@@ -2,47 +2,939 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>siavashsed.github.io/topproduct — Product Reviews & Buying Guides</title>
-<meta name="description" content="Expert insights on product reviews & buying guides">
-
-
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TopProduct - Editor-Tested Product Picks You Can Actually Trust</title>
+<meta name="description" content="Honest product reviews, trending finds, and buying guides across tech, home, beauty, fitness, and more. No sponsored fluff - just what's actually worth your money.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Georgia',serif;background:#ffffff;color:#111111;line-height:1.65;font-size:16px}
-a{color:#2563eb;text-decoration:none}
-a:hover{color:#1d4ed8}
-img{max-width:100%;display:block;height:auto}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#fafaf8;
+  --bg2:#f2ede6;
+  --ink:#1a1a17;
+  --ink2:#3a3832;
+  --muted:#706b60;
+  --border:#e0dbd2;
+  --accent:#dc2626;
+  --accent2:#ea580c;
+  --gold:#d97706;
+  --font:'Inter',system-ui,sans-serif;
+  --serif:'Playfair Display',Georgia,serif;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
 
-.wrap{max-width:860px;margin:0 auto;padding:0 24px}
-.hdr{padding:48px 0;border-bottom:2px solid #111111;margin-bottom:0}
-.logo{font-family:'Inter',sans-serif;font-size:36px;font-weight:900;color:#111111;letter-spacing:-1px}
-.cat{font-size:12px;color:#999;text-transform:uppercase;letter-spacing:2px;margin-top:6px}
-@media(max-width:600px){div[style*="grid-template-columns:120px"]{grid-template-columns:1fr!important}}
+/* MASTHEAD */
+.masthead{
+  background:var(--ink);
+  padding:0 24px;
+  border-bottom:3px solid var(--accent);
+}
+.masthead-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:68px;
+}
+.masthead-logo{
+  font-family:var(--serif);
+  font-size:26px;
+  font-weight:900;
+  color:#fff;
+  letter-spacing:-.5px;
+  flex-shrink:0;
+}
+.masthead-logo span{color:var(--accent)}
+.masthead-tagline{
+  font-size:11px;
+  color:rgba(255,255,255,.45);
+  letter-spacing:.3px;
+  display:none;
+}
+.masthead-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.masthead-subscribe{
+  font-size:12px;
+  font-weight:700;
+  color:var(--ink);
+  background:var(--accent);
+  padding:8px 18px;
+  border-radius:4px;
+  transition:opacity .2s;
+}
+.masthead-subscribe:hover{opacity:.85}
+
+/* CAT NAV */
+.cat-nav{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:200;
+  padding:0 24px;
+  box-shadow:0 1px 8px rgba(0,0,0,.06);
+}
+.cat-nav-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  overflow-x:auto;
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+  height:46px;
+  gap:0;
+}
+.cat-nav-inner::-webkit-scrollbar{display:none}
+.cat-nav-item{
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+  padding:0 16px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:all .2s;
+  cursor:pointer;
+  margin-bottom:-1px;
+  text-decoration:none;
+}
+.cat-nav-item:hover,.cat-nav-item.active{
+  color:var(--accent);
+  border-bottom-color:var(--accent);
+}
+.cat-nav-divider{width:1px;height:20px;background:var(--border);margin:0 4px;flex-shrink:0}
+
+/* TRENDING TICKER */
+.ticker{
+  background:var(--accent);
+  padding:8px 24px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  overflow:hidden;
+}
+.ticker-label{
+  font-size:10px;
+  font-weight:800;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  flex-shrink:0;
+  padding:3px 10px;
+  border:1.5px solid rgba(255,255,255,.6);
+  border-radius:3px;
+}
+.ticker-track{
+  display:flex;
+  gap:32px;
+  animation:ticker-scroll 30s linear infinite;
+  white-space:nowrap;
+}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{
+  font-size:12px;
+  font-weight:600;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.ticker-item::before{content:'#';opacity:.6}
+@keyframes ticker-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* HERO */
+.hero{
+  padding:40px 24px 48px;
+  max-width:1240px;
+  margin:0 auto;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:32px;
+  align-items:start;
+}
+.hero-featured{
+  background:var(--ink);
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+}
+.hero-img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  display:block;
+  opacity:.85;
+}
+.hero-img-placeholder{
+  width:100%;
+  height:400px;
+  background:linear-gradient(135deg,#2a2720 0%,#1a1a17 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-img-placeholder svg{opacity:.15}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 50%,transparent 100%);
+}
+.hero-body{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:28px 32px;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:10px;
+  font-weight:800;
+  color:#fff;
+  background:var(--accent);
+  padding:5px 12px;
+  border-radius:3px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:14px;
+}
+.hero-title{
+  font-family:var(--serif);
+  font-size:clamp(22px,3vw,32px);
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+.hero-desc{
+  font-size:14px;
+  color:rgba(255,255,255,.75);
+  line-height:1.6;
+  margin-bottom:18px;
+}
+.hero-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  background:var(--accent);
+  padding:10px 20px;
+  border-radius:4px;
+  transition:opacity .2s;
+}
+.hero-cta:hover{opacity:.85}
+
+/* Hero sidebar */
+.hero-sidebar{}
+.hero-sidebar-title{
+  font-size:10px;
+  font-weight:800;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-sidebar-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.hero-pick{
+  display:flex;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.hero-pick:first-of-type{padding-top:0}
+.hero-pick:last-child{border-bottom:none}
+.hero-pick:hover{opacity:.75}
+.hero-pick-num{
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:900;
+  color:var(--border);
+  line-height:1;
+  min-width:28px;
+  flex-shrink:0;
+  padding-top:2px;
+}
+.hero-pick-cat{
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  margin-bottom:5px;
+}
+.hero-pick-title{
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.45;
+}
+.hero-pick-meta{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+/* SECTION COMMON */
+.section{padding:48px 24px}
+.section-inner{max-width:1240px;margin:0 auto}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;gap:16px}
+.section-head-left{}
+.section-label{
+  font-size:10px;
+  font-weight:800;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  margin-bottom:8px;
+}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(20px,2.5vw,28px);
+  font-weight:900;
+  color:var(--ink);
+  line-height:1.2;
+}
+.section-title span{color:var(--accent)}
+.section-view-all{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  gap:4px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.section-view-all:hover{text-decoration:underline}
+
+/* ARTICLE GRID */
+.arts-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.art-card{
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
+  transition:transform .2s,box-shadow .2s;
+}
+.art-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 28px rgba(0,0,0,.09);
+}
+.art-card-img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  display:block;
+}
+.art-card-img-ph{
+  width:100%;
+  height:200px;
+  background:var(--bg2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.art-card-img-ph svg{opacity:.3}
+.art-card-body{padding:20px}
+.art-card-cat{
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.art-card-cat.trending::before{
+  content:'TRENDING';
+  font-size:9px;
+  background:var(--accent);
+  color:#fff;
+  padding:2px 6px;
+  border-radius:2px;
+  letter-spacing:1px;
+}
+.art-card-title{
+  font-family:var(--serif);
+  font-size:17px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.35;
+  margin-bottom:10px;
+}
+.art-card-desc{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:16px;
+}
+.art-card-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.art-card-meta{font-size:11px;color:var(--muted)}
+.art-card-read{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+}
+.art-card-read:hover{text-decoration:underline}
+
+/* PICKS SECTION (Best Of) */
+.picks-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.picks-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.pick-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:22px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:border-color .2s,transform .2s;
+}
+.pick-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.pick-card-icon{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background:var(--bg2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.pick-card-cat{
+  font-size:10px;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+.pick-card-title{
+  font-family:var(--serif);
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.4;
+}
+.pick-card-badge{
+  font-size:11px;
+  font-weight:700;
+  color:#fff;
+  background:var(--gold);
+  padding:4px 10px;
+  border-radius:3px;
+  display:inline-block;
+  align-self:flex-start;
+}
+
+/* FILTER BAR */
+.filter-bar{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+}
+.filter-btn{
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+  background:none;
+  border:1.5px solid var(--border);
+  padding:6px 16px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:all .2s;
+  font-family:var(--font);
+}
+.filter-btn:hover,.filter-btn.active{
+  color:var(--accent);
+  border-color:var(--accent);
+  background:rgba(220,38,38,.05);
+}
+
+/* NEWSLETTER */
+.newsletter-section{
+  background:var(--ink);
+  padding:64px 24px;
+  text-align:center;
+}
+.newsletter-inner{max-width:600px;margin:0 auto}
+.newsletter-kicker{
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  margin-bottom:16px;
+}
+.newsletter-h2{
+  font-family:var(--serif);
+  font-size:clamp(24px,4vw,36px);
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:14px;
+}
+.newsletter-sub{
+  font-size:15px;
+  color:rgba(255,255,255,.55);
+  line-height:1.7;
+  margin-bottom:32px;
+}
+.newsletter-form{
+  display:flex;
+  gap:10px;
+  max-width:480px;
+  margin:0 auto;
+}
+.newsletter-input{
+  flex:1;
+  font-size:14px;
+  font-family:var(--font);
+  color:var(--ink);
+  background:#fff;
+  border:none;
+  border-radius:6px;
+  padding:13px 18px;
+  outline:none;
+}
+.newsletter-btn{
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  background:var(--accent);
+  border:none;
+  border-radius:6px;
+  padding:13px 22px;
+  cursor:pointer;
+  font-family:var(--font);
+  white-space:nowrap;
+  transition:opacity .2s;
+}
+.newsletter-btn:hover{opacity:.85}
+.newsletter-note{font-size:11px;color:rgba(255,255,255,.3);margin-top:14px}
+@media(max-width:480px){.newsletter-form{flex-direction:column}}
+
+/* FOOTER */
+.footer{
+  background:#111;
+  border-top:1px solid #222;
+  padding:40px 24px;
+}
+.footer-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:32px;
+  align-items:center;
+}
+.footer-logo{
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:900;
+  color:#fff;
+}
+.footer-logo span{color:var(--accent)}
+.footer-desc{
+  font-size:12px;
+  color:rgba(255,255,255,.35);
+  margin-top:6px;
+  line-height:1.6;
+  max-width:360px;
+}
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+.footer-links a{
+  font-size:12px;
+  color:rgba(255,255,255,.4);
+  transition:color .2s;
+}
+.footer-links a:hover{color:rgba(255,255,255,.8)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.07);
+  margin-top:28px;
+  padding-top:20px;
+  font-size:11px;
+  color:rgba(255,255,255,.25);
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .picks-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-sidebar{display:none}
+  .arts-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .arts-grid{grid-template-columns:1fr}
+  .picks-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-links{flex-wrap:wrap;gap:12px}
+  .masthead-subscribe{display:none}
+}
+@media(max-width:400px){
+  .picks-grid{grid-template-columns:1fr}
+}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:none}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="hdr">
-    <a href="/" class="logo">siavashsed.github.io/topproduct</a>
-    <div class="cat">Product Reviews & Buying Guides</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="./" class="masthead-logo">Top<span>Product</span></a>
+    <div class="masthead-actions">
+      <a href="#newsletter" class="masthead-subscribe">Get Weekly Picks</a>
+    </div>
   </div>
-  
-    <div style="padding:28px 0;border-bottom:1px solid #e2e5ea;display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start">
-      <div>
-        <div style="font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;line-height:1.6">May 18, 2026</div>
-        <div style="font-size:11px;color:#2563eb;margin-top:4px">Product Reviews & Buying Guides</div>
+</header>
+
+<!-- CAT NAV -->
+<nav class="cat-nav">
+  <div class="cat-nav-inner">
+    <span class="cat-nav-item active" onclick="setFilter('all')">All Picks</span>
+    <div class="cat-nav-divider"></div>
+    <span class="cat-nav-item" onclick="setFilter('tech')">Tech</span>
+    <span class="cat-nav-item" onclick="setFilter('home')">Home</span>
+    <span class="cat-nav-item" onclick="setFilter('beauty')">Beauty</span>
+    <span class="cat-nav-item" onclick="setFilter('fitness')">Fitness</span>
+    <span class="cat-nav-item" onclick="setFilter('kitchen')">Kitchen</span>
+    <span class="cat-nav-item" onclick="setFilter('tiktok')">TikTok Finds</span>
+    <div class="cat-nav-divider"></div>
+    <span class="cat-nav-item" onclick="setFilter('trending')">Trending Now</span>
+  </div>
+</nav>
+
+<!-- TRENDING TICKER -->
+<div class="ticker">
+  <span class="ticker-label">Trending</span>
+  <div class="ticker-track" id="ticker-track">
+    <span class="ticker-item">Stanley Quencher Tumbler</span>
+    <span class="ticker-item">Dyson Airwrap Dupes</span>
+    <span class="ticker-item">LED Face Mask</span>
+    <span class="ticker-item">Portable Blenders</span>
+    <span class="ticker-item">Wireless Earbuds Under $50</span>
+    <span class="ticker-item">Linen Bedding Sets</span>
+    <span class="ticker-item">Air Fryer Accessories</span>
+    <span class="ticker-item">Mini Projector</span>
+    <span class="ticker-item">Stanley Quencher Tumbler</span>
+    <span class="ticker-item">Dyson Airwrap Dupes</span>
+    <span class="ticker-item">LED Face Mask</span>
+    <span class="ticker-item">Portable Blenders</span>
+    <span class="ticker-item">Wireless Earbuds Under $50</span>
+    <span class="ticker-item">Linen Bedding Sets</span>
+    <span class="ticker-item">Air Fryer Accessories</span>
+    <span class="ticker-item">Mini Projector</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-featured" id="hero-featured">
+      <div class="hero-img-placeholder">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
       </div>
-      <div>
-        <a href="/tiktok-products-actually-worth-buying/" style="font-size:clamp(18px,2.5vw,24px);font-weight:700;color:#111111;line-height:1.3;display:block;margin-bottom:10px">The 7 TikTok Products That Are Actually Worth Buying (According to Someone Who Tested Them)</a>
-        <p style="font-size:14px;color:#444;line-height:1.6;margin-bottom:10px">Siavash Sadighi cuts through TikTok hype to find 7 viral products that genuinely deliver. Honest reviews, no brand deals, real results.</p>
-        <a href="/tiktok-products-actually-worth-buying/" style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#2563eb">Read →</a>
+      <div class="hero-overlay"></div>
+      <div class="hero-body">
+        <div class="hero-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Editor's Pick of the Week
+        </div>
+        <h1 class="hero-title" id="hero-title">The 7 Products TikTok Discovered That Are Actually Worth Buying in 2026</h1>
+        <p class="hero-desc" id="hero-desc">We tested every viral product that blew up this month and separated the genuine finds from the hype. These seven survived our 30-day real-world testing.</p>
+        <a href="./tiktok-products-actually-worth-buying-2026/" class="hero-cta" id="hero-cta">
+          Read Full Review
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
     </div>
-</div>
-<footer style="background:#f7f8fa;border-top:1px solid #e2e5ea;padding:40px 24px;text-align:center;font-size:13px;color:#999;margin-top:60px">
-<p>&copy; 2026 siavashsed.github.io/topproduct &nbsp;&middot;&nbsp; Product Reviews & Buying Guides</p>
-<p style="margin-top:6px;font-size:11px">For informational purposes only. Not financial or investment advice.</p>
-<p style="margin-top:6px;font-size:11px"><a href="/about/" style="color:#999">About</a> &nbsp;&middot;&nbsp; <a href="/contact/" style="color:#999">Contact</a> &nbsp;&middot;&nbsp; <a href="/privacy/" style="color:#999">Privacy Policy</a></p>
-</footer></body></html>
+
+    <aside class="hero-sidebar">
+      <div class="hero-sidebar-title">Latest Picks</div>
+      <div id="sidebar-picks">
+        <div class="hero-pick">
+          <div class="hero-pick-num">01</div>
+          <div>
+            <div class="hero-pick-cat">Kitchen</div>
+            <div class="hero-pick-title">The Compact Air Fryer That Replaced Our Full Oven for 80% of Meals</div>
+            <div class="hero-pick-meta">6 min read</div>
+          </div>
+        </div>
+        <div class="hero-pick">
+          <div class="hero-pick-num">02</div>
+          <div>
+            <div class="hero-pick-cat">Tech</div>
+            <div class="hero-pick-title">Best Wireless Earbuds Under $60: We Tested 9 Options So You Don't Have To</div>
+            <div class="hero-pick-meta">10 min read</div>
+          </div>
+        </div>
+        <div class="hero-pick">
+          <div class="hero-pick-num">03</div>
+          <div>
+            <div class="hero-pick-cat">Beauty</div>
+            <div class="hero-pick-title">The $28 Retinol Serum That Skin Doctors Actually Recommend</div>
+            <div class="hero-pick-meta">7 min read</div>
+          </div>
+        </div>
+        <div class="hero-pick">
+          <div class="hero-pick-num">04</div>
+          <div>
+            <div class="hero-pick-cat">Home</div>
+            <div class="hero-pick-title">Linen Bedding Brands Ranked: What's Actually Worth the Price</div>
+            <div class="hero-pick-meta">9 min read</div>
+          </div>
+        </div>
+        <div class="hero-pick">
+          <div class="hero-pick-num">05</div>
+          <div>
+            <div class="hero-pick-cat">Fitness</div>
+            <div class="hero-pick-title">Resistance Bands vs. Dumbbells: Which Builds Muscle Faster at Home</div>
+            <div class="hero-pick-meta">8 min read</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- BEST OF PICKS -->
+<section class="section picks-section reveal">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-head-left">
+        <div class="section-label">Curated Guides</div>
+        <h2 class="section-title">Best Of, <span>By Category</span></h2>
+      </div>
+    </div>
+    <div class="picks-grid">
+      <div class="pick-card">
+        <div class="pick-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        </div>
+        <div class="pick-card-cat">Tech</div>
+        <div class="pick-card-title">Best Tech Gadgets of 2026 That Don't Feel Like Gimmicks</div>
+        <span class="pick-card-badge">12 Picks</span>
+      </div>
+      <div class="pick-card">
+        <div class="pick-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="pick-card-cat">Home</div>
+        <div class="pick-card-title">Home Essentials Worth Spending More On (and What to Cheap Out On)</div>
+        <span class="pick-card-badge">9 Picks</span>
+      </div>
+      <div class="pick-card">
+        <div class="pick-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="pick-card-cat">Beauty</div>
+        <div class="pick-card-title">Skincare Products That Dermatologists Actually Use Themselves</div>
+        <span class="pick-card-badge">8 Picks</span>
+      </div>
+      <div class="pick-card">
+        <div class="pick-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="pick-card-cat">Fitness</div>
+        <div class="pick-card-title">Home Gym Equipment That Fits a Small Apartment and a Real Budget</div>
+        <span class="pick-card-badge">10 Picks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES SECTION -->
+<section class="section reveal" id="articles">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-head-left">
+        <div class="section-label">Latest Reviews</div>
+        <h2 class="section-title">What We've Been Testing</h2>
+      </div>
+      <a href="#" class="section-view-all">
+        All Reviews
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" onclick="setFilter('all')">All</button>
+      <button class="filter-btn" onclick="setFilter('tech')">Tech</button>
+      <button class="filter-btn" onclick="setFilter('home')">Home</button>
+      <button class="filter-btn" onclick="setFilter('beauty')">Beauty</button>
+      <button class="filter-btn" onclick="setFilter('fitness')">Fitness</button>
+      <button class="filter-btn" onclick="setFilter('kitchen')">Kitchen</button>
+      <button class="filter-btn" onclick="setFilter('tiktok')">TikTok Finds</button>
+    </div>
+
+    <div class="arts-grid" id="arts-grid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-kicker">Weekly Product Digest</div>
+    <h2 class="newsletter-h2">The Best Finds, Delivered Every Thursday.</h2>
+    <p class="newsletter-sub">We test products so you don't have to waste money on things that disappoint. Get our editor-curated picks, trending finds, and honest reviews once a week.</p>
+    <form class="newsletter-form" onsubmit="return handleSub(event)">
+      <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+      <button type="submit" class="newsletter-btn">Get Weekly Picks</button>
+    </form>
+    <div class="newsletter-note">No spam. One email per week. Unsubscribe any time.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Top<span>Product</span></div>
+      <p class="footer-desc">Editor-tested product picks, honest buying guides, and trending finds across every category that matters to your daily life.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./about.html">About</a>
+      <a href="#articles">Reviews</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="./about.html#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 TopProduct. All rights reserved.</div>
+</footer>
+
+<script>
+var PLACEHOLDER_ARTS=[
+  {slug:'tiktok-products-actually-worth-buying-2026',category:'TikTok Finds',title:'The 7 Products TikTok Discovered That Are Actually Worth Buying in 2026',date:'May 16, 2026',meta_description:'We tested every viral product that blew up this month and separated the genuine finds from the hype. These seven survived our 30-day real-world testing.'},
+  {slug:'best-wireless-earbuds-under-60',category:'Tech',title:'Best Wireless Earbuds Under $60: We Tested 9 Options So You Don\'t Have To',date:'May 14, 2026',meta_description:'From Anker to Sony, we put nine budget earbuds through a month of commutes, gym sessions, and video calls. Here\'s the honest ranking.'},
+  {slug:'compact-air-fryer-replaced-oven',category:'Kitchen',title:'The Compact Air Fryer That Replaced Our Full Oven for 80% of Meals',date:'May 12, 2026',meta_description:'We stopped pre-heating our full oven after week one. This $79 basket air fryer does everything faster, crispier, and with less cleanup.'},
+  {slug:'retinol-serum-skin-doctors-recommend',category:'Beauty',title:'The $28 Retinol Serum That Skin Doctors Actually Recommend',date:'May 10, 2026',meta_description:'We asked six dermatologists which over-the-counter retinol they\'d tell their own family to use. The answer surprised us - and it\'s not La Mer.'},
+  {slug:'linen-bedding-brands-ranked',category:'Home',title:'Linen Bedding Brands Ranked: What\'s Actually Worth the Price',date:'May 8, 2026',meta_description:'We slept on nine linen sheet sets for three months each. The $40 option from an Amazon brand beat brands charging five times as much.'},
+  {slug:'resistance-bands-vs-dumbbells-home',category:'Fitness',title:'Resistance Bands vs. Dumbbells: Which Builds Muscle Faster at Home',date:'May 6, 2026',meta_description:'A 12-week home workout experiment comparing resistance bands and dumbbells across five key exercises. The results were more nuanced than we expected.'},
+  {slug:'portable-blenders-tested-ranked',category:'Kitchen',title:'Portable Blenders Ranked: We Made 200 Smoothies to Find the Best One',date:'May 4, 2026',meta_description:'Blendjet, Ninja, Hamilton Beach and six others. After 200 smoothies we have a very clear winner - and it\'s not the most expensive option.'},
+  {slug:'led-face-mask-worth-it',category:'Beauty',title:'Are LED Face Masks Actually Worth $200? We Used One for 90 Days',date:'May 2, 2026',meta_description:'Spoiler: the answer depends entirely on which skin concern you\'re targeting. Here\'s what the clinical evidence actually supports.'},
+  {slug:'home-gym-small-apartment-budget',category:'Fitness',title:'Complete Home Gym for a Small Apartment on a $300 Budget',date:'Apr 30, 2026',meta_description:'You don\'t need a dedicated room or $2,000 worth of equipment. This $300 setup covers every major muscle group and fits in a closet.'},
+];
+
+var allArts=[];
+var activeFilter='all';
+
+async function loadArticles(){
+  try{
+    var r=await fetch('./articles.json');
+    if(!r.ok)throw new Error('no json');
+    var posts=await r.json();
+    if(!posts||!posts.length)throw new Error('empty');
+    allArts=posts;
+  }catch(e){
+    allArts=PLACEHOLDER_ARTS;
+  }
+  renderGrid(allArts);
+  renderSidebar();
+}
+
+function renderGrid(arts){
+  var grid=document.getElementById('arts-grid');
+  if(!grid)return;
+  var filtered=activeFilter==='all'?arts:arts.filter(function(a){
+    return (a.category||'').toLowerCase().indexOf(activeFilter)>=0||
+           (a.tags||[]).indexOf(activeFilter)>=0;
+  });
+  if(!filtered.length)filtered=arts;
+  grid.innerHTML=filtered.slice(0,9).map(function(a){
+    var isTrending=a.trending||a.category==='TikTok Finds';
+    var catClass=isTrending?'art-card-cat trending':'art-card-cat';
+    return '<a class="art-card" href="./'+a.slug+'/"><div class="art-card-img-ph"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="art-card-body"><div class="'+catClass+'">'+a.category+'</div><h3 class="art-card-title">'+a.title+'</h3><p class="art-card-desc">'+(a.meta_description||'').slice(0,120)+'...</p><div class="art-card-footer"><span class="art-card-meta">'+a.date+'</span><span class="art-card-read">Read More &rarr;</span></div></div></a>';
+  }).join('');
+}
+
+function renderSidebar(){
+  if(!allArts.length)return;
+  var el=document.getElementById('sidebar-picks');
+  if(!el)return;
+  el.innerHTML=allArts.slice(0,5).map(function(a,i){
+    var n=('0'+(i+1)).slice(-2);
+    return '<a class="hero-pick" href="./'+a.slug+'/"><div class="hero-pick-num">'+n+'</div><div><div class="hero-pick-cat">'+a.category+'</div><div class="hero-pick-title">'+a.title+'</div><div class="hero-pick-meta">'+a.date+'</div></div></a>';
+  }).join('');
+}
+
+function setFilter(f){
+  activeFilter=f;
+  document.querySelectorAll('.cat-nav-item').forEach(function(el){el.classList.remove('active')});
+  document.querySelectorAll('.filter-btn').forEach(function(el){el.classList.remove('active')});
+  document.querySelectorAll('[onclick="setFilter(\''+f+'\')"]').forEach(function(el){el.classList.add('active')});
+  renderGrid(allArts);
+}
+
+function handleSub(e){
+  e.preventDefault();
+  var btn=e.target.querySelector('.newsletter-btn');
+  btn.textContent='You\'re in!';
+  btn.style.background='#16a34a';
+  return false;
+}
+
+function reveal(){
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-60)el.classList.add('visible');
+  });
+}
+window.addEventListener('scroll',reveal,{passive:true});
+reveal();
+
+loadArticles();
+</script>
+</body>
+</html>
