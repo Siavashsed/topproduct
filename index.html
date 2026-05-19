@@ -11,6 +11,10 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--accent,#dc2626);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent2,#b91c1c)}
 :root{
   --bg:#fafaf8;
   --bg2:#f2ede6;
@@ -42,20 +46,30 @@ img{display:block;max-width:100%}
   justify-content:space-between;
   height:68px;
 }
+.masthead-brand{display:flex;flex-direction:column;gap:3px;flex-shrink:0}
 .masthead-logo{
   font-family:var(--serif);
-  font-size:26px;
+  font-size:28px;
   font-weight:900;
   color:#fff;
-  letter-spacing:-.5px;
-  flex-shrink:0;
+  letter-spacing:-.8px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+}
+.masthead-logo-mark{
+  width:28px;height:28px;background:var(--accent);border-radius:5px;
+  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .masthead-logo span{color:var(--accent)}
 .masthead-tagline{
-  font-size:11px;
-  color:rgba(255,255,255,.45);
-  letter-spacing:.3px;
-  display:none;
+  font-size:10px;
+  font-weight:600;
+  color:rgba(255,255,255,.4);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding-left:34px;
 }
 .masthead-actions{
   display:flex;
@@ -631,7 +645,15 @@ img{display:block;max-width:100%}
 <!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-inner">
-    <a href="./" class="masthead-logo">Top<span>Product</span></a>
+    <div class="masthead-brand">
+      <a href="./" class="masthead-logo">
+        <span class="masthead-logo-mark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        Top<span>Product</span>
+      </a>
+      <div class="masthead-tagline">Editor-Tested Reviews</div>
+    </div>
     <div class="masthead-actions">
       <a href="#newsletter" class="masthead-subscribe">Get Weekly Picks</a>
     </div>
@@ -653,29 +675,6 @@ img{display:block;max-width:100%}
     <span class="cat-nav-item" onclick="setFilter('trending')">Trending Now</span>
   </div>
 </nav>
-
-<!-- TRENDING TICKER -->
-<div class="ticker">
-  <span class="ticker-label">Trending</span>
-  <div class="ticker-track" id="ticker-track">
-    <span class="ticker-item">Stanley Quencher Tumbler</span>
-    <span class="ticker-item">Dyson Airwrap Dupes</span>
-    <span class="ticker-item">LED Face Mask</span>
-    <span class="ticker-item">Portable Blenders</span>
-    <span class="ticker-item">Wireless Earbuds Under $50</span>
-    <span class="ticker-item">Linen Bedding Sets</span>
-    <span class="ticker-item">Air Fryer Accessories</span>
-    <span class="ticker-item">Mini Projector</span>
-    <span class="ticker-item">Stanley Quencher Tumbler</span>
-    <span class="ticker-item">Dyson Airwrap Dupes</span>
-    <span class="ticker-item">LED Face Mask</span>
-    <span class="ticker-item">Portable Blenders</span>
-    <span class="ticker-item">Wireless Earbuds Under $50</span>
-    <span class="ticker-item">Linen Bedding Sets</span>
-    <span class="ticker-item">Air Fryer Accessories</span>
-    <span class="ticker-item">Mini Projector</span>
-  </div>
-</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -836,6 +835,33 @@ img{display:block;max-width:100%}
     <div class="newsletter-note">No spam. One email per week. Unsubscribe any time.</div>
   </div>
 </section>
+
+<!-- TRENDING TICKER -->
+<div class="ticker">
+  <span class="ticker-label">Trending</span>
+  <div class="ticker-track" id="ticker-track">
+    <span class="ticker-item">Smart Ring Health Trackers</span>
+    <span class="ticker-item">Dyson Airwrap Dupes</span>
+    <span class="ticker-item">LED Face Masks</span>
+    <span class="ticker-item">Electrolyte Powders</span>
+    <span class="ticker-item">Wireless Earbuds Under $50</span>
+    <span class="ticker-item">Linen Bedding Sets</span>
+    <span class="ticker-item">Portable Neck Fans</span>
+    <span class="ticker-item">Cold Plunge Tubs</span>
+    <span class="ticker-item">AI Meal Planners</span>
+    <span class="ticker-item">Under-Desk Treadmills</span>
+    <span class="ticker-item">Smart Ring Health Trackers</span>
+    <span class="ticker-item">Dyson Airwrap Dupes</span>
+    <span class="ticker-item">LED Face Masks</span>
+    <span class="ticker-item">Electrolyte Powders</span>
+    <span class="ticker-item">Wireless Earbuds Under $50</span>
+    <span class="ticker-item">Linen Bedding Sets</span>
+    <span class="ticker-item">Portable Neck Fans</span>
+    <span class="ticker-item">Cold Plunge Tubs</span>
+    <span class="ticker-item">AI Meal Planners</span>
+    <span class="ticker-item">Under-Desk Treadmills</span>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="footer">
