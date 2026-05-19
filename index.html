@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TopProduct - Editor-Tested Product Picks You Can Actually Trust</title>
-<meta name="description" content="Honest product reviews, trending finds, and buying guides across tech, home, beauty, fitness, and more. No sponsored fluff - just what's actually worth your money.">
+<title>TopProduct - Editor-Tested Reviews of Trending &amp; Viral Products</title>
+<meta name="description" content="TopProduct reviews and curates the trending products actually worth buying. Honest, editor-tested reviews of viral TikTok finds, tech, home, beauty and fitness gear - no sponsored fluff.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:var(--accent,#dc2626);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:var(--accent2,#b91c1c)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
 :root{
   --bg:#fafaf8;
   --bg2:#f2ede6;
@@ -25,6 +24,7 @@ html{scroll-behavior:smooth}
   --accent:#dc2626;
   --accent2:#ea580c;
   --gold:#d97706;
+  --green:#16a34a;
   --font:'Inter',system-ui,sans-serif;
   --serif:'Playfair Display',Georgia,serif;
 }
@@ -33,611 +33,213 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 
 /* MASTHEAD */
-.masthead{
-  background:var(--ink);
-  padding:0 24px;
-  border-bottom:3px solid var(--accent);
-}
-.masthead-inner{
-  max-width:1240px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  height:68px;
-}
-.masthead-brand{display:flex;flex-direction:column;gap:3px;flex-shrink:0}
-.masthead-logo{
-  font-family:var(--serif);
-  font-size:28px;
-  font-weight:900;
-  color:#fff;
-  letter-spacing:-.8px;
-  display:flex;
-  align-items:center;
-  gap:6px;
-  text-decoration:none;
-}
-.masthead-logo-mark{
-  width:28px;height:28px;background:var(--accent);border-radius:5px;
-  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
-}
+.masthead{background:var(--ink);padding:0 24px;border-bottom:3px solid var(--accent)}
+.masthead-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px}
+.masthead-brand{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+.masthead-logo{font-family:var(--serif);font-size:26px;font-weight:900;color:#fff;letter-spacing:-.8px;display:flex;align-items:center;gap:8px}
+.masthead-logo-mark{width:30px;height:30px;background:var(--accent);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 .masthead-logo span{color:var(--accent)}
-.masthead-tagline{
-  font-size:10px;
-  font-weight:600;
-  color:rgba(255,255,255,.4);
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  padding-left:34px;
-}
-.masthead-actions{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-.masthead-subscribe{
-  font-size:12px;
-  font-weight:700;
-  color:var(--ink);
-  background:var(--accent);
-  padding:8px 18px;
-  border-radius:4px;
-  transition:opacity .2s;
-}
-.masthead-subscribe:hover{opacity:.85}
-
-/* CAT NAV */
-.cat-nav{
-  background:#fff;
-  border-bottom:1px solid var(--border);
-  position:sticky;
-  top:0;
-  z-index:200;
-  padding:0 24px;
-  box-shadow:0 1px 8px rgba(0,0,0,.06);
-}
-.cat-nav-inner{
-  max-width:1240px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  overflow-x:auto;
-  -ms-overflow-style:none;
-  scrollbar-width:none;
-  height:46px;
-  gap:0;
-}
-.cat-nav-inner::-webkit-scrollbar{display:none}
-.cat-nav-item{
-  font-size:12px;
-  font-weight:600;
-  color:var(--muted);
-  padding:0 16px;
-  height:100%;
-  display:flex;
-  align-items:center;
-  white-space:nowrap;
-  border-bottom:2px solid transparent;
-  transition:all .2s;
-  cursor:pointer;
-  margin-bottom:-1px;
-  text-decoration:none;
-}
-.cat-nav-item:hover,.cat-nav-item.active{
-  color:var(--accent);
-  border-bottom-color:var(--accent);
-}
-.cat-nav-divider{width:1px;height:20px;background:var(--border);margin:0 4px;flex-shrink:0}
-
-/* TRENDING TICKER */
-.ticker{
-  background:var(--accent);
-  padding:8px 24px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  overflow:hidden;
-}
-.ticker-label{
-  font-size:10px;
-  font-weight:800;
-  color:#fff;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  flex-shrink:0;
-  padding:3px 10px;
-  border:1.5px solid rgba(255,255,255,.6);
-  border-radius:3px;
-}
-.ticker-track{
-  display:flex;
-  gap:32px;
-  animation:ticker-scroll 30s linear infinite;
-  white-space:nowrap;
-}
-.ticker-track:hover{animation-play-state:paused}
-.ticker-item{
-  font-size:12px;
-  font-weight:600;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.ticker-item::before{content:'#';opacity:.6}
-@keyframes ticker-scroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
+.masthead-tagline{font-size:9px;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:1.6px;text-transform:uppercase;padding-left:38px}
+.masthead-nav{display:flex;align-items:center;gap:4px}
+.masthead-nav a{font-size:13px;font-weight:600;color:rgba(255,255,255,.7);padding:8px 14px;border-radius:5px;transition:color .2s,background .2s}
+.masthead-nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.masthead-subscribe{font-size:12px;font-weight:700;color:#fff!important;background:var(--accent);padding:9px 18px!important;border-radius:5px;transition:opacity .2s}
+.masthead-subscribe:hover{opacity:.88;background:var(--accent)!important}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.menu-toggle svg{stroke:#fff}
 
 /* HERO */
-.hero{
-  padding:40px 24px 48px;
-  max-width:1240px;
-  margin:0 auto;
-}
-.hero-inner{
-  display:grid;
-  grid-template-columns:1fr 360px;
-  gap:32px;
-  align-items:start;
-}
-.hero-featured{
-  background:var(--ink);
-  border-radius:12px;
-  overflow:hidden;
-  position:relative;
-}
-.hero-img{
-  width:100%;
-  height:400px;
-  object-fit:cover;
-  display:block;
-  opacity:.85;
-}
-.hero-img-placeholder{
-  width:100%;
-  height:400px;
-  background:linear-gradient(135deg,#2a2720 0%,#1a1a17 100%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.hero-img-placeholder svg{opacity:.15}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 50%,transparent 100%);
-}
-.hero-body{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  padding:28px 32px;
-}
-.hero-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-size:10px;
-  font-weight:800;
-  color:#fff;
-  background:var(--accent);
-  padding:5px 12px;
-  border-radius:3px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  margin-bottom:14px;
-}
-.hero-title{
-  font-family:var(--serif);
-  font-size:clamp(22px,3vw,32px);
-  font-weight:900;
-  color:#fff;
-  line-height:1.2;
-  margin-bottom:12px;
-}
-.hero-desc{
-  font-size:14px;
-  color:rgba(255,255,255,.75);
-  line-height:1.6;
-  margin-bottom:18px;
-}
-.hero-cta{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-size:13px;
-  font-weight:700;
-  color:#fff;
-  background:var(--accent);
-  padding:10px 20px;
-  border-radius:4px;
-  transition:opacity .2s;
-}
-.hero-cta:hover{opacity:.85}
+.hero{position:relative;background:linear-gradient(160deg,#1f1d18 0%,#1a1a17 60%,#241f1a 100%);padding:72px 24px 88px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(220,38,38,.22),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-140px;left:-100px;width:380px;height:380px;background:radial-gradient(circle,rgba(234,88,12,.16),transparent 70%);border-radius:50%}
+.hero-inner{max-width:920px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:7px 16px;border-radius:30px;text-transform:uppercase;letter-spacing:1.6px;margin-bottom:24px}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(220,38,38,.25)}
+.hero h1{font-family:var(--serif);font-size:clamp(32px,5.4vw,58px);font-weight:900;color:#fff;line-height:1.12;letter-spacing:-1px;margin-bottom:22px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.66);line-height:1.7;max-width:640px;margin:0 auto 32px}
+.hero-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;padding:14px 28px;border-radius:7px;border:none;cursor:pointer;font-family:var(--font);transition:transform .2s,opacity .2s,box-shadow .2s}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(220,38,38,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(220,38,38,.45)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
 
-/* Hero sidebar */
-.hero-sidebar{}
-.hero-sidebar-title{
-  font-size:10px;
-  font-weight:800;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:16px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.hero-sidebar-title::after{content:'';flex:1;height:1px;background:var(--border)}
-.hero-pick{
-  display:flex;
-  gap:14px;
-  padding:16px 0;
-  border-bottom:1px solid var(--border);
-  cursor:pointer;
-  transition:opacity .2s;
-}
-.hero-pick:first-of-type{padding-top:0}
-.hero-pick:last-child{border-bottom:none}
-.hero-pick:hover{opacity:.75}
-.hero-pick-num{
-  font-family:var(--serif);
-  font-size:22px;
-  font-weight:900;
-  color:var(--border);
-  line-height:1;
-  min-width:28px;
-  flex-shrink:0;
-  padding-top:2px;
-}
-.hero-pick-cat{
-  font-size:10px;
-  font-weight:700;
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:1.2px;
-  margin-bottom:5px;
-}
-.hero-pick-title{
-  font-size:14px;
-  font-weight:600;
-  color:var(--ink);
-  line-height:1.45;
-}
-.hero-pick-meta{
-  font-size:11px;
-  color:var(--muted);
-  margin-top:5px;
-}
+/* TRUST STRIP */
+.trust{background:var(--ink);padding:22px 24px;border-top:1px solid rgba(255,255,255,.07)}
+.trust-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:14px 40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:600;color:rgba(255,255,255,.6)}
+.trust-item svg{stroke:var(--accent);flex-shrink:0}
 
 /* SECTION COMMON */
-.section{padding:48px 24px}
+.section{padding:72px 24px}
 .section-inner{max-width:1240px;margin:0 auto}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;gap:16px}
-.section-head-left{}
-.section-label{
-  font-size:10px;
-  font-weight:800;
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:2.5px;
-  margin-bottom:8px;
-}
-.section-title{
-  font-family:var(--serif);
-  font-size:clamp(20px,2.5vw,28px);
-  font-weight:900;
-  color:var(--ink);
-  line-height:1.2;
-}
+.section-narrow{max-width:920px}
+.section-head{text-align:center;margin-bottom:48px}
+.section-head.left{text-align:left}
+.section-label{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:2.6px;margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:900;color:var(--ink);line-height:1.18;letter-spacing:-.5px}
 .section-title span{color:var(--accent)}
-.section-view-all{
-  font-size:12px;
-  font-weight:700;
-  color:var(--accent);
-  display:flex;
-  align-items:center;
-  gap:4px;
-  white-space:nowrap;
-  flex-shrink:0;
-}
-.section-view-all:hover{text-decoration:underline}
+.section-sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:620px;margin:14px auto 0}
+.section-head.left .section-sub{margin-left:0}
 
-/* ARTICLE GRID */
-.arts-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-}
-.art-card{
-  border-radius:8px;
-  overflow:hidden;
-  border:1px solid var(--border);
-  background:#fff;
-  transition:transform .2s,box-shadow .2s;
-}
-.art-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 28px rgba(0,0,0,.09);
-}
-.art-card-img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  display:block;
-}
-.art-card-img-ph{
-  width:100%;
-  height:200px;
-  background:var(--bg2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.art-card-img-ph svg{opacity:.3}
-.art-card-body{padding:20px}
-.art-card-cat{
-  font-size:10px;
-  font-weight:700;
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  margin-bottom:8px;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-.art-card-cat.trending::before{
-  content:'TRENDING';
-  font-size:9px;
-  background:var(--accent);
-  color:#fff;
-  padding:2px 6px;
-  border-radius:2px;
-  letter-spacing:1px;
-}
-.art-card-title{
-  font-family:var(--serif);
-  font-size:17px;
-  font-weight:700;
-  color:var(--ink);
-  line-height:1.35;
-  margin-bottom:10px;
-}
-.art-card-desc{
-  font-size:13px;
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:16px;
-}
-.art-card-footer{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+/* SCORECARD TOOL */
+.tool-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.tool-wrap{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
+.tool-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:30px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.tool-card h3{font-family:var(--serif);font-size:21px;font-weight:900;margin-bottom:6px}
+.tool-card .tool-hint{font-size:13px;color:var(--muted);margin-bottom:22px}
+.check-item{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--border);cursor:pointer;align-items:flex-start;transition:opacity .15s}
+.check-item:last-child{border-bottom:none}
+.check-item:hover{opacity:.82}
+.check-box{width:24px;height:24px;border:2px solid var(--border);border-radius:7px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;margin-top:1px}
+.check-box svg{opacity:0;transform:scale(.5);transition:all .2s}
+.check-item.on .check-box{background:var(--green);border-color:var(--green)}
+.check-item.on .check-box svg{opacity:1;transform:scale(1)}
+.check-text strong{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.check-text span{font-size:12.5px;color:var(--muted);line-height:1.5}
+.score-panel{background:var(--ink);border-radius:14px;padding:30px 26px;color:#fff;position:sticky;top:24px;text-align:center}
+.score-ring{position:relative;width:150px;height:150px;margin:6px auto 18px}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.score-ring-num b{font-family:var(--serif);font-size:42px;font-weight:900;line-height:1}
+.score-ring-num em{font-size:10px;font-style:normal;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:3px}
+.score-verdict{font-family:var(--serif);font-size:22px;font-weight:900;margin-bottom:8px}
+.score-msg{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;min-height:60px}
+.score-bar{height:7px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden;margin:18px 0 6px}
+.score-bar i{display:block;height:100%;width:0;border-radius:4px;background:var(--accent);transition:width .4s ease,background .4s ease}
+.score-count{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.5px}
+.score-reset{margin-top:18px;font-size:12px;font-weight:700;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:9px 18px;border-radius:6px;cursor:pointer;font-family:var(--font);transition:background .2s}
+.score-reset:hover{background:rgba(255,255,255,.16)}
+
+/* WHY / STORY */
+.story-section{background:var(--bg)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-visual{background:var(--ink);border-radius:16px;padding:38px;color:#fff}
+.story-visual .sv-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);align-items:center}
+.story-visual .sv-row:last-child{border-bottom:none}
+.story-visual .sv-icon{width:42px;height:42px;border-radius:10px;background:rgba(220,38,38,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.story-visual .sv-icon svg{stroke:var(--accent)}
+.story-visual .sv-row b{font-size:14px;display:block}
+.story-visual .sv-row span{font-size:12px;color:rgba(255,255,255,.5)}
+.story-text h2{font-family:var(--serif);font-size:clamp(24px,3vw,34px);font-weight:900;line-height:1.2;margin-bottom:18px;letter-spacing:-.5px}
+.story-text h2 span{color:var(--accent)}
+.story-text p{font-size:15px;color:var(--ink2);line-height:1.75;margin-bottom:16px}
+.story-text p:last-of-type{margin-bottom:0}
+
+/* VALUE CARDS */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.value-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:30px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.value-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.08);border-color:var(--accent)}
+.value-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.value-card h3{font-family:var(--serif);font-size:19px;font-weight:700;margin-bottom:9px}
+.value-card p{font-size:13.5px;color:var(--muted);line-height:1.65}
+
+/* STATS BAND */
+.stats{background:var(--ink);padding:62px 24px}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.stat{text-align:center}
+.stat b{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:900;color:#fff;line-height:1;display:block}
+.stat b span{color:var(--accent)}
+.stat em{font-size:12px;font-style:normal;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1.6px;margin-top:10px;display:block}
+
+/* COVER / TOPIC GRID */
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.topic-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
+.topic-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.07)}
+.topic-icon{width:46px;height:46px;border-radius:10px;background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topic-icon svg{stroke:var(--accent)}
+.topic-card h3{font-size:15px;font-weight:700;margin-bottom:5px}
+.topic-card p{font-size:12.5px;color:var(--muted);line-height:1.6}
+
+/* ARTICLES */
+.arts-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.arts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.art-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.art-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.art-card-img{width:100%;height:170px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2a2720,#1a1a17)}
+.art-card-img svg{opacity:.3}
+.art-card-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.art-card-cat{font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:9px}
+.art-card-title{font-family:var(--serif);font-size:17px;font-weight:700;line-height:1.36;margin-bottom:10px}
+.art-card-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;flex:1}
+.art-card-footer{display:flex;align-items:center;justify-content:space-between}
 .art-card-meta{font-size:11px;color:var(--muted)}
-.art-card-read{
-  font-size:12px;
-  font-weight:700;
-  color:var(--accent);
-}
-.art-card-read:hover{text-decoration:underline}
+.art-card-read{font-size:12px;font-weight:700;color:var(--accent)}
+.arts-empty{background:#fff;border:1px dashed var(--border);border-radius:14px;padding:64px 32px;text-align:center}
+.arts-empty svg{opacity:.35;margin-bottom:18px}
+.arts-empty h3{font-family:var(--serif);font-size:21px;font-weight:700;margin-bottom:8px}
+.arts-empty p{font-size:14px;color:var(--muted);max-width:420px;margin:0 auto}
 
-/* PICKS SECTION (Best Of) */
-.picks-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.picks-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-.pick-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:22px 20px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  transition:border-color .2s,transform .2s;
-}
-.pick-card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.pick-card-icon{
-  width:44px;
-  height:44px;
-  border-radius:10px;
-  background:var(--bg2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-}
-.pick-card-cat{
-  font-size:10px;
-  font-weight:700;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-}
-.pick-card-title{
-  font-family:var(--serif);
-  font-size:15px;
-  font-weight:700;
-  color:var(--ink);
-  line-height:1.4;
-}
-.pick-card-badge{
-  font-size:11px;
-  font-weight:700;
-  color:#fff;
-  background:var(--gold);
-  padding:4px 10px;
-  border-radius:3px;
-  display:inline-block;
-  align-self:flex-start;
-}
+/* AUTHOR */
+.author-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:40px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
+.author-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--serif);font-size:44px;font-weight:900;color:#fff}
+.author-info .author-label{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.author-info h3{font-family:var(--serif);font-size:24px;font-weight:900;margin-bottom:10px}
+.author-info p{font-size:14px;color:var(--ink2);line-height:1.72;margin-bottom:14px}
+.author-stats{display:flex;gap:26px;flex-wrap:wrap}
+.author-stats div b{font-family:var(--serif);font-size:20px;font-weight:900;color:var(--accent)}
+.author-stats div span{font-size:11px;color:var(--muted);display:block;text-transform:uppercase;letter-spacing:1px}
 
-/* FILTER BAR */
-.filter-bar{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-bottom:32px;
-}
-.filter-btn{
-  font-size:12px;
-  font-weight:600;
-  color:var(--muted);
-  background:none;
-  border:1.5px solid var(--border);
-  padding:6px 16px;
-  border-radius:20px;
-  cursor:pointer;
-  transition:all .2s;
-  font-family:var(--font);
-}
-.filter-btn:hover,.filter-btn.active{
-  color:var(--accent);
-  border-color:var(--accent);
-  background:rgba(220,38,38,.05);
-}
+/* FAQ */
+.faq-section{background:var(--bg)}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;cursor:pointer;font-size:15px;font-weight:700;color:var(--ink)}
+.faq-q svg{flex-shrink:0;transition:transform .25s;stroke:var(--accent)}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 22px;font-size:14px;color:var(--muted);line-height:1.7}
+.faq-item.open .faq-a{max-height:240px}
 
 /* NEWSLETTER */
-.newsletter-section{
-  background:var(--ink);
-  padding:64px 24px;
-  text-align:center;
-}
-.newsletter-inner{max-width:600px;margin:0 auto}
-.newsletter-kicker{
-  font-size:10px;
-  font-weight:700;
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:2.5px;
-  margin-bottom:16px;
-}
-.newsletter-h2{
-  font-family:var(--serif);
-  font-size:clamp(24px,4vw,36px);
-  font-weight:900;
-  color:#fff;
-  line-height:1.2;
-  margin-bottom:14px;
-}
-.newsletter-sub{
-  font-size:15px;
-  color:rgba(255,255,255,.55);
-  line-height:1.7;
-  margin-bottom:32px;
-}
-.newsletter-form{
-  display:flex;
-  gap:10px;
-  max-width:480px;
-  margin:0 auto;
-}
-.newsletter-input{
-  flex:1;
-  font-size:14px;
-  font-family:var(--font);
-  color:var(--ink);
-  background:#fff;
-  border:none;
-  border-radius:6px;
-  padding:13px 18px;
-  outline:none;
-}
-.newsletter-btn{
-  font-size:13px;
-  font-weight:700;
-  color:#fff;
-  background:var(--accent);
-  border:none;
-  border-radius:6px;
-  padding:13px 22px;
-  cursor:pointer;
-  font-family:var(--font);
-  white-space:nowrap;
-  transition:opacity .2s;
-}
-.newsletter-btn:hover{opacity:.85}
-.newsletter-note{font-size:11px;color:rgba(255,255,255,.3);margin-top:14px}
-@media(max-width:480px){.newsletter-form{flex-direction:column}}
+.newsletter-section{background:linear-gradient(160deg,#1f1d18,#1a1a17);padding:78px 24px;text-align:center;position:relative;overflow:hidden}
+.newsletter-section::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:300px;background:radial-gradient(circle,rgba(220,38,38,.18),transparent 70%)}
+.newsletter-inner{max-width:600px;margin:0 auto;position:relative;z-index:2}
+.newsletter-kicker{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:2.6px;margin-bottom:16px}
+.newsletter-h2{font-family:var(--serif);font-size:clamp(26px,4vw,38px);font-weight:900;color:#fff;line-height:1.18;margin-bottom:14px}
+.newsletter-sub{font-size:15px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:30px}
+.newsletter-form{display:flex;gap:10px;max-width:480px;margin:0 auto}
+.newsletter-input{flex:1;font-size:14px;font-family:var(--font);color:var(--ink);background:#fff;border:none;border-radius:7px;padding:14px 18px;outline:none}
+.newsletter-btn{font-size:13px;font-weight:700;color:#fff;background:var(--accent);border:none;border-radius:7px;padding:14px 24px;cursor:pointer;font-family:var(--font);white-space:nowrap;transition:opacity .2s}
+.newsletter-btn:hover{opacity:.88}
+.newsletter-note{font-size:11px;color:rgba(255,255,255,.32);margin-top:14px}
 
 /* FOOTER */
-.footer{
-  background:#111;
-  border-top:1px solid #222;
-  padding:40px 24px;
-}
-.footer-inner{
-  max-width:1240px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:32px;
-  align-items:center;
-}
-.footer-logo{
-  font-family:var(--serif);
-  font-size:20px;
-  font-weight:900;
-  color:#fff;
-}
+.footer{background:#111;border-top:1px solid #222;padding:56px 24px 28px}
+.footer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px}
+.footer-logo{font-family:var(--serif);font-size:22px;font-weight:900;color:#fff;margin-bottom:12px}
 .footer-logo span{color:var(--accent)}
-.footer-desc{
-  font-size:12px;
-  color:rgba(255,255,255,.35);
-  margin-top:6px;
-  line-height:1.6;
-  max-width:360px;
-}
-.footer-links{
-  display:flex;
-  gap:20px;
-}
-.footer-links a{
-  font-size:12px;
-  color:rgba(255,255,255,.4);
-  transition:color .2s;
-}
-.footer-links a:hover{color:rgba(255,255,255,.8)}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.07);
-  margin-top:28px;
-  padding-top:20px;
-  font-size:11px;
-  color:rgba(255,255,255,.25);
-  text-align:center;
-}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .picks-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .hero-sidebar{display:none}
-  .arts-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:640px){
-  .arts-grid{grid-template-columns:1fr}
-  .picks-grid{grid-template-columns:1fr 1fr}
-  .footer-inner{grid-template-columns:1fr}
-  .footer-links{flex-wrap:wrap;gap:12px}
-  .masthead-subscribe{display:none}
-}
-@media(max-width:400px){
-  .picks-grid{grid-template-columns:1fr}
-}
+.footer-desc{font-size:12.5px;color:rgba(255,255,255,.38);line-height:1.7;max-width:300px}
+.footer-col h4{font-size:11px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:1.6px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.42);margin-bottom:9px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1240px;margin:40px auto 0;border-top:1px solid rgba(255,255,255,.07);padding-top:22px;font-size:11px;color:rgba(255,255,255,.28);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+  .tool-wrap{grid-template-columns:1fr}
+  .score-panel{position:static}
+  .story-grid{grid-template-columns:1fr;gap:32px}
+  .value-grid,.topic-grid,.arts-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-inner{grid-template-columns:repeat(2,1fr);gap:36px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .masthead-nav a:not(.masthead-subscribe){display:none}
+  .menu-toggle{display:block}
+  .masthead-nav.open a:not(.masthead-subscribe){display:block;position:absolute;left:0;right:0;background:var(--ink);text-align:center;padding:14px}
+  .masthead-nav.open{position:static}
+  .value-grid,.topic-grid,.arts-grid{grid-template-columns:1fr}
+  .newsletter-form{flex-direction:column}
+  .author-card{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .author-stats{justify-content:center}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .trust-inner{gap:12px 22px}
+}
 </style>
 </head>
 <body>
@@ -649,177 +251,267 @@ img{display:block;max-width:100%}
     <div class="masthead-brand">
       <a href="./" class="masthead-logo">
         <span class="masthead-logo-mark">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </span>
         Top<span>Product</span>
       </a>
       <div class="masthead-tagline">Editor-Tested Reviews</div>
     </div>
-    <div class="masthead-actions">
-      <a href="#newsletter" class="masthead-subscribe">Get Weekly Picks</a>
-    </div>
+    <nav class="masthead-nav" id="mainNav">
+      <a href="./">Home</a>
+      <a href="./#scorecard">Scorecard Tool</a>
+      <a href="./#cover">What We Cover</a>
+      <a href="./#articles">Reviews</a>
+      <a href="about.html">About</a>
+      <a href="./#newsletter" class="masthead-subscribe">Get Weekly Picks</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
 </header>
-
-<!-- CAT NAV -->
-<nav class="cat-nav">
-  <div class="cat-nav-inner">
-    <span class="cat-nav-item active" onclick="setFilter('all')">All Picks</span>
-    <div class="cat-nav-divider"></div>
-    <span class="cat-nav-item" onclick="setFilter('tech')">Tech</span>
-    <span class="cat-nav-item" onclick="setFilter('home')">Home</span>
-    <span class="cat-nav-item" onclick="setFilter('beauty')">Beauty</span>
-    <span class="cat-nav-item" onclick="setFilter('fitness')">Fitness</span>
-    <span class="cat-nav-item" onclick="setFilter('kitchen')">Kitchen</span>
-    <span class="cat-nav-item" onclick="setFilter('tiktok')">TikTok Finds</span>
-    <div class="cat-nav-divider"></div>
-    <span class="cat-nav-item" onclick="setFilter('trending')">Trending Now</span>
-  </div>
-</nav>
 <!--/SHELL:HEADER-->
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-featured" id="hero-featured">
-      <div class="hero-img-placeholder">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-body">
-        <div class="hero-badge">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          Editor's Pick of the Week
-        </div>
-        <h1 class="hero-title" id="hero-title">The 7 Products TikTok Discovered That Are Actually Worth Buying in 2026</h1>
-        <p class="hero-desc" id="hero-desc">We tested every viral product that blew up this month and separated the genuine finds from the hype. These seven survived our 30-day real-world testing.</p>
-        <a href="./tiktok-products-actually-worth-buying-2026/" class="hero-cta" id="hero-cta">
-          Read Full Review
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <aside class="hero-sidebar">
-      <div class="hero-sidebar-title">Latest Picks</div>
-      <div id="sidebar-picks">
-        <div class="hero-pick">
-          <div class="hero-pick-num">01</div>
-          <div>
-            <div class="hero-pick-cat">Kitchen</div>
-            <div class="hero-pick-title">The Compact Air Fryer That Replaced Our Full Oven for 80% of Meals</div>
-            <div class="hero-pick-meta">6 min read</div>
-          </div>
-        </div>
-        <div class="hero-pick">
-          <div class="hero-pick-num">02</div>
-          <div>
-            <div class="hero-pick-cat">Tech</div>
-            <div class="hero-pick-title">Best Wireless Earbuds Under $60: We Tested 9 Options So You Don't Have To</div>
-            <div class="hero-pick-meta">10 min read</div>
-          </div>
-        </div>
-        <div class="hero-pick">
-          <div class="hero-pick-num">03</div>
-          <div>
-            <div class="hero-pick-cat">Beauty</div>
-            <div class="hero-pick-title">The $28 Retinol Serum That Skin Doctors Actually Recommend</div>
-            <div class="hero-pick-meta">7 min read</div>
-          </div>
-        </div>
-        <div class="hero-pick">
-          <div class="hero-pick-num">04</div>
-          <div>
-            <div class="hero-pick-cat">Home</div>
-            <div class="hero-pick-title">Linen Bedding Brands Ranked: What's Actually Worth the Price</div>
-            <div class="hero-pick-meta">9 min read</div>
-          </div>
-        </div>
-        <div class="hero-pick">
-          <div class="hero-pick-num">05</div>
-          <div>
-            <div class="hero-pick-cat">Fitness</div>
-            <div class="hero-pick-title">Resistance Bands vs. Dumbbells: Which Builds Muscle Faster at Home</div>
-            <div class="hero-pick-meta">8 min read</div>
-          </div>
-        </div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<!-- BEST OF PICKS -->
-<section class="section picks-section reveal">
-  <div class="section-inner">
-    <div class="section-head">
-      <div class="section-head-left">
-        <div class="section-label">Curated Guides</div>
-        <h2 class="section-title">Best Of, <span>By Category</span></h2>
-      </div>
-    </div>
-    <div class="picks-grid">
-      <div class="pick-card">
-        <div class="pick-card-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-        </div>
-        <div class="pick-card-cat">Tech</div>
-        <div class="pick-card-title">Best Tech Gadgets of 2026 That Don't Feel Like Gimmicks</div>
-        <span class="pick-card-badge">12 Picks</span>
-      </div>
-      <div class="pick-card">
-        <div class="pick-card-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="pick-card-cat">Home</div>
-        <div class="pick-card-title">Home Essentials Worth Spending More On (and What to Cheap Out On)</div>
-        <span class="pick-card-badge">9 Picks</span>
-      </div>
-      <div class="pick-card">
-        <div class="pick-card-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div class="pick-card-cat">Beauty</div>
-        <div class="pick-card-title">Skincare Products That Dermatologists Actually Use Themselves</div>
-        <span class="pick-card-badge">8 Picks</span>
-      </div>
-      <div class="pick-card">
-        <div class="pick-card-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <div class="pick-card-cat">Fitness</div>
-        <div class="pick-card-title">Home Gym Equipment That Fits a Small Apartment and a Real Budget</div>
-        <span class="pick-card-badge">10 Picks</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ARTICLES SECTION -->
-<section class="section reveal" id="articles">
-  <div class="section-inner">
-    <div class="section-head">
-      <div class="section-head-left">
-        <div class="section-label">Latest Reviews</div>
-        <h2 class="section-title">What We've Been Testing</h2>
-      </div>
-      <a href="#" class="section-view-all">
-        All Reviews
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    <div class="hero-eyebrow"><span class="dot"></span>Trending Products, Honestly Reviewed</div>
+    <h1>Don't Get Burned by the <span>Next Viral Product</span></h1>
+    <p>Every week TikTok, Instagram and the algorithm crown a new "must-buy." We test the hype, expose the dropship markups, and tell you what is genuinely worth your money - and what is not.</p>
+    <div class="hero-cta-row">
+      <a href="./#scorecard" class="btn btn-primary">
+        Score a Product Now
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </a>
+      <a href="./#articles" class="btn btn-ghost">Read Latest Reviews</a>
     </div>
+  </div>
+</section>
 
-    <div class="filter-bar" id="filter-bar">
-      <button class="filter-btn active" onclick="setFilter('all')">All</button>
-      <button class="filter-btn" onclick="setFilter('tech')">Tech</button>
-      <button class="filter-btn" onclick="setFilter('home')">Home</button>
-      <button class="filter-btn" onclick="setFilter('beauty')">Beauty</button>
-      <button class="filter-btn" onclick="setFilter('fitness')">Fitness</button>
-      <button class="filter-btn" onclick="setFilter('kitchen')">Kitchen</button>
-      <button class="filter-btn" onclick="setFilter('tiktok')">TikTok Finds</button>
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>30-Day Real-World Testing</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l3 6 6 .9-4.5 4.3 1 6.1L12 21l-5.5 2.3 1-6.1L3 7.9 9 7z"/></svg>No Sponsored Fluff</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Updated Weekly</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dropship Markups Exposed</div>
+  </div>
+</div>
+
+<!-- SCORECARD TOOL -->
+<section class="section tool-section" id="scorecard">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Free Interactive Tool</div>
+      <h2 class="section-title">The Trending Product <span>Scorecard</span></h2>
+      <p class="section-sub">Found something viral you are tempted to buy? Run it through our 10-point checklist. Tick every box that honestly applies, and we will tell you whether it is a smart buy or a scroll-past.</p>
     </div>
+    <div class="tool-wrap reveal">
+      <div class="tool-card">
+        <h3>Score Your Product</h3>
+        <p class="tool-hint">Check each statement that is true for the product you are eyeing.</p>
+        <div id="checklist"></div>
+      </div>
+      <div class="score-panel">
+        <div class="score-ring">
+          <svg width="150" height="150" viewBox="0 0 150 150">
+            <circle cx="75" cy="75" r="64" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="11"/>
+            <circle id="scoreArc" cx="75" cy="75" r="64" fill="none" stroke="#dc2626" stroke-width="11" stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="402"/>
+          </svg>
+          <div class="score-ring-num"><b id="scoreNum">0</b><em>out of 100</em></div>
+        </div>
+        <div class="score-verdict" id="scoreVerdict">Start Checking</div>
+        <p class="score-msg" id="scoreMsg">Tick the boxes that apply and your live verdict appears here instantly.</p>
+        <div class="score-bar"><i id="scoreBar"></i></div>
+        <div class="score-count" id="scoreCount">0 of 10 criteria met</div>
+        <button class="score-reset" id="scoreReset">Reset Scorecard</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="arts-grid" id="arts-grid">
-      <!-- populated by JS -->
+<!-- STORY / WHY -->
+<section class="section story-section">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-text reveal">
+        <h2>The Viral Economy Was Built to <span>Empty Your Wallet</span></h2>
+        <p>A single 15-second clip can turn an unknown gadget into a global obsession overnight. The problem is that going viral has nothing to do with being good. Most "TikTok made me buy it" products are generic items pulled from the same overseas catalogs, marked up three to five times, and shipped slowly in plain packaging.</p>
+        <p>TopProduct exists to break that cycle. We buy products with our own money, live with them for at least 30 days, and report exactly what holds up and what falls apart. No affiliate pressure, no brand deals dictating the verdict.</p>
+        <p>When a viral find is genuinely excellent, we will be the first to tell you. When it is recycled hype, we will save you the disappointment and the return shipping.</p>
+      </div>
+      <div class="story-visual reveal">
+        <div class="sv-row">
+          <div class="sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <div><b>We find it before it floods your feed</b><span>Tracking emerging trends daily</span></div>
+        </div>
+        <div class="sv-row">
+          <div class="sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+          <div><b>We test it for 30+ days</b><span>Real homes, real use, real wear</span></div>
+        </div>
+        <div class="sv-row">
+          <div class="sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div><b>We trace the real price</b><span>Spotting markups and dropship tricks</span></div>
+        </div>
+        <div class="sv-row">
+          <div class="sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="3" y="9" width="18" height="12" rx="2"/></svg></div>
+          <div><b>We publish the honest verdict</b><span>Buy, skip, or wait - clearly stated</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE CARDS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Why TopProduct</div>
+      <h2 class="section-title">How We Keep You From <span>Wasting Money</span></h2>
+      <p class="section-sub">Four principles guide every review we publish - and every product we tell you to skip.</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Bought, Not Gifted</h3>
+        <p>Every product we review is purchased at retail price like a normal shopper. Brands never get to send us a polished sample and skew the result.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Tested Over Time</h3>
+        <p>A first impression means nothing. We use products for a month or more so we catch the cheap hinge, the fading battery, the peeling coating.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Price Reality Checks</h3>
+        <p>We trace viral products back to their source listings so you know if that $49 gadget is really a $12 item with a marketing budget attached.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Clear Verdicts</h3>
+        <p>No vague star ratings. Every review ends with a plain answer: buy it, skip it, or wait for the price to drop. Decisions made simple.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
+        <h3>Trend Radar</h3>
+        <p>We monitor what is gaining traction before it hits everyone's feed, so our verdict is ready the moment you start wondering about it.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>Reader-First, Always</h3>
+        <p>If a product is bad, we say so even when it would be easy to stay quiet. Your trust is worth more than any single review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><b data-count="640">0</b><em>Products Tested</em></div>
+    <div class="stat reveal"><b data-count="30">0</b><em>Min Days Per Test</em></div>
+    <div class="stat reveal"><b data-count="48">0</b><em>Trends Tracked Weekly</em></div>
+    <div class="stat reveal"><b><span data-count="0">0</span><span>%</span></b><em>Sponsored Reviews</em></div>
+  </div>
+</section>
+
+<!-- WHAT WE COVER -->
+<section class="section story-section" id="cover">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">What We Cover</div>
+      <h2 class="section-title">Every Category Where <span>Hype Meets Your Wallet</span></h2>
+      <p class="section-sub">From the gadget aisle to the bathroom shelf, these are the spaces where viral marketing works hardest - and where we dig deepest.</p>
+    </div>
+    <div class="topic-grid">
+      <div class="topic-card reveal">
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+        <div><h3>Tech &amp; Gadgets</h3><p>Earbuds, smart rings, chargers and the accessories that promise the world for $30.</p></div>
+      </div>
+      <div class="topic-card reveal">
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div><h3>Home &amp; Living</h3><p>Bedding, organizers, lighting and the decor that fills every "amazon must-have" list.</p></div>
+      </div>
+      <div class="topic-card reveal">
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div><h3>Beauty &amp; Skincare</h3><p>Serums, LED masks, hair tools and dupes - tested against the claims and the originals.</p></div>
+      </div>
+      <div class="topic-card reveal">
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div><h3>Fitness &amp; Wellness</h3><p>Resistance gear, recovery tools and supplements that flood the feed every January.</p></div>
+      </div>
+      <div class="topic-card reveal">
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2l1.5 9h15L21 2"/><path d="M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/></svg></div>
+        <div><h3>Kitchen &amp; Gear</h3><p>Air fryers, portable blenders and the countertop gadgets promising to change dinner.</p></div>
+      </div>
+      <div class="topic-card reveal">
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <div><h3>TikTok &amp; Viral Finds</h3><p>The week's biggest "made me buy it" moments, fact-checked before you tap order.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section arts-section" id="articles">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Latest Reviews</div>
+      <h2 class="section-title">What We've Been <span>Testing</span></h2>
+      <p class="section-sub">Fresh editor-tested reviews and buying guides, published as we finish each round of testing.</p>
+    </div>
+    <div class="arts-grid" id="arts-grid"></div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="section">
+  <div class="section-inner section-narrow">
+    <div class="author-card reveal">
+      <div class="author-avatar">TP</div>
+      <div class="author-info">
+        <div class="author-label">The Team Behind The Reviews</div>
+        <h3>The TopProduct Editorial Desk</h3>
+        <p>We are a small, independent team of product testers, deal hunters and skeptical shoppers. We have spent years watching viral products come and go, and we got tired of friends asking "is this thing actually good?" only to find no honest answer online.</p>
+        <p>So we built TopProduct: a place where every verdict is earned through real money spent and real time used. No agency, no brand on a leash - just careful testing and plain talk.</p>
+        <div class="author-stats">
+          <div><b>640+</b><span>Products Reviewed</span></div>
+          <div><b>30 Days</b><span>Minimum Per Test</span></div>
+          <div><b>0</b><span>Paid Verdicts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="section-inner section-narrow">
+    <div class="section-head reveal">
+      <div class="section-label">Good Questions</div>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div id="faqList" class="reveal">
+      <div class="faq-item">
+        <div class="faq-q">How does TopProduct make money if reviews are not sponsored?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        <div class="faq-a"><p>We may earn a small commission when readers buy through some links, but that never changes a verdict. We recommend "skip it" products constantly, and a brand can never pay to improve its score or position.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the Trending Product Scorecard for?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        <div class="faq-a"><p>It is a free, instant gut-check. When you spot a viral product, run it through the 10-point checklist on this page. The live score tells you whether the basics of a smart purchase are in place before you spend a cent.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do you decide which products to test?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        <div class="faq-a"><p>We track what is trending across social platforms and search every week, then prioritize the products readers ask about most. If something is blowing up your feed, it is probably already on our test bench.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I suggest a product for review?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        <div class="faq-a"><p>Yes - reader requests are one of our best sources of test ideas. Head to our About page to find the best way to reach the editorial desk with your suggestion.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How often do you publish new reviews?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        <div class="faq-a"><p>New reviews and buying guides go up regularly as testing rounds wrap. Joining the weekly digest is the easiest way to get every new verdict the moment it is live.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -829,7 +521,7 @@ img{display:block;max-width:100%}
   <div class="newsletter-inner">
     <div class="newsletter-kicker">Weekly Product Digest</div>
     <h2 class="newsletter-h2">The Best Finds, Delivered Every Thursday.</h2>
-    <p class="newsletter-sub">We test products so you don't have to waste money on things that disappoint. Get our editor-curated picks, trending finds, and honest reviews once a week.</p>
+    <p class="newsletter-sub">One short email a week: our newest editor-tested verdicts, the viral products to skip, and the deals genuinely worth grabbing. No spam, ever.</p>
     <form class="newsletter-form" onsubmit="return handleSub(event)">
       <input type="email" class="newsletter-input" placeholder="your@email.com" required>
       <button type="submit" class="newsletter-btn">Get Weekly Picks</button>
@@ -838,131 +530,193 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
-<!-- TRENDING TICKER -->
-<div class="ticker">
-  <span class="ticker-label">Trending</span>
-  <div class="ticker-track" id="ticker-track">
-    <span class="ticker-item">Smart Ring Health Trackers</span>
-    <span class="ticker-item">Dyson Airwrap Dupes</span>
-    <span class="ticker-item">LED Face Masks</span>
-    <span class="ticker-item">Electrolyte Powders</span>
-    <span class="ticker-item">Wireless Earbuds Under $50</span>
-    <span class="ticker-item">Linen Bedding Sets</span>
-    <span class="ticker-item">Portable Neck Fans</span>
-    <span class="ticker-item">Cold Plunge Tubs</span>
-    <span class="ticker-item">AI Meal Planners</span>
-    <span class="ticker-item">Under-Desk Treadmills</span>
-    <span class="ticker-item">Smart Ring Health Trackers</span>
-    <span class="ticker-item">Dyson Airwrap Dupes</span>
-    <span class="ticker-item">LED Face Masks</span>
-    <span class="ticker-item">Electrolyte Powders</span>
-    <span class="ticker-item">Wireless Earbuds Under $50</span>
-    <span class="ticker-item">Linen Bedding Sets</span>
-    <span class="ticker-item">Portable Neck Fans</span>
-    <span class="ticker-item">Cold Plunge Tubs</span>
-    <span class="ticker-item">AI Meal Planners</span>
-    <span class="ticker-item">Under-Desk Treadmills</span>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <!--SHELL:FOOTER-->
 <footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Top<span>Product</span></div>
-      <p class="footer-desc">Editor-tested product picks, honest buying guides, and trending finds across every category that matters to your daily life.</p>
+      <p class="footer-desc">Editor-tested reviews of trending and viral products. We test the hype so you can shop with confidence - no sponsored fluff, just honest verdicts.</p>
     </div>
-    <div class="footer-links">
-      <a href="./about.html">About</a>
-      <a href="#articles">Reviews</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="./about.html#contact">Contact</a>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="./">Home</a>
+      <a href="./#scorecard">Scorecard Tool</a>
+      <a href="./#cover">What We Cover</a>
+      <a href="./#articles">Latest Reviews</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="./#newsletter">Newsletter</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="./#cover">Tech &amp; Gadgets</a>
+      <a href="./#cover">Home &amp; Living</a>
+      <a href="./#cover">Beauty &amp; Skincare</a>
+      <a href="./#cover">TikTok Finds</a>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 TopProduct. All rights reserved.</div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 TopProduct. All rights reserved.</span>
+    <span>Independent reviews. Tested with our own money.</span>
+  </div>
 </footer>
 
 <script>
-var PLACEHOLDER_ARTS=[
-  {slug:'tiktok-products-actually-worth-buying-2026',category:'TikTok Finds',title:'The 7 Products TikTok Discovered That Are Actually Worth Buying in 2026',date:'May 16, 2026',meta_description:'We tested every viral product that blew up this month and separated the genuine finds from the hype. These seven survived our 30-day real-world testing.'},
-  {slug:'best-wireless-earbuds-under-60',category:'Tech',title:'Best Wireless Earbuds Under $60: We Tested 9 Options So You Don\'t Have To',date:'May 14, 2026',meta_description:'From Anker to Sony, we put nine budget earbuds through a month of commutes, gym sessions, and video calls. Here\'s the honest ranking.'},
-  {slug:'compact-air-fryer-replaced-oven',category:'Kitchen',title:'The Compact Air Fryer That Replaced Our Full Oven for 80% of Meals',date:'May 12, 2026',meta_description:'We stopped pre-heating our full oven after week one. This $79 basket air fryer does everything faster, crispier, and with less cleanup.'},
-  {slug:'retinol-serum-skin-doctors-recommend',category:'Beauty',title:'The $28 Retinol Serum That Skin Doctors Actually Recommend',date:'May 10, 2026',meta_description:'We asked six dermatologists which over-the-counter retinol they\'d tell their own family to use. The answer surprised us - and it\'s not La Mer.'},
-  {slug:'linen-bedding-brands-ranked',category:'Home',title:'Linen Bedding Brands Ranked: What\'s Actually Worth the Price',date:'May 8, 2026',meta_description:'We slept on nine linen sheet sets for three months each. The $40 option from an Amazon brand beat brands charging five times as much.'},
-  {slug:'resistance-bands-vs-dumbbells-home',category:'Fitness',title:'Resistance Bands vs. Dumbbells: Which Builds Muscle Faster at Home',date:'May 6, 2026',meta_description:'A 12-week home workout experiment comparing resistance bands and dumbbells across five key exercises. The results were more nuanced than we expected.'},
-  {slug:'portable-blenders-tested-ranked',category:'Kitchen',title:'Portable Blenders Ranked: We Made 200 Smoothies to Find the Best One',date:'May 4, 2026',meta_description:'Blendjet, Ninja, Hamilton Beach and six others. After 200 smoothies we have a very clear winner - and it\'s not the most expensive option.'},
-  {slug:'led-face-mask-worth-it',category:'Beauty',title:'Are LED Face Masks Actually Worth $200? We Used One for 90 Days',date:'May 2, 2026',meta_description:'Spoiler: the answer depends entirely on which skin concern you\'re targeting. Here\'s what the clinical evidence actually supports.'},
-  {slug:'home-gym-small-apartment-budget',category:'Fitness',title:'Complete Home Gym for a Small Apartment on a $300 Budget',date:'Apr 30, 2026',meta_description:'You don\'t need a dedicated room or $2,000 worth of equipment. This $300 setup covers every major muscle group and fits in a closet.'},
-];
+/* ---- Mobile nav ---- */
+(function(){
+  var t=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
+  if(t&&n)t.addEventListener('click',function(){n.classList.toggle('open')});
+})();
 
-var allArts=[];
-var activeFilter='all';
+/* ---- Trending Product Scorecard ---- */
+(function(){
+  var CRITERIA=[
+    {t:'Real reviews exist',d:'There are detailed reviews from multiple independent sources, not just the seller.'},
+    {t:'Fair price for the value',d:'The price reasonably matches what the product is and does.'},
+    {t:'Ships in a sensible time',d:'Delivery is days, not the 3-6 weeks typical of dropship listings.'},
+    {t:'Not an obvious dropship markup',d:'You cannot find the exact same item far cheaper under a generic name.'},
+    {t:'Solves a real problem',d:'It fixes something you actually deal with, not just a clever-looking gimmick.'},
+    {t:'Clear return policy',d:'There is a stated, reasonable way to return it if it disappoints.'},
+    {t:'Identifiable brand or seller',d:'A real, contactable brand stands behind it, not an anonymous storefront.'},
+    {t:'Quality materials or build',d:'Photos, specs and reviews suggest it will survive normal use.'},
+    {t:'You would buy it without the hype',d:'Stripped of the viral video, you would still genuinely want it.'},
+    {t:'Fits a genuine need or budget',d:'It belongs in your life and your budget, not just your cart on impulse.'}
+  ];
+  var list=document.getElementById('checklist');
+  if(!list)return;
+  var arc=document.getElementById('scoreArc'),
+      numEl=document.getElementById('scoreNum'),
+      verdictEl=document.getElementById('scoreVerdict'),
+      msgEl=document.getElementById('scoreMsg'),
+      barEl=document.getElementById('scoreBar'),
+      countEl=document.getElementById('scoreCount'),
+      resetBtn=document.getElementById('scoreReset'),
+      CIRC=402;
 
-async function loadArticles(){
-  try{
-    var r=await fetch('./articles.json');
-    if(!r.ok)throw new Error('no json');
-    var posts=await r.json();
-    if(!posts||!posts.length)throw new Error('empty');
-    allArts=posts;
-  }catch(e){
-    allArts=PLACEHOLDER_ARTS;
-  }
-  renderGrid(allArts);
-  renderSidebar();
-}
-
-function renderGrid(arts){
-  var grid=document.getElementById('arts-grid');
-  if(!grid)return;
-  var filtered=activeFilter==='all'?arts:arts.filter(function(a){
-    return (a.category||'').toLowerCase().indexOf(activeFilter)>=0||
-           (a.tags||[]).indexOf(activeFilter)>=0;
+  CRITERIA.forEach(function(c,i){
+    var div=document.createElement('div');
+    div.className='check-item';
+    div.setAttribute('data-i',i);
+    div.innerHTML='<div class="check-box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>'+
+      '<div class="check-text"><strong>'+c.t+'</strong><span>'+c.d+'</span></div>';
+    div.addEventListener('click',function(){div.classList.toggle('on');update()});
+    list.appendChild(div);
   });
-  if(!filtered.length)filtered=arts;
-  grid.innerHTML=filtered.slice(0,9).map(function(a){
-    var isTrending=a.trending||a.category==='TikTok Finds';
-    var catClass=isTrending?'art-card-cat trending':'art-card-cat';
-    return '<a class="art-card" href="./'+a.slug+'/"><div class="art-card-img-ph"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="art-card-body"><div class="'+catClass+'">'+a.category+'</div><h3 class="art-card-title">'+a.title+'</h3><p class="art-card-desc">'+(a.meta_description||'').slice(0,120)+'...</p><div class="art-card-footer"><span class="art-card-meta">'+a.date+'</span><span class="art-card-read">Read More &rarr;</span></div></div></a>';
-  }).join('');
-}
 
-function renderSidebar(){
-  if(!allArts.length)return;
-  var el=document.getElementById('sidebar-picks');
-  if(!el)return;
-  el.innerHTML=allArts.slice(0,5).map(function(a,i){
-    var n=('0'+(i+1)).slice(-2);
-    return '<a class="hero-pick" href="./'+a.slug+'/"><div class="hero-pick-num">'+n+'</div><div><div class="hero-pick-cat">'+a.category+'</div><div class="hero-pick-title">'+a.title+'</div><div class="hero-pick-meta">'+a.date+'</div></div></a>';
-  }).join('');
-}
+  function update(){
+    var checked=list.querySelectorAll('.check-item.on').length;
+    var score=checked*10;
+    numEl.textContent=score;
+    arc.style.strokeDashoffset=CIRC-(CIRC*score/100);
+    barEl.style.width=score+'%';
+    countEl.textContent=checked+' of 10 criteria met';
+    var color,verdict,msg;
+    if(checked===0){color='#dc2626';verdict='Start Checking';msg='Tick the boxes that apply and your live verdict appears here instantly.';}
+    else if(checked<=3){color='#dc2626';verdict='Hard Pass';msg='This has classic viral-trap warning signs. Walk away and keep your money.';}
+    else if(checked<=5){color='#ea580c';verdict='Risky Buy';msg='Too many gaps. Dig much deeper or wait before you spend anything here.';}
+    else if(checked<=7){color='#d97706';verdict='Proceed With Care';msg='Some real promise, but a few boxes are missing. Verify them before checkout.';}
+    else if(checked<=9){color='#16a34a';verdict='Looks Worth It';msg='This product clears most of the smart-buy checks. A solid, low-risk purchase.';}
+    else{color='#16a34a';verdict='Genuine Top Product';msg='A clean sweep. This is exactly the kind of trending product worth buying.';}
+    arc.style.stroke=color;barEl.style.background=color;verdictEl.style.color=color;
+    verdictEl.textContent=verdict;msgEl.textContent=msg;
+  }
+  resetBtn.addEventListener('click',function(){
+    list.querySelectorAll('.check-item.on').forEach(function(el){el.classList.remove('on')});
+    update();
+  });
+  update();
+})();
 
-function setFilter(f){
-  activeFilter=f;
-  document.querySelectorAll('.cat-nav-item').forEach(function(el){el.classList.remove('active')});
-  document.querySelectorAll('.filter-btn').forEach(function(el){el.classList.remove('active')});
-  document.querySelectorAll('[onclick="setFilter(\''+f+'\')"]').forEach(function(el){el.classList.add('active')});
-  renderGrid(allArts);
-}
+/* ---- FAQ accordion ---- */
+(function(){
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.querySelector('.faq-q').addEventListener('click',function(){
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+      if(!open)item.classList.add('open');
+    });
+  });
+})();
 
+/* ---- Count-up stats ---- */
+(function(){
+  var done=false;
+  function run(){
+    if(done)return;
+    var band=document.querySelector('.stats');
+    if(!band)return;
+    if(band.getBoundingClientRect().top<window.innerHeight-80){
+      done=true;
+      document.querySelectorAll('[data-count]').forEach(function(el){
+        var target=parseInt(el.getAttribute('data-count'),10),cur=0,
+            step=Math.max(1,Math.ceil(target/45));
+        var t=setInterval(function(){
+          cur+=step;
+          if(cur>=target){cur=target;clearInterval(t)}
+          el.textContent=cur+(target>=100?'+':'');
+        },28);
+      });
+    }
+  }
+  window.addEventListener('scroll',run,{passive:true});run();
+})();
+
+/* ---- Scroll reveal ---- */
+(function(){
+  function reveal(){
+    document.querySelectorAll('.reveal').forEach(function(el){
+      if(el.getBoundingClientRect().top<window.innerHeight-70)el.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll',reveal,{passive:true});reveal();
+})();
+
+/* ---- Newsletter ---- */
 function handleSub(e){
   e.preventDefault();
   var btn=e.target.querySelector('.newsletter-btn');
-  btn.textContent='You\'re in!';
+  btn.textContent="You're in!";
   btn.style.background='#16a34a';
   return false;
 }
 
-function reveal(){
-  document.querySelectorAll('.reveal').forEach(function(el){
-    var top=el.getBoundingClientRect().top;
-    if(top<window.innerHeight-60)el.classList.add('visible');
-  });
+/* ---- Article grid: real data only ---- */
+async function loadArticles(){
+  if(!document.getElementById('arts-grid'))return;
+  var grid=document.getElementById('arts-grid');
+  var posts=[];
+  try{
+    var r=await fetch('./articles.json');
+    if(r.ok){var d=await r.json();if(Array.isArray(d))posts=d;}
+  }catch(e){posts=[];}
+  posts=posts.filter(function(a){return a&&a.slug&&a.title});
+  if(!posts.length){
+    grid.style.display='block';
+    grid.innerHTML='<div class="arts-empty">'+
+      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'+
+      '<h3>Fresh Reviews Are On The Test Bench</h3>'+
+      '<p>Our editors are currently testing the next round of trending products. Join the weekly digest below to get every verdict the moment it goes live.</p>'+
+      '</div>';
+    return;
+  }
+  grid.innerHTML=posts.slice(0,9).map(function(a){
+    var desc=(a.meta_description||a.description||'').slice(0,118);
+    if(desc)desc+='...';
+    return '<a class="art-card" href="./'+a.slug+'/">'+
+      '<div class="art-card-img"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>'+
+      '<div class="art-card-body">'+
+      (a.category?'<div class="art-card-cat">'+a.category+'</div>':'')+
+      '<h3 class="art-card-title">'+a.title+'</h3>'+
+      (desc?'<p class="art-card-desc">'+desc+'</p>':'<p class="art-card-desc"></p>')+
+      '<div class="art-card-footer"><span class="art-card-meta">'+(a.date||'TopProduct Review')+'</span>'+
+      '<span class="art-card-read">Read Review &rarr;</span></div>'+
+      '</div></a>';
+  }).join('');
 }
-window.addEventListener('scroll',reveal,{passive:true});
-reveal();
-
 loadArticles();
 </script>
 <!--/SHELL:FOOTER-->
