@@ -1,341 +1,840 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About Siavash Sadighi - TopProduct</title>
-<meta name="description" content="Editor-tested product picks, honest buying guides, and trending finds across every category that matters.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About - TopProduct</title>
+<meta name="description" content="About TopProduct: Editor-tested product picks, honest buying guides, and trending finds across every category that matters.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{  --bg:#fafaf8;--bg2:#f2ede6;--sur:#ffffff;
-  --pri:#dc2626;--pri2:#b91c1c;
-  --txt:#1a1a17;--mut:#706b60;--brd:#e0dbd2;
-  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:monospace;--fh:Lora,Georgia,serif;}
-body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.8}
-a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
-.ln{display:flex;align-items:center;justify-content:space-between;padding:18px 52px;border-bottom:1px solid var(--brd);background:var(--bg);position:sticky;top:0;z-index:99}
-.ln-brand{font-family:var(--fh);font-size:22px;font-weight:700;color:var(--txt);text-decoration:none}
-.ln-brand em{color:var(--pri);font-style:normal}
-.ln-nav{display:flex;gap:28px}.ln-nav a{font-size:13px;color:var(--mut);font-weight:500;text-decoration:none}.ln-nav a:hover{color:var(--txt)}
-/* hero */
-.lah{background:var(--bg2);border-bottom:2px solid var(--brd);padding:52px 52px 44px}
-.lah-top{display:flex;align-items:center;gap:32px;margin-bottom:28px}
-.lah-avi{width:80px;height:80px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:26px;font-weight:700;color:#fff;flex-shrink:0;border:3px solid var(--bg)}
-.lah h1{font-family:var(--fh);font-size:clamp(22px,3vw,36px);font-weight:700;margin-bottom:4px;color:var(--txt)}
-.lah-role{font-size:14px;color:var(--pri);font-weight:600}
-.lah-cat{font-size:12px;color:var(--mut);margin-top:4px}
-.lah-stats{display:flex;gap:14px;flex-wrap:wrap}
-.lah-stat{background:var(--bg);border:1px solid var(--brd);border-radius:8px;padding:12px 18px;text-align:center}
-.lah-stat-num{font-family:var(--fh);font-size:20px;font-weight:700;color:var(--pri)}
-.lah-stat-lbl{font-size:10px;color:var(--mut);margin-top:2px;text-transform:uppercase;letter-spacing:1px}
-/* layout */
-.la-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;max-width:1160px;margin:0 auto;padding:52px 52px}
-.la-sec{margin-bottom:44px}
-.la-sec-hd{font-family:var(--fh);font-size:20px;font-weight:700;color:var(--txt);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--pri)}
-.la-p{color:var(--mut);line-height:1.9;margin-bottom:16px}
-/* quote */
-.la-quote{border-left:3px solid var(--pri);padding:12px 20px;margin:4px 0 24px;background:var(--bg2);border-radius:0 6px 6px 0}
-.la-quote p{font-family:var(--fh);font-size:16px;color:var(--txt);line-height:1.7;font-style:italic}
-/* invest grid */
-.la-inv{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.la-inv-card{border:1px solid var(--brd);border-radius:8px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;transition:border-color .2s}.la-inv-card:hover{border-color:var(--pri)}
-.la-inv-icon{color:var(--pri);flex-shrink:0;margin-top:2px}
-.la-inv-head{font-size:13px;font-weight:700;color:var(--txt);margin-bottom:3px}
-.la-inv-body{font-size:12px;color:var(--mut);line-height:1.65}
-/* journey timeline */
-.laj{padding:44px 52px;border-bottom:1px solid var(--brd);background:var(--bg2)}
-.laj-inner{max-width:1160px;margin:0 auto}
-.laj-hd{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--mut);margin-bottom:28px}
-.laj-items{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
-.laj-items::before{content:'';position:absolute;top:12px;left:0;right:0;height:2px;background:var(--brd);z-index:0}
-.laj-item{display:flex;flex-direction:column;gap:8px;padding-top:0;position:relative;z-index:1;padding-right:14px}
-.laj-dot{width:26px;height:26px;border-radius:50%;background:var(--pri);border:3px solid var(--bg2);flex-shrink:0}
-.laj-year{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--pri);margin-top:4px}
-.laj-text{font-size:12px;color:var(--mut);line-height:1.65}
-/* philosophy banner */
-.la-philo{background:var(--pri);padding:40px 52px;text-align:center;border-top:1px solid rgba(0,0,0,.1)}
-.la-philo blockquote{font-family:var(--fh);font-size:clamp(16px,2.2vw,22px);font-style:italic;color:#fff;max-width:760px;margin:0 auto;line-height:1.6}
-.la-philo cite{display:block;margin-top:12px;font-size:11px;color:rgba(255,255,255,.7);font-style:normal;letter-spacing:1.5px;text-transform:uppercase}
-/* methodology */
-.la-steps{display:flex;flex-direction:column;gap:16px}
-.la-step{display:flex;gap:14px}
-.la-step-dot{width:28px;height:28px;border-radius:50%;background:var(--pri);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.la-step-head{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--txt);margin-bottom:4px}
-.la-step-body{font-size:13px;color:var(--mut);line-height:1.7}
-/* sidebar */
-.la-side{}
-.la-card{background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:22px;margin-bottom:18px}
-.la-card-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--pri);margin-bottom:12px}
-/* nl */
-.la-nl{background:var(--pri);border-radius:10px;padding:24px;margin-bottom:18px;color:#fff}
-.la-nl h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:6px}
-.la-nl p{font-size:12px;opacity:.88;margin-bottom:14px}
-.la-nl-in{width:100%;border:none;border-radius:6px;padding:10px 12px;font-size:13px;margin-bottom:8px;outline:none;background:rgba(255,255,255,.95)}
-.la-nl-btn{width:100%;background:#1c1a14;color:#fff;border:none;border-radius:6px;padding:10px;font-size:13px;font-weight:700;cursor:pointer;transition:opacity .2s}.la-nl-btn:hover{opacity:.85}
-/* footer */
-.lfb{padding:24px 52px;border-top:1px solid var(--brd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.lfb-copy{font-size:12px;color:var(--mut)}.lfb-links{display:flex;gap:20px}.lfb-links a{font-size:12px;color:var(--mut);text-decoration:none}.lfb-links a:hover{color:var(--pri)}
-@media(max-width:1024px){.la-layout{grid-template-columns:1fr}}
-@media(max-width:768px){.ln{padding:14px 16px}.lah{padding:32px 16px 28px}.lah-top{flex-direction:column;gap:16px}.la-layout{padding:32px 16px;gap:28px}.la-inv{grid-template-columns:1fr}.laj{padding:32px 16px}.laj-items{grid-template-columns:1fr 1fr;gap:24px}.laj-items::before{display:none}.la-philo{padding:32px 16px}.lfb{padding:20px 16px;flex-direction:column;text-align:center}}
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--accent,#dc2626);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent2,#b91c1c)}
+:root{
+  --bg:#fafaf8;
+  --bg2:#f2ede6;
+  --ink:#1a1a17;
+  --ink2:#3a3832;
+  --muted:#706b60;
+  --border:#e0dbd2;
+  --accent:#dc2626;
+  --accent2:#ea580c;
+  --gold:#d97706;
+  --font:'Inter',system-ui,sans-serif;
+  --serif:'Playfair Display',Georgia,serif;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* MASTHEAD */
+.masthead{
+  background:var(--ink);
+  padding:0 24px;
+  border-bottom:3px solid var(--accent);
+}
+.masthead-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:68px;
+}
+.masthead-brand{display:flex;flex-direction:column;gap:3px;flex-shrink:0}
+.masthead-logo{
+  font-family:var(--serif);
+  font-size:28px;
+  font-weight:900;
+  color:#fff;
+  letter-spacing:-.8px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+}
+.masthead-logo-mark{
+  width:28px;height:28px;background:var(--accent);border-radius:5px;
+  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.masthead-logo span{color:var(--accent)}
+.masthead-tagline{
+  font-size:10px;
+  font-weight:600;
+  color:rgba(255,255,255,.4);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding-left:34px;
+}
+.masthead-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.masthead-subscribe{
+  font-size:12px;
+  font-weight:700;
+  color:var(--ink);
+  background:var(--accent);
+  padding:8px 18px;
+  border-radius:4px;
+  transition:opacity .2s;
+}
+.masthead-subscribe:hover{opacity:.85}
+
+/* CAT NAV */
+.cat-nav{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:200;
+  padding:0 24px;
+  box-shadow:0 1px 8px rgba(0,0,0,.06);
+}
+.cat-nav-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  overflow-x:auto;
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+  height:46px;
+  gap:0;
+}
+.cat-nav-inner::-webkit-scrollbar{display:none}
+.cat-nav-item{
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+  padding:0 16px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:all .2s;
+  cursor:pointer;
+  margin-bottom:-1px;
+  text-decoration:none;
+}
+.cat-nav-item:hover,.cat-nav-item.active{
+  color:var(--accent);
+  border-bottom-color:var(--accent);
+}
+.cat-nav-divider{width:1px;height:20px;background:var(--border);margin:0 4px;flex-shrink:0}
+
+/* TRENDING TICKER */
+.ticker{
+  background:var(--accent);
+  padding:8px 24px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  overflow:hidden;
+}
+.ticker-label{
+  font-size:10px;
+  font-weight:800;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  flex-shrink:0;
+  padding:3px 10px;
+  border:1.5px solid rgba(255,255,255,.6);
+  border-radius:3px;
+}
+.ticker-track{
+  display:flex;
+  gap:32px;
+  animation:ticker-scroll 30s linear infinite;
+  white-space:nowrap;
+}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{
+  font-size:12px;
+  font-weight:600;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.ticker-item::before{content:'#';opacity:.6}
+@keyframes ticker-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* HERO */
+.hero{
+  padding:40px 24px 48px;
+  max-width:1240px;
+  margin:0 auto;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:32px;
+  align-items:start;
+}
+.hero-featured{
+  background:var(--ink);
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+}
+.hero-img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  display:block;
+  opacity:.85;
+}
+.hero-img-placeholder{
+  width:100%;
+  height:400px;
+  background:linear-gradient(135deg,#2a2720 0%,#1a1a17 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-img-placeholder svg{opacity:.15}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 50%,transparent 100%);
+}
+.hero-body{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:28px 32px;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:10px;
+  font-weight:800;
+  color:#fff;
+  background:var(--accent);
+  padding:5px 12px;
+  border-radius:3px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:14px;
+}
+.hero-title{
+  font-family:var(--serif);
+  font-size:clamp(22px,3vw,32px);
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+.hero-desc{
+  font-size:14px;
+  color:rgba(255,255,255,.75);
+  line-height:1.6;
+  margin-bottom:18px;
+}
+.hero-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  background:var(--accent);
+  padding:10px 20px;
+  border-radius:4px;
+  transition:opacity .2s;
+}
+.hero-cta:hover{opacity:.85}
+
+/* Hero sidebar */
+.hero-sidebar{}
+.hero-sidebar-title{
+  font-size:10px;
+  font-weight:800;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-sidebar-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.hero-pick{
+  display:flex;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.hero-pick:first-of-type{padding-top:0}
+.hero-pick:last-child{border-bottom:none}
+.hero-pick:hover{opacity:.75}
+.hero-pick-num{
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:900;
+  color:var(--border);
+  line-height:1;
+  min-width:28px;
+  flex-shrink:0;
+  padding-top:2px;
+}
+.hero-pick-cat{
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  margin-bottom:5px;
+}
+.hero-pick-title{
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.45;
+}
+.hero-pick-meta{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+/* SECTION COMMON */
+.section{padding:48px 24px}
+.section-inner{max-width:1240px;margin:0 auto}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;gap:16px}
+.section-head-left{}
+.section-label{
+  font-size:10px;
+  font-weight:800;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  margin-bottom:8px;
+}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(20px,2.5vw,28px);
+  font-weight:900;
+  color:var(--ink);
+  line-height:1.2;
+}
+.section-title span{color:var(--accent)}
+.section-view-all{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  gap:4px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.section-view-all:hover{text-decoration:underline}
+
+/* ARTICLE GRID */
+.arts-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.art-card{
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
+  transition:transform .2s,box-shadow .2s;
+}
+.art-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 28px rgba(0,0,0,.09);
+}
+.art-card-img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  display:block;
+}
+.art-card-img-ph{
+  width:100%;
+  height:200px;
+  background:var(--bg2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.art-card-img-ph svg{opacity:.3}
+.art-card-body{padding:20px}
+.art-card-cat{
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.art-card-cat.trending::before{
+  content:'TRENDING';
+  font-size:9px;
+  background:var(--accent);
+  color:#fff;
+  padding:2px 6px;
+  border-radius:2px;
+  letter-spacing:1px;
+}
+.art-card-title{
+  font-family:var(--serif);
+  font-size:17px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.35;
+  margin-bottom:10px;
+}
+.art-card-desc{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:16px;
+}
+.art-card-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.art-card-meta{font-size:11px;color:var(--muted)}
+.art-card-read{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+}
+.art-card-read:hover{text-decoration:underline}
+
+/* PICKS SECTION (Best Of) */
+.picks-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.picks-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.pick-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:22px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:border-color .2s,transform .2s;
+}
+.pick-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.pick-card-icon{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background:var(--bg2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.pick-card-cat{
+  font-size:10px;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+.pick-card-title{
+  font-family:var(--serif);
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.4;
+}
+.pick-card-badge{
+  font-size:11px;
+  font-weight:700;
+  color:#fff;
+  background:var(--gold);
+  padding:4px 10px;
+  border-radius:3px;
+  display:inline-block;
+  align-self:flex-start;
+}
+
+/* FILTER BAR */
+.filter-bar{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+}
+.filter-btn{
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+  background:none;
+  border:1.5px solid var(--border);
+  padding:6px 16px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:all .2s;
+  font-family:var(--font);
+}
+.filter-btn:hover,.filter-btn.active{
+  color:var(--accent);
+  border-color:var(--accent);
+  background:rgba(220,38,38,.05);
+}
+
+/* NEWSLETTER */
+.newsletter-section{
+  background:var(--ink);
+  padding:64px 24px;
+  text-align:center;
+}
+.newsletter-inner{max-width:600px;margin:0 auto}
+.newsletter-kicker{
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  margin-bottom:16px;
+}
+.newsletter-h2{
+  font-family:var(--serif);
+  font-size:clamp(24px,4vw,36px);
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:14px;
+}
+.newsletter-sub{
+  font-size:15px;
+  color:rgba(255,255,255,.55);
+  line-height:1.7;
+  margin-bottom:32px;
+}
+.newsletter-form{
+  display:flex;
+  gap:10px;
+  max-width:480px;
+  margin:0 auto;
+}
+.newsletter-input{
+  flex:1;
+  font-size:14px;
+  font-family:var(--font);
+  color:var(--ink);
+  background:#fff;
+  border:none;
+  border-radius:6px;
+  padding:13px 18px;
+  outline:none;
+}
+.newsletter-btn{
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  background:var(--accent);
+  border:none;
+  border-radius:6px;
+  padding:13px 22px;
+  cursor:pointer;
+  font-family:var(--font);
+  white-space:nowrap;
+  transition:opacity .2s;
+}
+.newsletter-btn:hover{opacity:.85}
+.newsletter-note{font-size:11px;color:rgba(255,255,255,.3);margin-top:14px}
+@media(max-width:480px){.newsletter-form{flex-direction:column}}
+
+/* FOOTER */
+.footer{
+  background:#111;
+  border-top:1px solid #222;
+  padding:40px 24px;
+}
+.footer-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:32px;
+  align-items:center;
+}
+.footer-logo{
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:900;
+  color:#fff;
+}
+.footer-logo span{color:var(--accent)}
+.footer-desc{
+  font-size:12px;
+  color:rgba(255,255,255,.35);
+  margin-top:6px;
+  line-height:1.6;
+  max-width:360px;
+}
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+.footer-links a{
+  font-size:12px;
+  color:rgba(255,255,255,.4);
+  transition:color .2s;
+}
+.footer-links a:hover{color:rgba(255,255,255,.8)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.07);
+  margin-top:28px;
+  padding-top:20px;
+  font-size:11px;
+  color:rgba(255,255,255,.25);
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .picks-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-sidebar{display:none}
+  .arts-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .arts-grid{grid-template-columns:1fr}
+  .picks-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-links{flex-wrap:wrap;gap:12px}
+  .masthead-subscribe{display:none}
+}
+@media(max-width:400px){
+  .picks-grid{grid-template-columns:1fr}
+}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:none}
+/* page */
+.ab{max-width:840px;margin:0 auto;padding:56px 24px 88px}
+.ab-kicker{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#dc2626;margin-bottom:14px}
+.ab-title{font-family:system-ui,sans-serif;font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.15;color:#1a1a17;margin:0 0 16px}
+.ab-lead{font-size:17px;line-height:1.7;color:#706b60;margin-bottom:40px}
+.ab-author{display:flex;gap:16px;align-items:center;background:#f2ede6;border:1px solid #e0dbd2;border-radius:10px;padding:20px 22px;margin-bottom:32px}
+.ab-avatar{width:56px;height:56px;border-radius:50%;background:#dc2626;color:#fafaf8;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ab-name{font-size:17px;font-weight:700;color:#1a1a17}
+.ab-role{font-size:13px;color:#dc2626;font-weight:600;margin-top:2px}
+.ab-h2{font-family:system-ui,sans-serif;font-size:20px;font-weight:700;color:#1a1a17;margin:40px 0 14px}
+.ab-p{font-size:15px;line-height:1.85;color:#706b60;margin-bottom:14px}
+.ab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px}
+.ab-card{background:#f2ede6;border:1px solid #e0dbd2;border-radius:10px;padding:18px}
+.ab-card-av{width:38px;height:38px;border-radius:50%;background:#dc2626;color:#fafaf8;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.ab-card-name{font-size:14px;font-weight:700;color:#1a1a17}
+.ab-card-role{font-size:11px;font-weight:600;color:#dc2626;margin:2px 0 7px}
+.ab-card-bio{font-size:12px;line-height:1.65;color:#706b60}
+.ab-cta{margin-top:44px;background:#f2ede6;border:1px solid #e0dbd2;border-radius:12px;padding:30px 26px;text-align:center}
+.ab-cta h3{font-family:system-ui,sans-serif;font-size:19px;font-weight:700;color:#1a1a17;margin:0 0 8px}
+.ab-cta p{font-size:14px;color:#706b60;margin:0 0 18px}
+.ab-cta a{display:inline-block;background:#dc2626;color:#fafaf8;padding:11px 28px;border-radius:7px;font-size:14px;font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-brand">
+      <a href="./" class="masthead-logo">
+        <span class="masthead-logo-mark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        Top<span>Product</span>
+      </a>
+      <div class="masthead-tagline">Editor-Tested Reviews</div>
+    </div>
+    <div class="masthead-actions">
+      <a href="#newsletter" class="masthead-subscribe">Get Weekly Picks</a>
+    </div>
+  </div>
+</header>
 
-<nav class="ln">
-  <a href="./" class="ln-brand">TopProduct <em></em></a>
-  <nav class="ln-nav">
-    <a href="./">Home</a>
-    <a href="about.html">About</a>
-  </nav>
+<!-- CAT NAV -->
+<nav class="cat-nav">
+  <div class="cat-nav-inner">
+    <span class="cat-nav-item active" onclick="setFilter('all')">All Picks</span>
+    <div class="cat-nav-divider"></div>
+    <span class="cat-nav-item" onclick="setFilter('tech')">Tech</span>
+    <span class="cat-nav-item" onclick="setFilter('home')">Home</span>
+    <span class="cat-nav-item" onclick="setFilter('beauty')">Beauty</span>
+    <span class="cat-nav-item" onclick="setFilter('fitness')">Fitness</span>
+    <span class="cat-nav-item" onclick="setFilter('kitchen')">Kitchen</span>
+    <span class="cat-nav-item" onclick="setFilter('tiktok')">TikTok Finds</span>
+    <div class="cat-nav-divider"></div>
+    <span class="cat-nav-item" onclick="setFilter('trending')">Trending Now</span>
+  </div>
 </nav>
-
-<div class="lah">
-  <div class="lah-top">
-    <div class="lah-avi">SS</div>
+<main class="ab">
+  <div class="ab-kicker">About TopProduct</div>
+  <h1 class="ab-title">Editor-Tested Product Picks You Can Actually Trust</h1>
+  <p class="ab-lead">Honest product reviews, trending finds, and buying guides. No sponsored fluff - just what is actually worth your money.</p>
+  <div class="ab-author">
+    <div class="ab-avatar">SS</div>
     <div>
-      <h1>Siavash Sadighi</h1>
-      <div class="lah-role">Product Editor & Consumer Tech Researcher</div>
-      <div class="lah-cat">Product Reviews & Buying Guides</div>
+      <div class="ab-name">Siavash Sadighi</div>
+      <div class="ab-role">Product Editor & Consumer Tech Researcher</div>
     </div>
   </div>
-  <div class="lah-stats">
-    <div class="lah-stat"><div class="lah-stat-num">15+</div><div class="lah-stat-lbl">Yrs Investing</div></div><div class="lah-stat"><div class="lah-stat-num">CFP</div><div class="lah-stat-lbl">Certified</div></div><div class="lah-stat"><div class="lah-stat-num">Retired 41</div><div class="lah-stat-lbl">Passive Income</div></div><div class="lah-stat"><div class="lah-stat-num">4</div><div class="lah-stat-lbl">Income Streams</div></div>
+  <div class="ab-h2">Why this site exists</div>
+  <p class="ab-p">I test products before writing about them. That sounds obvious but it is not standard practice. Most product content is rewritten spec sheets or affiliate-optimized lists assembled without opening a single box.</p>
+    <p class="ab-p">TopProduct exists because I got tired of buying things based on reviews written by people who had never touched them. Every pick here has been through real use - not a press preview, not a sponsored send.</p>
+  <div class="ab-h2">Who contributes</div>
+  <p class="ab-p">Alongside Siavash Sadighi, a small group of practitioners review and pressure-test what gets published here.</p>
+  <div class="ab-grid">
+      <div class="ab-card">
+        <div class="ab-card-av">JT</div>
+        <div class="ab-card-name">James Thorne</div>
+        <div class="ab-card-role">Technical Contributor</div>
+        <div class="ab-card-bio">Full-stack developer who switched to financial writing. Covers the engineering reality behind products and platforms.</div>
+      </div>
+      <div class="ab-card">
+        <div class="ab-card-av">SR</div>
+        <div class="ab-card-name">Sofia Reyes</div>
+        <div class="ab-card-role">Editorial Contributor</div>
+        <div class="ab-card-bio">Spent eight years as a financial journalist before going independent. Strong background in regulatory and policy reporting.</div>
+      </div>
+      <div class="ab-card">
+        <div class="ab-card-av">LF</div>
+        <div class="ab-card-name">Lena Fischer</div>
+        <div class="ab-card-role">International Contributor</div>
+        <div class="ab-card-bio">Based in Frankfurt. Covers European regulatory developments, cross-border market dynamics, and emerging market capital flows.</div>
+      </div>
   </div>
-</div>
-
-<!-- hero-banner -->
-<div id="pxl-wrap" style="width:100%;height:220px;overflow:hidden;position:relative;background:var(--bg2);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);">
-  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;display:block;" alt="">
-  <a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="position:absolute;bottom:6px;right:10px;font-size:10px;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s;text-decoration:none;">Photo: Pexels</a>
-</div>
-
-<!-- JOURNEY TIMELINE -->
-<div class="laj">
-  <div class="laj-inner">
-    <div class="laj-hd">The Journey</div>
-    <div class="laj-items">
-      <div class="laj-item"><div class="laj-dot"></div><div class="laj-year">Age 26</div><div class="laj-text">Opened first brokerage account. Started with index funds and small monthly contributions.</div></div><div class="laj-item"><div class="laj-dot"></div><div class="laj-year">Age 30</div><div class="laj-text">First dividend payment. Small, but proof the strategy was real.</div></div><div class="laj-item"><div class="laj-dot"></div><div class="laj-year">Age 35</div><div class="laj-text">CFP designation earned. Passive income crossed $1,000/month for the first time.</div></div><div class="laj-item"><div class="laj-dot"></div><div class="laj-year">Age 39</div><div class="laj-text">Launched a digital product. Added a fourth income stream without adding working hours.</div></div><div class="laj-item"><div class="laj-dot"></div><div class="laj-year">Age 41</div><div class="laj-text">Financial independence reached. Left traditional employment.</div></div>
+  <div class="ab-cta">
+    <h3>The Weekly Pick</h3>
+    <p>One editor-tested recommendation every Thursday. Products worth buying, and the ones worth skipping.</p>
+    <a href="./">Read the latest</a>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Top<span>Product</span></div>
+      <p class="footer-desc">Editor-tested product picks, honest buying guides, and trending finds across every category that matters to your daily life.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./about.html">About</a>
+      <a href="#articles">Reviews</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="./about.html#contact">Contact</a>
     </div>
   </div>
-</div>
-
-<!-- PHILOSOPHY BANNER -->
-<div class="la-philo">
-  <blockquote>"Editor-Tested Product Picks You Can Actually Trust"</blockquote>
-  <cite>Siavash Sadighi · Product Editor & Consumer Tech Researcher</cite>
-</div>
-
-<div class="la-layout">
-
-  <div class="la-main">
-
-    <div class="la-sec">
-      <div class="la-sec-hd">Background</div>
-      <p class="la-p">I test products before writing about them. That sounds obvious but it is not standard practice. Most product content is rewritten spec sheets or affiliate-optimized lists assembled without opening a single box.</p>
-    <p class="la-p">TopProduct exists because I got tired of buying things based on reviews written by people who had never touched them. Every pick here has been through real use - not a press preview, not a sponsored send.</p>
-    </div>
-
-    <div class="la-quote">
-      <p>"Editor-Tested Product Picks You Can Actually Trust"</p>
-    </div>
-
-    <div class="la-sec">
-      <div class="la-sec-hd">What I Cover</div>
-      <div class="la-inv">
-        <div class="la-inv-card"><div class="la-inv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div><div class="la-inv-head">Dividend Investing</div><div class="la-inv-body">High-quality companies with consistent payout histories.</div></div></div><div class="la-inv-card"><div class="la-inv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><div class="la-inv-head">REITs</div><div class="la-inv-body">Real estate investment trusts for income without direct property management.</div></div></div><div class="la-inv-card"><div class="la-inv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div><div><div class="la-inv-head">Index Funds</div><div class="la-inv-body">The low-cost, tax-efficient core that outperforms most active strategies.</div></div></div><div class="la-inv-card"><div class="la-inv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="la-inv-head">Digital Income</div><div class="la-inv-body">Products that generate recurring revenue once built and marketed.</div></div></div><div class="la-inv-card"><div class="la-inv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="la-inv-head">Fixed Income</div><div class="la-inv-body">Capital preservation and portfolio stability for when equities fall.</div></div></div><div class="la-inv-card"><div class="la-inv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><div class="la-inv-head">Tax-Advantaged Accounts</div><div class="la-inv-body">Strategic use of registered accounts - the part most content gets wrong.</div></div></div>
-      </div>
-    </div>
-
-    <div class="la-sec">
-      <div class="la-sec-hd">How I Approach Product Reviews & Buying Guides</div>
-      <div class="la-steps">
-        <div class="la-step"><div class="la-step-dot">1</div><div><div class="la-step-head">Start with what the evidence shows</div><div class="la-step-body">Before applying any strategy, understand what the research actually supports - not what popular sources claim.</div></div></div><div class="la-step"><div class="la-step-dot">2</div><div><div class="la-step-head">Layer complexity deliberately</div><div class="la-step-body">Add one new layer at a time. Understand each piece before moving to the next.</div></div></div><div class="la-step"><div class="la-step-dot">3</div><div><div class="la-step-head">Run the realistic numbers</div><div class="la-step-body">Most projections skip the hard parts: time, cost, and real-world friction. Do the honest math first.</div></div></div><div class="la-step"><div class="la-step-dot">4</div><div><div class="la-step-head">Structure beats hustle</div><div class="la-step-body">How you organize your approach matters as much as what you do. Systems compound over time.</div></div></div><div class="la-step"><div class="la-step-dot">5</div><div><div class="la-step-head">Accept the realistic timeline</div><div class="la-step-body">Meaningful results take time. Those who succeed are the ones who stopped looking for shortcuts.</div></div></div>
-      </div>
-    </div>
-
-    <div class="la-sec">
-      <div class="la-sec-hd">About TopProduct</div>
-      <p class="la-p">Honest product reviews, trending finds, and buying guides. No sponsored fluff - just what is actually worth your money.</p>
-      <p class="la-p">Editor-tested product picks, honest buying guides, and trending finds across every category that matters.</p>
-    </div>
-
-    <div class="la-sec">
-      <div class="la-sec-hd">Contributors</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">JT</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">James Thorne</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Technical Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Full-stack developer who switched to financial writing. Covers the engineering reality behind products and platforms.</div>
-      </div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">SR</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Sofia Reyes</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Editorial Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Spent eight years as a financial journalist before going independent. Strong background in regulatory and policy reporting.</div>
-      </div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">LF</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Lena Fischer</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">International Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Based in Frankfurt. Covers European regulatory developments, cross-border market dynamics, and emerging market capital flows.</div>
-      </div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">PN</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Priya Nair</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Research Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Data scientist turned independent writer. Builds the models, then explains what they actually mean in plain language.</div>
-      </div>
-    </div>
-      </div>
-    </div>
-
-    <div class="la-sec">
-      <div class="la-sec-hd">Reader Comments</div>
-      <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:4px 20px">
-        <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">R</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Raj P.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The data-first approach here is exactly what I was looking for. Most analysis I find online is opinion dressed up as research.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">O</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Omar K.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have read things here that changed how I think about the field. That is a high bar and this site clears it regularly.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">M</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Mike H.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The level of detail here is what keeps me coming back. You actually back up the claims instead of just asserting them.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">C</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Chris V.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">Refreshing to read something that acknowledges uncertainty instead of pretending everything is obvious in hindsight.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:none">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">J</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Julia M.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">Bookmarked every major article this site has published. My actual reference library for this topic, not just casual reading.</div>
-    </div>
-      </div>
-    </div>
-
-  </div>
-
-  <aside class="la-side">
-
-    <div class="la-nl">
-      <h3>The Weekly Pick</h3>
-      <p>One editor-tested recommendation every Thursday. Products worth buying, and the ones worth skipping.</p>
-      <form id="la-nl-form" onsubmit="nlSub(event)">
-        <input type="email" class="la-nl-in" placeholder="your@email.com" required>
-        <button type="submit" class="la-nl-btn">Join the letter</button>
-      </form>
-    </div>
-
-    <div class="la-card">
-      <div class="la-card-lbl">Credentials</div>
-      <p style="font-size:13px;color:var(--mut);line-height:1.8;margin-bottom:8px">Product Editor & Consumer Tech Researcher</p>
-      <p style="font-size:13px;color:var(--mut);line-height:1.8">No product affiliations. No sponsored recommendations. No incentive to tell you anything other than what the math actually shows.</p>
-    </div>
-
-    <div class="la-card">
-      <div class="la-card-lbl">Topics Covered</div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
-        <li style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:8px"><span style="color:var(--pri);font-weight:700">→</span> Dividend Investing</li>
-        <li style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:8px"><span style="color:var(--pri);font-weight:700">→</span> REIT Analysis</li>
-        <li style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:8px"><span style="color:var(--pri);font-weight:700">→</span> Index Fund Strategy</li>
-        <li style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:8px"><span style="color:var(--pri);font-weight:700">→</span> Tax Optimization</li>
-        <li style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:8px"><span style="color:var(--pri);font-weight:700">→</span> Early Retirement Math</li>
-        <li style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:8px"><span style="color:var(--pri);font-weight:700">→</span> Income Portfolio Design</li>
-      </ul>
-    </div>
-
-    <div class="la-card" id="la-recent-card">
-      <div class="la-card-lbl">Recent Articles</div>
-      <div id="la-recent-list" style="display:flex;flex-direction:column;gap:10px"></div>
-    </div>
-
-  </aside>
-</div>
-
-<div class="lfb">
-  <span class="lfb-copy">© TopProduct</span>
-  <div class="lfb-links">
-    <a href="./">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="sms.html">SMS Policy</a><a href="meta-policy.html">Meta Policy</a>
-  </div>
-</div>
+  <div class="footer-bottom">&copy; 2026 TopProduct. All rights reserved.</div>
+</footer>
 
 <script>
-function nlSub(e){e.preventDefault();document.getElementById('la-nl-form').innerHTML='<div style="color:#fff;font-weight:600;padding:6px 0">Welcome to the letter.</div>';}
-async function loadRecent(){
+var PLACEHOLDER_ARTS=[
+  {slug:'tiktok-products-actually-worth-buying-2026',category:'TikTok Finds',title:'The 7 Products TikTok Discovered That Are Actually Worth Buying in 2026',date:'May 16, 2026',meta_description:'We tested every viral product that blew up this month and separated the genuine finds from the hype. These seven survived our 30-day real-world testing.'},
+  {slug:'best-wireless-earbuds-under-60',category:'Tech',title:'Best Wireless Earbuds Under $60: We Tested 9 Options So You Don\'t Have To',date:'May 14, 2026',meta_description:'From Anker to Sony, we put nine budget earbuds through a month of commutes, gym sessions, and video calls. Here\'s the honest ranking.'},
+  {slug:'compact-air-fryer-replaced-oven',category:'Kitchen',title:'The Compact Air Fryer That Replaced Our Full Oven for 80% of Meals',date:'May 12, 2026',meta_description:'We stopped pre-heating our full oven after week one. This $79 basket air fryer does everything faster, crispier, and with less cleanup.'},
+  {slug:'retinol-serum-skin-doctors-recommend',category:'Beauty',title:'The $28 Retinol Serum That Skin Doctors Actually Recommend',date:'May 10, 2026',meta_description:'We asked six dermatologists which over-the-counter retinol they\'d tell their own family to use. The answer surprised us - and it\'s not La Mer.'},
+  {slug:'linen-bedding-brands-ranked',category:'Home',title:'Linen Bedding Brands Ranked: What\'s Actually Worth the Price',date:'May 8, 2026',meta_description:'We slept on nine linen sheet sets for three months each. The $40 option from an Amazon brand beat brands charging five times as much.'},
+  {slug:'resistance-bands-vs-dumbbells-home',category:'Fitness',title:'Resistance Bands vs. Dumbbells: Which Builds Muscle Faster at Home',date:'May 6, 2026',meta_description:'A 12-week home workout experiment comparing resistance bands and dumbbells across five key exercises. The results were more nuanced than we expected.'},
+  {slug:'portable-blenders-tested-ranked',category:'Kitchen',title:'Portable Blenders Ranked: We Made 200 Smoothies to Find the Best One',date:'May 4, 2026',meta_description:'Blendjet, Ninja, Hamilton Beach and six others. After 200 smoothies we have a very clear winner - and it\'s not the most expensive option.'},
+  {slug:'led-face-mask-worth-it',category:'Beauty',title:'Are LED Face Masks Actually Worth $200? We Used One for 90 Days',date:'May 2, 2026',meta_description:'Spoiler: the answer depends entirely on which skin concern you\'re targeting. Here\'s what the clinical evidence actually supports.'},
+  {slug:'home-gym-small-apartment-budget',category:'Fitness',title:'Complete Home Gym for a Small Apartment on a $300 Budget',date:'Apr 30, 2026',meta_description:'You don\'t need a dedicated room or $2,000 worth of equipment. This $300 setup covers every major muscle group and fits in a closet.'},
+];
+
+var allArts=[];
+var activeFilter='all';
+
+async function loadArticles(){
   try{
-    const r=await fetch('./articles.json');if(!r.ok)return;
-    const posts=await r.json();
-    const el=document.getElementById('la-recent-list');
-    if(el)el.innerHTML=posts.slice(0,4).map(p=>`<a href="./${p.slug||'#'}/" style="text-decoration:none;display:block;border-bottom:1px solid var(--brd);padding-bottom:8px"><div style="font-family:'Lora',Georgia,serif;font-size:13px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:3px">${p.title}</div><div style="font-size:10px;color:var(--mut)">${p.date_iso||''}</div></a>`).join('');
-  }catch(e){}
+    var r=await fetch('./articles.json');
+    if(!r.ok)throw new Error('no json');
+    var posts=await r.json();
+    if(!posts||!posts.length)throw new Error('empty');
+    allArts=posts;
+  }catch(e){
+    allArts=PLACEHOLDER_ARTS;
+  }
+  renderGrid(allArts);
+  renderSidebar();
 }
-loadRecent();
-/* banner loader: pexels → unsplash → picsum */
-(function(){
-  var el=document.getElementById('pxl-img');
-  var cr=document.getElementById('pxl-cred');
+
+function renderGrid(arts){
+  var grid=document.getElementById('arts-grid');
+  if(!grid)return;
+  var filtered=activeFilter==='all'?arts:arts.filter(function(a){
+    return (a.category||'').toLowerCase().indexOf(activeFilter)>=0||
+           (a.tags||[]).indexOf(activeFilter)>=0;
+  });
+  if(!filtered.length)filtered=arts;
+  grid.innerHTML=filtered.slice(0,9).map(function(a){
+    var isTrending=a.trending||a.category==='TikTok Finds';
+    var catClass=isTrending?'art-card-cat trending':'art-card-cat';
+    return '<a class="art-card" href="./'+a.slug+'/"><div class="art-card-img-ph"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="art-card-body"><div class="'+catClass+'">'+a.category+'</div><h3 class="art-card-title">'+a.title+'</h3><p class="art-card-desc">'+(a.meta_description||'').slice(0,120)+'...</p><div class="art-card-footer"><span class="art-card-meta">'+a.date+'</span><span class="art-card-read">Read More &rarr;</span></div></div></a>';
+  }).join('');
+}
+
+function renderSidebar(){
+  if(!allArts.length)return;
+  var el=document.getElementById('sidebar-picks');
   if(!el)return;
-  var SOURCES=['pexels', 'unsplash'];
-  var Q=encodeURIComponent('Product Reviews & Buying Guides');
-  var FALLBACK='https://picsum.photos/seed/905/1400/400';
-  function showImg(src,cred){
-    el.onload=function(){el.style.opacity='1';if(cred&&cr){cr.textContent=cred;cr.style.opacity='1';}};
-    el.src=src;
-  }
-  function tryUnsplash(){
-    var uk=localStorage.getItem('unsplashKey');
-    if(!uk){showImg(FALLBACK,'');return;}
-    fetch('https://api.unsplash.com/photos/random?query='+Q+'&count=1&orientation=landscape&client_id='+uk)
-      .then(function(r){return r.json();}).then(function(d){
-        var p=Array.isArray(d)?d[0]:d;
-        if(p&&p.urls&&p.urls.regular){showImg(p.urls.regular,'Photo: '+((p.user&&p.user.name)||'Unsplash')+' / Unsplash');}
-        else{showImg(FALLBACK,'');}
-      }).catch(function(){showImg(FALLBACK,'');});
-  }
-  function tryPexels(){
-    var k=localStorage.getItem('pexelsKey');
-    if(!k){if(SOURCES.indexOf('unsplash')>=0)tryUnsplash();else showImg(FALLBACK,'');return;}
-    fetch('https://api.pexels.com/v1/search?query='+Q+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
-      .then(function(r){return r.json();}).then(function(d){
-        if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else if(SOURCES.indexOf('unsplash')>=0){tryUnsplash();}
-        else{showImg(FALLBACK,'');}
-      }).catch(function(){if(SOURCES.indexOf('unsplash')>=0)tryUnsplash();else showImg(FALLBACK,'');});
-  }
-  if(SOURCES.indexOf('pexels')>=0){tryPexels();}
-  else if(SOURCES.indexOf('unsplash')>=0){tryUnsplash();}
-  else{showImg(FALLBACK,'');}
-})();
+  el.innerHTML=allArts.slice(0,5).map(function(a,i){
+    var n=('0'+(i+1)).slice(-2);
+    return '<a class="hero-pick" href="./'+a.slug+'/"><div class="hero-pick-num">'+n+'</div><div><div class="hero-pick-cat">'+a.category+'</div><div class="hero-pick-title">'+a.title+'</div><div class="hero-pick-meta">'+a.date+'</div></div></a>';
+  }).join('');
+}
+
+function setFilter(f){
+  activeFilter=f;
+  document.querySelectorAll('.cat-nav-item').forEach(function(el){el.classList.remove('active')});
+  document.querySelectorAll('.filter-btn').forEach(function(el){el.classList.remove('active')});
+  document.querySelectorAll('[onclick="setFilter(\''+f+'\')"]').forEach(function(el){el.classList.add('active')});
+  renderGrid(allArts);
+}
+
+function handleSub(e){
+  e.preventDefault();
+  var btn=e.target.querySelector('.newsletter-btn');
+  btn.textContent='You\'re in!';
+  btn.style.background='#16a34a';
+  return false;
+}
+
+function reveal(){
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-60)el.classList.add('visible');
+  });
+}
+window.addEventListener('scroll',reveal,{passive:true});
+reveal();
+
+loadArticles();
 </script>
-</body></html>
+</body>
+</html>
