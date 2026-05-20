@@ -59,8 +59,7 @@ img{display:block;max-width:100%}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 80%);pointer-events:none}
 .hero-inner{max-width:960px;margin:0 auto;text-align:center;position:relative;z-index:2}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:8px 16px;border-radius:999px;letter-spacing:-.1px;margin-bottom:28px;backdrop-filter:blur(8px)}
-.hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(220,38,38,.25),0 0 12px rgba(220,38,38,.8);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(220,38,38,.25),0 0 12px rgba(220,38,38,.8);animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .hero h1{font-family:var(--display);font-size:clamp(40px,7vw,82px);font-weight:700;color:#fff;line-height:.98;letter-spacing:-2.5px;margin-bottom:24px;font-variation-settings:"opsz" 96}
 .hero h1 .accent{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
 .hero p{font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.62);line-height:1.6;max-width:660px;margin:0 auto 36px;font-weight:400}
@@ -236,10 +235,7 @@ img{display:block;max-width:100%}
 
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-
-/* RESPONSIVE */
-@media(max-width:980px){
+.reveal.visible{opacity:1;transform:none}@media(max-width:980px){
   .section{padding:72px 20px}
   .hero{padding:72px 20px 84px}
   .tool-wrap{grid-template-columns:1fr}
@@ -248,8 +244,7 @@ img{display:block;max-width:100%}
   .value-grid,.topic-grid,.arts-grid{grid-template-columns:repeat(2,1fr)}
   .stats-inner{grid-template-columns:repeat(2,1fr);gap:36px}
   .footer-inner{grid-template-columns:1fr 1fr}
-}
-@media(max-width:680px){
+}@media(max-width:680px){
   .masthead-nav a:not(.masthead-subscribe){display:none}
   .menu-toggle{display:block}
   .masthead-nav.open a:not(.masthead-subscribe){display:block;position:absolute;left:0;right:0;background:var(--ink);text-align:center;padding:14px}
@@ -262,6 +257,32 @@ img{display:block;max-width:100%}
   .footer-inner{grid-template-columns:1fr 1fr}
   .trust-inner{gap:12px 22px}
 }
+
+/* CONTRAST-AUDIT v1 */
+/* Article-page-only contrast guard. body[data-page-depth="1"] is stamped on
+   every article by layout_shell.wrap_page. Homepage (depth=0) is untouched. */
+body[data-page-depth="1"] h1,
+body[data-page-depth="1"] h2,
+body[data-page-depth="1"] h3,
+body[data-page-depth="1"] .art-title,
+body[data-page-depth="1"] .article-title,
+body[data-page-depth="1"] .mag-hero h1,
+body[data-page-depth="1"] .imm-hero h1,
+body[data-page-depth="1"] article h1,
+body[data-page-depth="1"] article h2,
+body[data-page-depth="1"] article h3{color:#000000 !important}
+body[data-page-depth="1"] article p,
+body[data-page-depth="1"] article li,
+body[data-page-depth="1"] .art-body p,
+body[data-page-depth="1"] .mag-body p,
+body[data-page-depth="1"] .imm-body p,
+body[data-page-depth="1"] article .intro,
+body[data-page-depth="1"] article .concl,
+body[data-page-depth="1"] article strong{color:#1a1a1a !important}
+body[data-page-depth="1"] article a,
+body[data-page-depth="1"] article p a,
+body[data-page-depth="1"] article .intro a{color:#000000 !important;text-decoration:underline;text-underline-offset:3px}
+/* /CONTRAST-AUDIT */
 </style>
 </head>
 <body data-page-depth="0">
@@ -352,11 +373,7 @@ img{display:block;max-width:100%}
 .ab-cta-in h2{font-family:var(--c-serif);font-size:clamp(24px,4vw,36px);font-weight:900;color:#fff;line-height:1.18;margin-bottom:14px}
 .ab-cta-in p{font-size:15px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:26px}
 .ab-btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;padding:14px 28px;border-radius:7px;background:var(--c-accent);color:#fff;box-shadow:0 8px 24px rgba(220,38,38,.35);transition:transform .2s,box-shadow .2s}
-.ab-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(220,38,38,.45)}
-
-@media(max-width:980px){.ab-story{grid-template-columns:1fr;gap:32px}.ab-vgrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.ab-vgrid{grid-template-columns:1fr}.ab-author{grid-template-columns:1fr;text-align:center;justify-items:center}.ab-astats{justify-content:center}}
-</style>
+.ab-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(220,38,38,.45)}@media(max-width:980px){.ab-story{grid-template-columns:1fr;gap:32px}.ab-vgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:680px){.ab-vgrid{grid-template-columns:1fr}.ab-author{grid-template-columns:1fr;text-align:center;justify-items:center}.ab-astats{justify-content:center}}</style>
 
 <main class="ab-main">
   <section class="ab-hero">
@@ -383,7 +400,7 @@ img{display:block;max-width:100%}
             <div><b>We find it before it floods your feed</b><span>Tracking emerging trends daily</span></div>
           </div>
           <div class="ab-sv-row">
-            <div class="ab-sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+            <div class="ab-sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/></svg></div>
             <div><b>We test it for 30+ days</b><span>Real homes, real use, real wear</span></div>
           </div>
           <div class="ab-sv-row">
@@ -423,12 +440,12 @@ img{display:block;max-width:100%}
           <p>We trace viral products to their source listings, so you know if that $49 gadget is really a $12 item with a marketing budget.</p>
         </div>
         <div class="ab-vcard">
-          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/></svg></div>
           <h3>Clear Verdicts</h3>
           <p>No vague star ratings. Every review ends with a plain answer: buy it, skip it, or wait for the price to drop.</p>
         </div>
         <div class="ab-vcard">
-          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
+          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
           <h3>Trend Radar</h3>
           <p>We watch what is gaining traction before it hits everyone's feed, so the verdict is ready the moment you start wondering.</p>
         </div>
@@ -641,7 +658,7 @@ async function loadArticles(){
   if(!posts.length){
     grid.style.display='block';
     grid.innerHTML='<div class="arts-empty">'+
-      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'+
+      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>'+
       '<h3>Fresh Reviews Are On The Test Bench</h3>'+
       '<p>Our editors are currently testing the next round of trending products. Join the weekly digest below to get every verdict the moment it goes live.</p>'+
       '</div>';
