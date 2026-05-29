@@ -13,5 +13,62 @@
       "containerstore.com"
     ],
     "category": "Kitchen & Gear"
+  },
+  {
+    "title": "How the FTC's 2019 Crackdown on Fake Reviews Finally Changed the Buying Guide Industry",
+    "slug": "ftc-2019-fake-reviews-crackdown",
+    "meta_description": "Jamie Cole on the 2019 FTC fake review enforcement wave that reshaped consumer trust in product reviews and buying guides for good.",
+    "date": "November 18, 2019",
+    "date_iso": "2019-11-18",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/7772031/pexels-photo-7772031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "pewresearch.org",
+      "brightlocal.com",
+      "thewirecutter.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The FTC's 2023 Fake Review Crackdown: What It Actually Means for How You Shop",
+    "slug": "ftc-fake-review-rules-2023",
+    "meta_description": "The FTC finalized rules against fake reviews in 2023. Here's what that means for product buyers and why review sites will never be the same.",
+    "date": "June 29, 2023",
+    "date_iso": "2023-06-29",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/27200518/pexels-photo-27200518.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "consumer.ftc.gov",
+      "science.org"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The FTC's 2022 Fake Review Crackdown: What It Actually Meant for Buyers",
+    "slug": "ftc-2022-fake-review-rules",
+    "meta_description": "The FTC proposed sweeping new fake review rules in 2022. Here's what it meant for product buyers, buying guides, and trust online.",
+    "date": "February 02, 2022",
+    "date_iso": "2022-02-02",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/5717753/pexels-photo-5717753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "science.org"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
