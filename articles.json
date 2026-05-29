@@ -32,7 +32,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Tech & Gadgets"
   },
   {
     "title": "The FTC's 2023 Fake Review Crackdown: What It Actually Means for How You Shop",
@@ -51,7 +52,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Kitchen & Gear"
   },
   {
     "title": "The FTC's 2022 Fake Review Crackdown: What It Actually Meant for Buyers",
@@ -69,6 +71,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Tech & Gadgets"
   }
 ]
