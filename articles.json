@@ -73,5 +73,44 @@
       "en"
     ],
     "category": "Tech & Gadgets"
+  },
+  {
+    "title": "The Week's Top 7 Trending Products Worth Your Attention Right Now (May 29, 2026)",
+    "slug": "top-7-trending-products-may-2026",
+    "meta_description": "Jamie Cole ranks the 7 most notable trending products of the week. Honest picks, no brand deals, clear advice on who each one is actually for.",
+    "date": "May 29, 2026",
+    "date_iso": "2026-05-29",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/24029951/pexels-photo-24029951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "withings.com",
+      "statista.com",
+      "pewresearch.org",
+      "cdc.gov"
+    ],
+    "posted_iso": "2026-05-29",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The FTC's 2022 Fake Review Crackdown Was the Best Thing That Happened to Buyers This Year",
+    "slug": "ftc-2022-fake-reviews-buyers",
+    "meta_description": "The FTC's 2022 proposed rule on fake reviews changed how we trust product ratings. Here's what it meant for real buyers.",
+    "date": "June 07, 2022",
+    "date_iso": "2022-06-07",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/4195502/pexels-photo-4195502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "statista.com",
+      "pewresearch.org"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
