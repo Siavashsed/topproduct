@@ -41,9 +41,17 @@ img{display:block;max-width:100%}
 .masthead{background:var(--ink);padding:0 24px;border-bottom:1px solid #000;position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%)}
 .masthead-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .masthead-brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.masthead-logo{font-family:var(--display);font-size:24px;font-weight:800;color:#fff;letter-spacing:-1px;display:flex;align-items:center;gap:10px;font-variation-settings:"opsz" 32}
-.masthead-logo-mark{width:32px;height:32px;background:var(--accent);border-radius:9px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(220,38,38,.4)}
-.masthead-logo span{color:var(--accent)}
+/* LOGO - custom TP monogram badge with gradient + amber accent dot.
+   Wordmark uses Inter Tight at -.04em tracking; "Product" runs a
+   red→amber gradient via background-clip. */
+.masthead-logo{font-family:'Inter Tight','Inter',system-ui,sans-serif;font-size:22px;font-weight:800;color:#fff;letter-spacing:-.04em;display:flex;align-items:center;gap:11px;font-variation-settings:"opsz" 32;line-height:1}
+.masthead-logo-mark{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;filter:drop-shadow(0 6px 16px rgba(220,38,38,.4));background:none;box-shadow:none;border-radius:0;transition:transform .25s,filter .25s}
+.masthead-logo-mark svg{display:block;width:100%;height:100%}
+.masthead-logo:hover .masthead-logo-mark{transform:rotate(-4deg) scale(1.04);filter:drop-shadow(0 8px 22px rgba(220,38,38,.6))}
+.masthead-logo-wm{display:inline-flex;align-items:baseline;gap:1px}
+.masthead-logo-pro{background:linear-gradient(115deg,#dc2626 20%,#fbbf24 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.masthead-logo-dot{color:#fbbf24;font-weight:900;margin-left:1px}
+.masthead-logo span{color:inherit}
 .masthead-nav{display:flex;align-items:center;gap:2px}
 .masthead-nav a{font-size:13px;font-weight:500;color:rgba(255,255,255,.72);padding:9px 14px;border-radius:8px;transition:color .2s,background .2s;letter-spacing:-.1px}
 .masthead-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
@@ -296,11 +304,28 @@ body[data-page-depth="1"] article .intro a{color:#dc2626 !important;text-decorat
 <header class="masthead">
   <div class="masthead-inner">
     <div class="masthead-brand">
-      <a href="./" class="masthead-logo">
-        <span class="masthead-logo-mark">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <a href="./" class="masthead-logo" aria-label="TopProduct - home">
+        <span class="masthead-logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <defs>
+              <linearGradient id="tpGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ef4444"/>
+                <stop offset=".55" stop-color="#dc2626"/>
+                <stop offset="1" stop-color="#7f1d1d"/>
+              </linearGradient>
+              <linearGradient id="tpStroke" x1="0" y1="0" x2="0" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="rgba(255,255,255,.35)"/>
+                <stop offset="1" stop-color="rgba(255,255,255,.05)"/>
+              </linearGradient>
+            </defs>
+            <rect x="1" y="1" width="36" height="36" rx="10" fill="url(#tpGrad)"/>
+            <rect x="1.5" y="1.5" width="35" height="35" rx="9.5" stroke="url(#tpStroke)" stroke-width="1" fill="none"/>
+            <path d="M7.5 11.5h11" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="29" cy="27.5" r="2.4" fill="#fbbf24"/>
+            <circle cx="29" cy="27.5" r="2.4" fill="none" stroke="rgba(255,255,255,.6)" stroke-width=".8"/>
+          </svg>
         </span>
-        Top<span>Product</span>
+        <span class="masthead-logo-wm">Top<span class="masthead-logo-pro">Product</span><span class="masthead-logo-dot">.</span></span>
       </a>
     </div>
     <nav class="masthead-nav" id="mainNav">
