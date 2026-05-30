@@ -367,30 +367,30 @@ body[data-page-depth="1"] article .intro a{color:#dc2626 !important;text-decorat
       <div class="pdp-qty">
   <div class="pdp-qty-head">Quantity discount &middot; <span>buy more, save more</span></div>
   <div class="pdp-qty-grid">
-    <a href="https://tusestore.com/en/products/tuse-bolsa?utm_source=topproduct&utm_medium=review&utm_campaign=tuse-bag&quantity=1" target="_blank" rel="noopener" class="pdp-qty-card">
+    <button type="button" onclick="openOrderModal(1)" class="pdp-qty-card">
       <div class="pdp-qty-count">1 bag</div>
       <div class="pdp-qty-price">$49.90</div>
       <div class="pdp-qty-each">$49.90 each</div>
       <div class="pdp-qty-save">&nbsp;</div>
-    </a>
-    <a href="https://tusestore.com/en/products/tuse-bolsa?utm_source=topproduct&utm_medium=review&utm_campaign=tuse-bag&quantity=2" target="_blank" rel="noopener" class="pdp-qty-card pdp-qty-popular">
+    </button>
+    <button type="button" onclick="openOrderModal(2)" class="pdp-qty-card pdp-qty-popular">
       <div class="pdp-qty-tag">Most popular</div>
       <div class="pdp-qty-count">2 bags</div>
       <div class="pdp-qty-price">$89.90</div>
       <div class="pdp-qty-each">$44.95 each</div>
       <div class="pdp-qty-save">Save $9.90</div>
-    </a>
-    <a href="https://tusestore.com/en/products/tuse-bolsa?utm_source=topproduct&utm_medium=review&utm_campaign=tuse-bag&quantity=3" target="_blank" rel="noopener" class="pdp-qty-card">
+    </button>
+    <button type="button" onclick="openOrderModal(3)" class="pdp-qty-card">
       <div class="pdp-qty-count">3 bags</div>
       <div class="pdp-qty-price">$119.90</div>
       <div class="pdp-qty-each">$39.97 each</div>
       <div class="pdp-qty-save pdp-qty-save-hot">Save $29.80</div>
-    </a>
+    </button>
   </div>
   <div class="pdp-qty-note">Mix colors. Free shipping unlocks at 2+ bags.</div>
 </div>
       <div class="pdp-cta-stack">
-        <a href="https://tusestore.com/en/products/tuse-bolsa?utm_source=topproduct&utm_medium=review&utm_campaign=tuse-bag" target="_blank" rel="noopener" class="pdp-buy">Buy on tusestore.com &middot; $49.90 &rsaquo;</a>
+        <button type="button" onclick="openOrderModal(1)" class="pdp-buy">Order Now &middot; $49.90 &rsaquo;</button>
         <div class="pdp-trust-row">
           <span>✓ Free shipping over $50</span>
           <span>✓ 30-day returns</span>
@@ -548,11 +548,85 @@ body[data-page-depth="1"] article .intro a{color:#dc2626 !important;text-decorat
 <section class="pdp-section pdp-final-cta">
   <h2 class="pdp-h2">The simple recommendation</h2>
   <p>If you currently own more than one bag for "different occasions," the TUSÉ replaces 2-4 of them at a price below most single-purpose bags in its category. At $49.90 with free shipping and 30-day returns, the downside is almost zero.</p>
-  <a href="https://tusestore.com/en/products/tuse-bolsa?utm_source=topproduct&utm_medium=review&utm_campaign=tuse-bag" target="_blank" rel="noopener" class="pdp-buy">Get the TUSÉ Bag &middot; $49.90 &rsaquo;</a>
+  <button type="button" onclick="openOrderModal(1)" class="pdp-buy">Get the TUSÉ Bag &middot; $49.90 &rsaquo;</button>
   <div class="pdp-source-note">Buying from the official brand store at <a href="https://tusestore.com/en/products/tuse-bolsa" target="_blank" rel="noopener nofollow">tusestore.com</a>. We may earn a small commission on referrals at no extra cost to you.</div>
 </section>
 
-<a href="https://tusestore.com/en/products/tuse-bolsa?utm_source=topproduct&utm_medium=review&utm_campaign=tuse-bag" target="_blank" rel="noopener" class="pdp-sticky-buy" id="pdp-sticky-buy">Buy TUSÉ &middot; $49.90 &rsaquo;</a>
+<button type="button" onclick="openOrderModal(1)" class="pdp-sticky-buy" id="pdp-sticky-buy">Order TUSÉ &middot; $49.90 &rsaquo;</button>
+
+<!-- ORDER MODAL - opens on any Buy/Order click. POSTs to Web3Forms;
+     each submission appears in your web3forms.com dashboard. No payment
+     here on purpose - we email the buyer a payment+shipping link within
+     12h, which lets you start taking orders today without setting up a
+     full checkout. Swap WEB3FORMS_KEY in the publish script when ready. -->
+<div id="om-overlay" class="om-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="om-title">
+  <div class="om-card">
+    <button type="button" class="om-close" onclick="closeOrderModal()" aria-label="Close">&times;</button>
+    <div class="om-head">
+      <div class="om-eyebrow">Order TUSÉ Bag</div>
+      <h3 id="om-title">Almost yours.</h3>
+      <p class="om-sub">No payment now. Tell us where it goes, we'll email a payment + shipping link within 12 hours. Cancel anytime before payment.</p>
+    </div>
+    <form id="om-form" novalidate>
+      <input type="hidden" name="access_key" value="PASTE_YOUR_FREE_WEB3FORMS_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="TUSÉ Bag - New order request">
+      <input type="hidden" name="from_name" value="TopProduct order form">
+      <input type="hidden" name="redirect" value="false">
+      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="om-field">
+        <div class="om-label">Quantity</div>
+        <div class="om-qty-row">
+          <button type="button" class="om-qty-pill" data-q="1" data-price="49.90">1 bag - $49.90</button>
+          <button type="button" class="om-qty-pill" data-q="2" data-price="89.90">2 bags - $89.90 <span class="om-saving">save $9.90</span></button>
+          <button type="button" class="om-qty-pill" data-q="3" data-price="119.90">3 bags - $119.90 <span class="om-saving">save $29.80</span></button>
+        </div>
+        <input type="hidden" name="quantity" id="om-qty-val" value="1">
+        <input type="hidden" name="total_usd" id="om-total-val" value="49.90">
+      </div>
+
+      <div class="om-field">
+        <label class="om-label" for="om-color">Color</label>
+        <select id="om-color" name="color">
+          <option value="Black">Black</option>
+          <option value="Navy Blue">Navy Blue</option>
+          <option value="Mixed (specify in notes)">Mixed (specify in notes)</option>
+        </select>
+      </div>
+
+      <div class="om-grid-2">
+        <div class="om-field"><label class="om-label" for="om-fn">First name</label><input id="om-fn" name="first_name" required></div>
+        <div class="om-field"><label class="om-label" for="om-ln">Last name</label><input id="om-ln" name="last_name" required></div>
+      </div>
+      <div class="om-field"><label class="om-label" for="om-email">Email</label><input id="om-email" type="email" name="email" required></div>
+      <div class="om-field"><label class="om-label" for="om-phone">Phone (optional, faster shipping updates)</label><input id="om-phone" type="tel" name="phone"></div>
+      <div class="om-field"><label class="om-label" for="om-addr">Shipping address</label><input id="om-addr" name="address" required></div>
+      <div class="om-grid-3">
+        <div class="om-field"><label class="om-label" for="om-city">City</label><input id="om-city" name="city" required></div>
+        <div class="om-field"><label class="om-label" for="om-postal">Postal code</label><input id="om-postal" name="postal_code" required></div>
+        <div class="om-field"><label class="om-label" for="om-country">Country</label><input id="om-country" name="country" required></div>
+      </div>
+      <div class="om-field"><label class="om-label" for="om-notes">Notes (optional)</label><textarea id="om-notes" name="notes" rows="2" placeholder="Anything we should know - gift wrap, specific delivery time, mixed colors, etc."></textarea></div>
+
+      <div class="om-total-row">
+        <span>Total</span>
+        <span class="om-total-val" id="om-total-display">$49.90</span>
+      </div>
+      <button type="submit" class="om-submit">
+        <span class="om-submit-label">Place order</span>
+        <span class="om-submit-spinner" aria-hidden="true"></span>
+      </button>
+      <div class="om-disclaimer">No charge now. We email a Stripe payment link + shipping ETA within 12h. Free shipping over $50.</div>
+    </form>
+    <div id="om-success" class="om-success" hidden>
+      <div class="om-success-icon">✓</div>
+      <h3>Order received.</h3>
+      <p>Check your email in the next 12 hours for a payment link and your tracking-ready shipping confirmation. Reply directly to that email if you need anything before then.</p>
+      <button type="button" class="om-close-btn" onclick="closeOrderModal()">Close</button>
+    </div>
+    <div id="om-error" class="om-error" hidden></div>
+  </div>
+</div>
 </section>
 
 <style>
@@ -610,7 +684,7 @@ body[data-page-depth="1"] article{max-width:none !important;width:100% !importan
 .pdp-qty-head{font-family:'Inter Tight','Inter',sans-serif;font-size:13px;font-weight:700;color:#0a0a0a;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
 .pdp-qty-head span{color:#737373;font-weight:500;text-transform:none;letter-spacing:0}
 .pdp-qty-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-.pdp-qty-card{display:block;background:#0a0a0a;border:1.5px solid #0a0a0a;border-radius:10px;padding:14px 10px;text-align:center;text-decoration:none;color:#fff !important;transition:transform .15s,box-shadow .2s,background .2s;position:relative;cursor:pointer}
+.pdp-qty-card{display:block;width:100%;font-family:inherit;background:#0a0a0a;border:1.5px solid #0a0a0a;border-radius:10px;padding:14px 10px;text-align:center;text-decoration:none;color:#fff !important;transition:transform .15s,box-shadow .2s,background .2s;position:relative;cursor:pointer}
 .pdp-qty-card *{color:#fff !important}
 .pdp-qty-card:hover{background:#1f1f1f;transform:translateY(-1px);box-shadow:0 10px 22px -8px rgba(10,10,10,.45)}
 .pdp-qty-popular{background:#dc2626 !important;border-color:#dc2626;box-shadow:0 10px 22px -8px rgba(220,38,38,.45)}
@@ -625,7 +699,7 @@ body[data-page-depth="1"] article{max-width:none !important;width:100% !importan
 .pdp-qty-note{font-size:11.5px;color:#737373;text-align:center;margin-top:10px;font-style:italic}
 
 .pdp-cta-stack{margin-bottom:26px}
-.pdp-buy{display:block;width:100%;background:#dc2626;color:#fff !important;text-align:center;padding:18px 24px;border-radius:10px;font-family:'Inter Tight','Inter',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.005em;text-decoration:none;transition:background .2s,transform .15s;box-shadow:0 12px 24px -10px rgba(220,38,38,.5)}
+.pdp-buy{display:block;width:100%;background:#dc2626;color:#fff !important;text-align:center;padding:18px 24px;border:none;border-radius:10px;font-family:'Inter Tight','Inter',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.005em;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;box-shadow:0 12px 24px -10px rgba(220,38,38,.5)}
 .pdp-buy:hover{background:#b91c1c;transform:translateY(-1px);color:#fff !important}
 .pdp-trust-row{display:flex;justify-content:space-between;gap:8px;margin-top:14px;font-size:12px;color:#525252;flex-wrap:wrap}
 
@@ -700,8 +774,51 @@ body[data-page-depth="1"] article{max-width:none !important;width:100% !importan
 .pdp-source-note a{color:#525252;text-decoration:underline}
 
 /* STICKY BUY */
-.pdp-sticky-buy{position:fixed;bottom:18px;right:18px;background:#dc2626;color:#fff !important;padding:14px 22px;border-radius:8px;font-family:'Inter Tight','Inter',sans-serif;font-size:14px;font-weight:700;text-decoration:none;box-shadow:0 16px 36px -8px rgba(220,38,38,.55);opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:50}
-.pdp-sticky-buy.show{opacity:1;transform:none}@media(max-width:880px){
+.pdp-sticky-buy{position:fixed;bottom:18px;right:18px;background:#dc2626;color:#fff !important;padding:14px 22px;border:none;border-radius:8px;font-family:'Inter Tight','Inter',sans-serif;font-size:14px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 16px 36px -8px rgba(220,38,38,.55);opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:50}
+.pdp-sticky-buy.show{opacity:1;transform:none}
+
+/* ORDER MODAL */
+.om-overlay{position:fixed;inset:0;background:rgba(10,10,10,.78);backdrop-filter:blur(6px);z-index:999;display:flex;align-items:center;justify-content:center;padding:24px;animation:omfade .25s ease;overflow-y:auto}@keyframes omfade{from{opacity:0}to{opacity:1}}
+.om-card{background:#fff;color:#1f1f1f;border-radius:16px;max-width:520px;width:100%;padding:32px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:omup .3s cubic-bezier(.2,1,.3,1);max-height:90vh;overflow-y:auto;font-family:'Inter',system-ui,sans-serif}@keyframes omup{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
+.om-close{position:absolute;top:14px;right:14px;background:#f4f4f4;border:none;width:34px;height:34px;border-radius:50%;font-size:22px;cursor:pointer;color:#525252;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .15s;font-family:inherit}
+.om-close:hover{background:#e5e5e5;color:#0a0a0a}
+.om-head{margin-bottom:22px;padding-right:28px}
+.om-eyebrow{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#dc2626;font-weight:700;margin-bottom:8px}
+.om-head h3{font-family:'Inter Tight','Inter',sans-serif;font-size:26px;font-weight:700;color:#0a0a0a;margin:0 0 8px;letter-spacing:-.022em;line-height:1.1}
+.om-sub{font-size:13.5px;color:#525252;line-height:1.55;margin:0}
+.om-field{margin-bottom:14px}
+.om-label{display:block;font-size:11.5px;color:#525252;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;font-weight:600}
+.om-field input,.om-field select,.om-field textarea{width:100%;font-family:inherit;font-size:14.5px;padding:11px 13px;border-radius:8px;border:1.5px solid #e5e5e5;background:#fff;color:#0a0a0a;outline:none;transition:border-color .15s;box-sizing:border-box}
+.om-field input:focus,.om-field select:focus,.om-field textarea:focus{border-color:#dc2626}
+.om-field textarea{resize:vertical;min-height:60px;font-family:inherit}
+.om-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.om-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.om-qty-row{display:grid;grid-template-columns:1fr;gap:8px}
+.om-qty-pill{display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:13.5px;font-weight:600;background:#fff;border:1.5px solid #e5e5e5;color:#0a0a0a;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all .15s;text-align:left}
+.om-qty-pill:hover{border-color:#0a0a0a}
+.om-qty-pill.active{background:#0a0a0a;border-color:#0a0a0a;color:#fff !important}
+.om-qty-pill.active .om-saving{color:#fef08a !important}
+.om-saving{font-size:11px;color:#15803d;background:#dcfce7;padding:2px 7px;border-radius:999px;font-weight:700;letter-spacing:.02em}
+.om-total-row{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#fafafa;border:1px solid #e5e5e5;border-radius:10px;margin:18px 0 12px}
+.om-total-row span:first-child{font-size:13px;color:#525252;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.om-total-val{font-family:'Inter Tight','Inter',sans-serif;font-size:24px;font-weight:700;color:#0a0a0a;letter-spacing:-.018em}
+.om-submit{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#dc2626;color:#fff !important;border:none;padding:16px;border-radius:10px;font-family:'Inter Tight','Inter',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 10px 24px -10px rgba(220,38,38,.55);letter-spacing:-.005em}
+.om-submit:hover{background:#b91c1c;transform:translateY(-1px)}
+.om-submit:disabled{opacity:.7;cursor:wait}
+.om-submit-spinner{display:none;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:vfspin .7s linear infinite}
+.om-submit.loading .om-submit-spinner{display:inline-block}
+.om-submit.loading .om-submit-label{display:none}
+.om-disclaimer{font-size:11.5px;color:#737373;text-align:center;margin-top:10px;font-style:italic;line-height:1.5}
+.om-success{text-align:center;padding:20px 0}
+.om-success-icon{width:64px;height:64px;border-radius:50%;background:#dcfce7;color:#15803d;font-size:32px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;border:2px solid #bbf7d0}
+.om-success h3{font-family:'Inter Tight','Inter',sans-serif;font-size:24px;color:#0a0a0a;margin:0 0 10px;font-weight:700}
+.om-success p{font-size:14px;color:#404040;line-height:1.6;margin:0 0 22px;max-width:380px;margin-left:auto;margin-right:auto}
+.om-close-btn{background:#0a0a0a;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.om-error{margin-top:12px;padding:12px;background:rgba(220,38,38,.08);color:#7f1d1d;border:1px solid rgba(220,38,38,.25);border-radius:8px;font-size:13px;line-height:1.5}@media(max-width:560px){
+  .om-card{padding:24px;max-height:95vh}
+  .om-head h3{font-size:22px}
+  .om-grid-2,.om-grid-3{grid-template-columns:1fr}
+}@media(max-width:880px){
   .tuse-pdp{padding:20px 18px 0}
   .pdp-hero-grid{grid-template-columns:1fr;gap:28px}
   .pdp-config-grid{grid-template-columns:1fr 1fr;gap:14px}
@@ -746,6 +863,80 @@ body[data-page-depth="1"] article{max-width:none !important;width:100% !importan
   }
   window.addEventListener('scroll',check,{passive:true});
   check();
+
+  // ORDER MODAL ----------------------------------------------------
+  var PRICES={1:49.90,2:89.90,3:119.90};
+  var overlay=document.getElementById('om-overlay');
+  var form=document.getElementById('om-form');
+  var qtyVal=document.getElementById('om-qty-val');
+  var totalVal=document.getElementById('om-total-val');
+  var totalDisplay=document.getElementById('om-total-display');
+  var pills=document.querySelectorAll('.om-qty-pill');
+  var submitBtn=form.querySelector('.om-submit');
+  var success=document.getElementById('om-success');
+  var errorBox=document.getElementById('om-error');
+
+  function setQty(q){
+    var price=PRICES[q]||PRICES[1];
+    qtyVal.value=q;
+    totalVal.value=price.toFixed(2);
+    totalDisplay.textContent='$'+price.toFixed(2);
+    pills.forEach(function(p){p.classList.toggle('active', String(p.dataset.q)===String(q));});
+  }
+
+  window.openOrderModal=function(q){
+    setQty(q||1);
+    overlay.hidden=false;
+    document.body.style.overflow='hidden';
+    success.hidden=true;
+    errorBox.hidden=true;
+    form.hidden=false;
+    setTimeout(function(){var fn=document.getElementById('om-fn');if(fn)fn.focus()},150);
+  };
+  window.closeOrderModal=function(){
+    overlay.hidden=true;
+    document.body.style.overflow='';
+  };
+
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeOrderModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hidden)closeOrderModal();});
+
+  pills.forEach(function(p){p.addEventListener('click',function(){setQty(p.dataset.q);});});
+  setQty(1);
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    errorBox.hidden=true;
+    if(!form.checkValidity()){form.reportValidity();return;}
+    submitBtn.classList.add('loading');
+    submitBtn.disabled=true;
+
+    var fd=new FormData(form);
+    fd.append('product','TUSÉ Bag - tuse-bag-convertible-carryall-review');
+    fd.append('source_page',window.location.href);
+
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:fd})
+      .then(function(r){return r.json();})
+      .then(function(data){
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled=false;
+        if(data.success){
+          form.hidden=true;
+          success.hidden=false;
+          form.reset();
+          setQty(1);
+        } else {
+          errorBox.textContent=(data.message||'Could not submit order. Email us directly at sia@kavalsia.com.');
+          errorBox.hidden=false;
+        }
+      })
+      .catch(function(err){
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled=false;
+        errorBox.textContent='Network error. Please try again or email sia@kavalsia.com with your order details.';
+        errorBox.hidden=false;
+      });
+  });
 })();
 </script></article>
 <footer class="footer">
@@ -758,6 +949,7 @@ body[data-page-depth="1"] article{max-width:none !important;width:100% !importan
       <h4>Explore</h4>
       <a href="../">Home</a>
       <a href="../#scorecard">Scorecard Tool</a>
+      <a href="../tools">AI Product Verifier</a>
       <a href="../#cover">What We Cover</a>
       <a href="../#articles">Latest Reviews</a>
     </div>
