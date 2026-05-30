@@ -515,210 +515,35 @@ body[data-page-depth] #potw-banner{display:none}</style>
   </div>
 </section>
 
-<!-- PRODUCT VERIFIER (AI) - calls Gemini 2.0 Flash with Google search
-     grounding to produce a quick trust read on any product. User brings
-     their own free Gemini API key (gets ~1,500 reqs/day free, stored in
-     localStorage so they only paste it once). Free tier ONLY: hard-coded
-     model is gemini-2.0-flash which is on the free quota. -->
-<section class="section verifier-section" id="verifier">
+<!-- PRODUCT VERIFIER teaser - lives on homepage; full tool is on /tools.
+     Kept short here so the homepage flow stays focused. -->
+<section class="section verifier-teaser-section">
   <div class="section-inner">
-    <div class="section-head reveal">
-      <div class="section-label">Live AI Tool</div>
-      <h2 class="section-title">Verify any product in <span class="accent">10 seconds</span></h2>
-      <p class="section-sub">Paste a product name or link. Our AI reads recent reviews, Reddit threads, and forum complaints in real time, then gives you a trust score and the red flags worth knowing before you buy.</p>
-    </div>
-    <div class="verifier-card reveal">
-      <div class="verifier-input-row">
-        <input type="text" id="vf-input" placeholder="e.g. TUSÉ convertible bag, or paste a product URL" autocomplete="off">
-        <button id="vf-go" type="button">
-          <span class="vf-go-label">Verify</span>
-          <span class="vf-go-spinner" aria-hidden="true"></span>
-        </button>
+    <a class="vf-teaser reveal" href="./tools">
+      <div class="vf-teaser-side">
+        <div class="vf-teaser-label">★ AI Tool</div>
+        <div class="vf-teaser-title">Verify any product in 10 seconds</div>
+        <div class="vf-teaser-sub">Our AI reads recent reviews, Reddit threads and forum complaints in real time. Gives you a trust score and the red flags before you buy.</div>
       </div>
-      <div class="verifier-keynote" id="vf-keynote">
-        First time? <button type="button" id="vf-key-toggle" class="vf-link">Add your free Gemini API key</button> (stored in this browser, never sent anywhere else).
+      <div class="vf-teaser-cta">
+        Open Verifier
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </div>
-      <div class="verifier-keyfield" id="vf-keyfield" hidden>
-        <label>Gemini API key <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">(get one free)</a></label>
-        <div class="vf-keyrow">
-          <input type="password" id="vf-key" placeholder="AIza...">
-          <button type="button" id="vf-key-save">Save</button>
-        </div>
-        <div class="vf-keyhint">Free tier only. Model: gemini-2.0-flash. About 1,500 verifications per day at no cost.</div>
-      </div>
-      <div class="verifier-result" id="vf-result" hidden></div>
-      <div class="verifier-recent" id="vf-recent" hidden>
-        <div class="vf-recent-head">Recently verified by readers</div>
-        <div class="vf-recent-list" id="vf-recent-list"></div>
-      </div>
-    </div>
+    </a>
   </div>
 </section>
 <style>
-.verifier-section{background:linear-gradient(180deg,#0e0e0d 0%,#1a0e0e 100%);color:#fff;padding:88px 24px;border-top:1px solid #2a1818}
-.verifier-section .section-head h2,.verifier-section .section-title{color:#fff}
-.verifier-section .section-sub{color:rgba(255,255,255,.65);max-width:700px}
-.verifier-section .section-label{color:#dc2626}
-.verifier-card{max-width:780px;margin:36px auto 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;backdrop-filter:blur(8px)}
-.verifier-input-row{display:grid;grid-template-columns:1fr auto;gap:10px}
-#vf-input{font-family:'Inter',system-ui,sans-serif;font-size:15px;padding:14px 16px;border-radius:10px;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.12);color:#fff;outline:none;transition:border-color .2s}
-#vf-input:focus{border-color:#dc2626}
-#vf-input::placeholder{color:rgba(255,255,255,.4)}
-#vf-go{background:#dc2626;color:#fff;border:none;font-family:'Inter Tight','Inter',sans-serif;font-size:14px;font-weight:700;padding:14px 24px;border-radius:10px;cursor:pointer;transition:background .2s;display:inline-flex;align-items:center;gap:8px;letter-spacing:-.005em}
-#vf-go:hover{background:#b91c1c}
-#vf-go:disabled{opacity:.6;cursor:wait}
-.vf-go-spinner{display:none;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:vfspin .7s linear infinite}
-#vf-go.loading .vf-go-spinner{display:inline-block}
-#vf-go.loading .vf-go-label{display:none}@keyframes vfspin{to{transform:rotate(360deg)}}
-.verifier-keynote{margin-top:14px;font-size:13px;color:rgba(255,255,255,.55);text-align:center}
-.vf-link{background:none;border:none;color:#fca5a5;cursor:pointer;text-decoration:underline;font:inherit;padding:0}
-.vf-link:hover{color:#fecaca}
-.verifier-keyfield{margin-top:16px;padding:16px;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08);border-radius:10px}
-.verifier-keyfield label{display:block;font-size:12px;color:rgba(255,255,255,.6);margin-bottom:8px;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
-.verifier-keyfield label a{color:#fca5a5;text-decoration:underline;text-transform:none;letter-spacing:0;font-weight:400}
-.vf-keyrow{display:grid;grid-template-columns:1fr auto;gap:8px}
-#vf-key{font-family:ui-monospace,Menlo,monospace;font-size:13px;padding:10px 12px;border-radius:8px;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.12);color:#fff;outline:none}
-#vf-key-save{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.15);padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px}
-#vf-key-save:hover{background:rgba(255,255,255,.18)}
-.vf-keyhint{font-size:11.5px;color:rgba(255,255,255,.45);margin-top:8px;font-style:italic}
-.verifier-result{margin-top:20px;padding:24px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.08);border-radius:12px;animation:vffade .4s ease}@keyframes vffade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.vf-score-row{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap}
-.vf-score-circle{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight','Inter',sans-serif;font-size:24px;font-weight:700;color:#fff;flex-shrink:0;background:conic-gradient(#dc2626 var(--p,50%),rgba(255,255,255,.1) 0)}
-.vf-score-inner{width:54px;height:54px;border-radius:50%;background:#0e0e0d;display:flex;align-items:center;justify-content:center}
-.vf-verdict{flex:1;min-width:0}
-.vf-verdict h4{font-family:'Inter Tight','Inter',sans-serif;font-size:18px;color:#fff;margin:0 0 4px;font-weight:700}
-.vf-verdict p{font-size:13.5px;color:rgba(255,255,255,.65);margin:0;line-height:1.55}
-.vf-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
-.vf-block h5{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.12em;margin:0 0 8px;font-weight:700;font-family:ui-monospace,Menlo,monospace}
-.vf-block ul{list-style:none;padding:0;margin:0}
-.vf-block li{font-size:13.5px;color:rgba(255,255,255,.78);padding:5px 0 5px 18px;position:relative;line-height:1.5}
-.vf-block li::before{content:'';position:absolute;left:4px;top:13px;width:6px;height:6px;border-radius:50%;background:#86efac}
-.vf-block.vf-bad li::before{background:#fca5a5}
-.vf-sources{margin-top:14px;font-size:12px;color:rgba(255,255,255,.5);padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
-.vf-sources a{color:rgba(255,255,255,.75);text-decoration:underline;margin-right:10px;font-size:12px}
-.verifier-recent{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
-.vf-recent-head{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;font-weight:600;font-family:ui-monospace,Menlo,monospace}
-.vf-recent-item{display:flex;justify-content:space-between;padding:8px 0;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04)}
-.vf-recent-item:last-child{border-bottom:none}
-.vf-recent-score{font-weight:700;font-family:ui-monospace,Menlo,monospace}
-.vf-err{color:#fca5a5;font-size:13px;padding:12px;background:rgba(220,38,38,.1);border-radius:8px;border:1px solid rgba(220,38,38,.25)}@media(max-width:600px){
-  .verifier-section{padding:60px 18px}
-  .verifier-card{padding:20px}
-  .verifier-input-row{grid-template-columns:1fr}
-  .vf-grid{grid-template-columns:1fr}
+.verifier-teaser-section{padding:60px 24px}
+.vf-teaser{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;background:linear-gradient(135deg,#0e0e0d 0%,#1a0e0e 100%);color:#fff;border-radius:18px;padding:36px 40px;text-decoration:none;border:1px solid #2a1818;max-width:1100px;margin:0 auto;transition:transform .25s,box-shadow .25s}
+.vf-teaser:hover{transform:translateY(-2px);box-shadow:0 18px 40px -18px rgba(220,38,38,.4)}
+.vf-teaser-label{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#dc2626;font-weight:700;margin-bottom:10px}
+.vf-teaser-title{font-family:'Inter Tight','Inter',sans-serif;font-size:clamp(22px,2.4vw,28px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:8px;line-height:1.15}
+.vf-teaser-sub{font-family:'Inter',system-ui,sans-serif;font-size:14.5px;color:rgba(255,255,255,.62);line-height:1.55;max-width:680px}
+.vf-teaser-cta{display:inline-flex;align-items:center;gap:8px;background:#dc2626;color:#fff;font-family:'Inter Tight','Inter',sans-serif;font-size:14px;font-weight:700;padding:14px 22px;border-radius:999px;letter-spacing:-.005em;flex-shrink:0}@media(max-width:720px){
+  .vf-teaser{grid-template-columns:1fr;padding:28px 24px;gap:18px}
+  .vf-teaser-cta{justify-self:start}
 }</style>
-<script>
-(function(){
-  var KEY_STORAGE='tp_gemini_key';
-  var RECENT_STORAGE='tp_vf_recent';
-  var inp=document.getElementById('vf-input');
-  var btn=document.getElementById('vf-go');
-  var keynote=document.getElementById('vf-keynote');
-  var keyfield=document.getElementById('vf-keyfield');
-  var keyInp=document.getElementById('vf-key');
-  var keySave=document.getElementById('vf-key-save');
-  var keyToggle=document.getElementById('vf-key-toggle');
-  var result=document.getElementById('vf-result');
-  var recentWrap=document.getElementById('vf-recent');
-  var recentList=document.getElementById('vf-recent-list');
 
-  function hasKey(){return !!localStorage.getItem(KEY_STORAGE)}
-  function refreshKeynote(){
-    if(hasKey()){keynote.innerHTML='✓ API key saved. <button type="button" id="vf-key-toggle2" class="vf-link">Change key</button>'; document.getElementById('vf-key-toggle2').onclick=function(){keyfield.hidden=!keyfield.hidden;keyInp.value=localStorage.getItem(KEY_STORAGE)||''}}
-  }
-  keyToggle.onclick=function(){keyfield.hidden=!keyfield.hidden;if(!keyfield.hidden)keyInp.focus()}
-  keySave.onclick=function(){
-    var v=keyInp.value.trim();
-    if(!v){return}
-    localStorage.setItem(KEY_STORAGE,v);
-    keyfield.hidden=true;
-    refreshKeynote();
-  }
-  refreshKeynote();
-
-  function renderRecent(){
-    var arr=JSON.parse(localStorage.getItem(RECENT_STORAGE)||'[]');
-    if(!arr.length){recentWrap.hidden=true;return}
-    recentList.innerHTML=arr.slice(0,5).map(function(r){
-      return '<div class="vf-recent-item"><span>'+escapeHtml(r.q)+'</span><span class="vf-recent-score" style="color:'+scoreColor(r.score)+'">'+r.score+'/10</span></div>'
-    }).join('');
-    recentWrap.hidden=false;
-  }
-  function pushRecent(q,score){
-    var arr=JSON.parse(localStorage.getItem(RECENT_STORAGE)||'[]');
-    arr.unshift({q:q,score:score,t:Date.now()});
-    arr=arr.slice(0,5);
-    localStorage.setItem(RECENT_STORAGE,JSON.stringify(arr));
-    renderRecent();
-  }
-  function scoreColor(s){if(s>=8)return '#86efac';if(s>=6)return '#fde68a';if(s>=4)return '#fdba74';return '#fca5a5'}
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]})}
-  renderRecent();
-
-  btn.onclick=function(){
-    var q=inp.value.trim();
-    if(!q){inp.focus();return}
-    var key=localStorage.getItem(KEY_STORAGE);
-    if(!key){keyfield.hidden=false;keyInp.focus();return}
-    btn.classList.add('loading');btn.disabled=true;
-    result.hidden=true;
-
-    var prompt='Search the web (Reddit, review sites, news, forums) for honest, recent opinions about this product: "'+q+'". '
-      +'Then return a STRICT JSON object only, no prose around it, with these exact keys: '
-      +'{"score": <integer 1-10 trust score>, "verdict": "<one short sentence: buy/skip/wait>", "good": [<up to 3 short positive points>], "bad": [<up to 3 short red flags>], "summary": "<2 sentence honest summary>"}. '
-      +'Score 1-3 = avoid, 4-6 = mixed, 7-8 = solid, 9-10 = exceptional. Be skeptical of obvious dropship products.';
-
-    var body={
-      contents:[{parts:[{text:prompt}]}],
-      tools:[{google_search:{}}],
-      generationConfig:{temperature:0.4}
-    };
-    var url='https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key='+encodeURIComponent(key);
-
-    fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
-      .then(function(r){return r.json()})
-      .then(function(data){
-        btn.classList.remove('loading');btn.disabled=false;
-        if(data.error){result.innerHTML='<div class="vf-err">'+escapeHtml(data.error.message||'API error')+'</div>';result.hidden=false;return}
-        var text=(((data.candidates||[])[0]||{}).content||{}).parts||[];
-        var rawText=text.map(function(p){return p.text||''}).join('');
-        var groundings=(((data.candidates||[])[0]||{}).groundingMetadata||{}).groundingChunks||[];
-
-        var match=rawText.match(/\{[\s\S]*\}/);
-        if(!match){result.innerHTML='<div class="vf-err">Could not parse response. Try again.</div>';result.hidden=false;return}
-        var parsed;
-        try{parsed=JSON.parse(match[0])}catch(e){result.innerHTML='<div class="vf-err">Bad JSON from model. Try again.</div>';result.hidden=false;return}
-
-        var score=Math.max(1,Math.min(10,parseInt(parsed.score)||5));
-        var pct=score*10;
-        var color=scoreColor(score);
-        var goodList=(parsed.good||[]).slice(0,3).map(function(g){return '<li>'+escapeHtml(g)+'</li>'}).join('');
-        var badList=(parsed.bad||[]).slice(0,3).map(function(b){return '<li>'+escapeHtml(b)+'</li>'}).join('');
-        var srcLinks=groundings.slice(0,5).map(function(g){
-          var w=(g.web||{});return w.uri?'<a href="'+w.uri+'" target="_blank" rel="noopener">'+escapeHtml((w.title||w.uri).slice(0,40))+'</a>':''
-        }).filter(Boolean).join('');
-
-        result.innerHTML='<div class="vf-score-row">'
-          +'<div class="vf-score-circle" style="--p:'+pct+'%;background:conic-gradient('+color+' '+pct+'%,rgba(255,255,255,.1) 0)"><div class="vf-score-inner">'+score+'</div></div>'
-          +'<div class="vf-verdict"><h4>'+escapeHtml(parsed.verdict||'Verdict unavailable')+'</h4><p>'+escapeHtml(parsed.summary||'')+'</p></div>'
-          +'</div>'
-          +(goodList||badList?'<div class="vf-grid">'
-            +(goodList?'<div class="vf-block"><h5>What buyers like</h5><ul>'+goodList+'</ul></div>':'')
-            +(badList?'<div class="vf-block vf-bad"><h5>Red flags</h5><ul>'+badList+'</ul></div>':'')
-            +'</div>':'')
-          +(srcLinks?'<div class="vf-sources"><b>Sources:</b> '+srcLinks+'</div>':'');
-        result.hidden=false;
-        pushRecent(q,score);
-      })
-      .catch(function(err){
-        btn.classList.remove('loading');btn.disabled=false;
-        result.innerHTML='<div class="vf-err">Request failed: '+escapeHtml(err.message||'network')+'</div>';
-        result.hidden=false;
-      });
-  };
-  inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click()});
-})();
-</script>
 
 <!-- STATS BAND -->
 <section class="stats">
@@ -838,6 +663,7 @@ body[data-page-depth] #potw-banner{display:none}</style>
       <h4>Explore</h4>
       <a href="./">Home</a>
       <a href="./#scorecard">Scorecard Tool</a>
+      <a href="./tools">AI Product Verifier</a>
       <a href="./#cover">What We Cover</a>
       <a href="./#articles">Latest Reviews</a>
     </div>
