@@ -104,5 +104,24 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "A Complete Home Gym for a Small Apartment Under $300: What Actually Works",
+    "slug": "small-apartment-home-gym-300-budget",
+    "meta_description": "Build a real home gym in a small apartment for under $300. Jamie Cole's honest, tested buying guide covers what to buy, what to skip, and what surprises you.",
+    "date": "June 01, 2026",
+    "date_iso": "2026-06-01",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/6496124/pexels-photo-6496124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "statista.com",
+      "cpsc.gov",
+      "journals.lww.com",
+      "health.harvard.edu"
+    ],
+    "posted_iso": "2026-06-01",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
