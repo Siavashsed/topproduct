@@ -67,7 +67,8 @@ img{display:block;max-width:100%}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 80%);pointer-events:none}
 .hero-inner{max-width:960px;margin:0 auto;text-align:center;position:relative;z-index:2}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:8px 16px;border-radius:999px;letter-spacing:-.1px;margin-bottom:28px;backdrop-filter:blur(8px)}
-.hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(220,38,38,.25),0 0 12px rgba(220,38,38,.8);animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(220,38,38,.25),0 0 12px rgba(220,38,38,.8);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .hero h1{font-family:var(--display);font-size:clamp(40px,7vw,82px);font-weight:700;color:#fff;line-height:.98;letter-spacing:-2.5px;margin-bottom:24px;font-variation-settings:"opsz" 96}
 .hero h1 .accent{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
 .hero p{font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.62);line-height:1.6;max-width:660px;margin:0 auto 36px;font-weight:400}
@@ -243,7 +244,10 @@ img{display:block;max-width:100%}
 
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}@media(max-width:980px){
+.reveal.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:980px){
   .section{padding:72px 20px}
   .hero{padding:72px 20px 84px}
   .tool-wrap{grid-template-columns:1fr}
@@ -252,7 +256,8 @@ img{display:block;max-width:100%}
   .value-grid,.topic-grid,.arts-grid{grid-template-columns:repeat(2,1fr)}
   .stats-inner{grid-template-columns:repeat(2,1fr);gap:36px}
   .footer-inner{grid-template-columns:1fr 1fr}
-}@media(max-width:680px){
+}
+@media(max-width:680px){
   .masthead-nav a:not(.masthead-subscribe){display:none}
   .menu-toggle{display:block}
   .masthead-nav.open a:not(.masthead-subscribe){display:block;position:absolute;left:0;right:0;background:var(--ink);text-align:center;padding:14px}
@@ -289,11 +294,14 @@ body[data-page-depth="1"] article .concl,
 body[data-page-depth="1"] article strong{color:var(--text,#171717) !important}
 body[data-page-depth="1"] article a,
 body[data-page-depth="1"] article p a,
-body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;text-decoration:underline;text-underline-offset:3px}
+body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;text-decoration:none;text-underline-offset:3px}
 /* /CONTRAST-AUDIT */
 </style>
 </head>
 <body>
+<!--SHELL:ACCENT:#dc2626-->
+<!--SHELL:HEADER-->
+
 <!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-inner">
@@ -315,6 +323,9 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
             <rect x="1" y="1" width="36" height="36" rx="10" fill="url(#tpGrad)"/>
             <rect x="1.5" y="1.5" width="35" height="35" rx="9.5" stroke="url(#tpStroke)" stroke-width="1" fill="none"/>
             <path d="M7.5 11.5h11" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M13 11.5v15" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M21.5 26.5v-15" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M21.5 11.5h4.2a3.6 3.6 0 0 1 0 7.2h-4.2" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <circle cx="29" cy="27.5" r="2.4" fill="#fbbf24"/>
             <circle cx="29" cy="27.5" r="2.4" fill="none" stroke="rgba(255,255,255,.6)" stroke-width=".8"/>
           </svg>
@@ -335,6 +346,8 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
     </button>
   </div>
 </header>
+<!--/SHELL:HEADER-->
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
@@ -378,7 +391,8 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
 .potw-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:140px 1fr auto;gap:28px;align-items:center}
 .potw-img{width:140px;height:140px;border-radius:14px;overflow:hidden;background:#1a1a1a linear-gradient(135deg,#2a1818 0%,#1a1a1a 100%);border:1px solid rgba(255,255,255,.08);flex-shrink:0;position:relative;aspect-ratio:1}
 .potw-img img{width:100%;height:100%;object-fit:cover;display:block;animation:potw-fade .6s ease}
-.potw-img-fallback::before{content:'TUSÉ';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;color:#fff;font-size:22px;font-weight:700;letter-spacing:.05em}@keyframes potw-fade{from{opacity:0}to{opacity:1}}
+.potw-img-fallback::before{content:'TUSÉ';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;color:#fff;font-size:22px;font-weight:700;letter-spacing:.05em}
+@keyframes potw-fade{from{opacity:0}to{opacity:1}}
 .potw-body{min-width:0}
 .potw-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#dc2626;font-weight:700;margin-bottom:12px}
 .potw-dot{width:7px;height:7px;border-radius:50%;background:#dc2626;box-shadow:0 0 0 4px rgba(220,38,38,.18),0 0 10px rgba(220,38,38,.7);animation:pulse 2s infinite}
@@ -387,19 +401,21 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
 .potw-sub{font-family:'Inter',system-ui,sans-serif;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.62);max-width:580px}
 .potw-cta{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0}
 .potw-price{font-family:var(--display,"Fraunces",serif);font-size:26px;color:#fff;font-weight:700;letter-spacing:-0.5px}
-.potw-read{display:inline-flex;align-items:center;gap:8px;background:#dc2626;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:13px;font-weight:600;padding:10px 18px;border-radius:999px;letter-spacing:-0.1px}@media(max-width:720px){
+.potw-read{display:inline-flex;align-items:center;gap:8px;background:#dc2626;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:13px;font-weight:600;padding:10px 18px;border-radius:999px;letter-spacing:-0.1px}
+@media(max-width:720px){
   #potw-banner{padding:22px 18px}
   .potw-inner{grid-template-columns:100px 1fr;gap:18px}
   .potw-img{width:100px;height:100px;border-radius:12px}
   .potw-cta{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center;margin-top:6px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
   .potw-sub{font-size:13.5px}
 }
-body[data-page-depth] #potw-banner{display:none}</style>
+body[data-page-depth] #potw-banner{display:none}
+</style>
 
 <!-- TRUST STRIP -->
 <div class="trust">
   <div class="trust-inner">
-    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/></svg>30 Day Real World Testing</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>30 Day Real World Testing</div>
     <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l3 6 6 .9-4.5 4.3 1 6.1L12 21l-5.5 2.3 1-6.1L3 7.9 9 7z"/></svg>No Sponsored Fluff</div>
     <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Updated Weekly</div>
     <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dropship Markups Exposed</div>
@@ -457,7 +473,7 @@ body[data-page-depth] #potw-banner{display:none}</style>
           <div><b>We find it before it floods your feed</b><span>Tracking emerging trends daily</span></div>
         </div>
         <div class="sv-row">
-          <div class="sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/></svg></div>
+          <div class="sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
           <div><b>We test it for 30+ days</b><span>Real homes, real use, real wear</span></div>
         </div>
         <div class="sv-row">
@@ -498,12 +514,12 @@ body[data-page-depth] #potw-banner{display:none}</style>
         <p>We trace viral products back to their source listings so you know if that $49 gadget is really a $12 item with a marketing budget attached.</p>
       </div>
       <div class="value-card reveal">
-        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/></svg></div>
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
         <h3>Clear Verdicts</h3>
         <p>No vague star ratings. Every review ends with a plain answer: buy it, skip it, or wait for the price to drop. Decisions made simple.</p>
       </div>
       <div class="value-card reveal">
-        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+        <div class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
         <h3>Trend Radar</h3>
         <p>We monitor what is gaining traction before it hits everyone's feed, so our verdict is ready the moment you start wondering about it.</p>
       </div>
@@ -540,10 +556,12 @@ body[data-page-depth] #potw-banner{display:none}</style>
 .vf-teaser-label{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#dc2626;font-weight:700;margin-bottom:10px}
 .vf-teaser-title{font-family:'Inter Tight','Inter',sans-serif;font-size:clamp(22px,2.4vw,28px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:8px;line-height:1.15}
 .vf-teaser-sub{font-family:'Inter',system-ui,sans-serif;font-size:14.5px;color:rgba(255,255,255,.62);line-height:1.55;max-width:680px}
-.vf-teaser-cta{display:inline-flex;align-items:center;gap:8px;background:#dc2626;color:#fff;font-family:'Inter Tight','Inter',sans-serif;font-size:14px;font-weight:700;padding:14px 22px;border-radius:999px;letter-spacing:-.005em;flex-shrink:0}@media(max-width:720px){
+.vf-teaser-cta{display:inline-flex;align-items:center;gap:8px;background:#dc2626;color:#fff;font-family:'Inter Tight','Inter',sans-serif;font-size:14px;font-weight:700;padding:14px 22px;border-radius:999px;letter-spacing:-.005em;flex-shrink:0}
+@media(max-width:720px){
   .vf-teaser{grid-template-columns:1fr;padding:28px 24px;gap:18px}
   .vf-teaser-cta{justify-self:start}
-}</style>
+}
+</style>
 
 
 <!-- STATS BAND -->
@@ -570,7 +588,7 @@ body[data-page-depth] #potw-banner{display:none}</style>
         <div><h3>Tech &amp; Gadgets</h3><p>Earbuds, smart rings, chargers and the accessories that promise the world for $30.</p></div>
       </div>
       <div class="topic-card reveal">
-        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <div><h3>Home &amp; Living</h3><p>Bedding, organizers, lighting and the decor that fills every Amazon must-have list.</p></div>
       </div>
       <div class="topic-card reveal">
@@ -582,7 +600,7 @@ body[data-page-depth] #potw-banner{display:none}</style>
         <div><h3>Fitness &amp; Wellness</h3><p>Resistance gear, recovery tools and supplements that flood the feed every January.</p></div>
       </div>
       <div class="topic-card reveal">
-        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2l1.5 9h15L21 2"/></svg></div>
+        <div class="topic-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2l1.5 9h15L21 2"/><path d="M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/></svg></div>
         <div><h3>Kitchen &amp; Gear</h3><p>Air fryers, portable blenders and the countertop gadgets promising to change dinner.</p></div>
       </div>
       <div class="topic-card reveal">
@@ -655,6 +673,7 @@ body[data-page-depth] #potw-banner{display:none}</style>
 
 
 
+<!--SHELL:FOOTER-->
 <footer class="footer">
   <div class="footer-inner">
     <div>
@@ -822,7 +841,7 @@ async function loadArticles(){
   if(!posts.length){
     grid.style.display='block';
     grid.innerHTML='<div class="arts-empty">'+
-      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>'+
+      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'+
       '<h3>Fresh Reviews Are On The Test Bench</h3>'+
       '<p>Our editors are currently testing the next round of trending products. Join the weekly digest below to get every verdict the moment it goes live.</p>'+
       '</div>';
@@ -850,5 +869,6 @@ async function loadArticles(){
 }
 loadArticles();
 </script>
+<!--/SHELL:FOOTER-->
 </body>
 </html>
