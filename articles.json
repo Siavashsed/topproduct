@@ -113,5 +113,24 @@
       "en"
     ],
     "category": "Home & Living"
+  },
+  {
+    "title": "The Week's Top 7 Trending Products Worth Knowing About Right Now (June 08, 2026)",
+    "slug": "top-7-trending-products-june-2026",
+    "meta_description": "Jamie Cole ranks the 7 most notable trending products of June 2026 - what makes each stand out and exactly who should buy them.",
+    "date": "June 08, 2026",
+    "date_iso": "2026-06-08",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/35652454/pexels-photo-35652454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "statista.com",
+      "ncbi.nlm.nih.gov",
+      "hubs.com"
+    ],
+    "posted_iso": "2026-06-08",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
