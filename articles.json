@@ -132,5 +132,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Amazon's Fake Review Purge of 2021 Changed How We Buy Everything",
+    "slug": "amazon-fake-review-purge-2021",
+    "meta_description": "Amazon deleted over 200 million fake reviews in 2021. Here's what that meant for buyers, guides, and the review economy that year.",
+    "date": "March 23, 2021",
+    "date_iso": "2021-03-23",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/5868120/pexels-photo-5868120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "brandservices.amazon.com",
+      "fakespot.com",
+      "reviewmeta.com",
+      "science.org"
+    ],
+    "posted_iso": "2026-06-10",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
