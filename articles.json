@@ -152,5 +152,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Amazon Killed Honest Reviews in 2019. Here's What Actually Happened.",
+    "slug": "amazon-fake-reviews-2019-crisis",
+    "meta_description": "A 2019 retrospective on how Amazon's fake review crisis reshaped buying guides and what it meant for real consumers. By Jamie Cole.",
+    "date": "June 17, 2019",
+    "date_iso": "2019-06-17",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/994197/pexels-photo-994197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reviewmeta.com",
+      "wsj.com",
+      "pewresearch.org",
+      "brightlocal.com"
+    ],
+    "posted_iso": "2026-06-11",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
