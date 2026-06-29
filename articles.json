@@ -1,5 +1,75 @@
 [
   {
+    "slug": "owala-freesip-tiktok-water-bottle",
+    "title": "The Owala FreeSip Quietly Became TikTok's Favorite Water Bottle",
+    "meta_description": "The Owala FreeSip spread across TikTok without a big launch. Here is what makes the bottle different and whether the hype holds up.",
+    "category": "Lifestyle",
+    "author": "Gemma Lewis",
+    "image": "https://cdn.shopify.com/s/files/1/0439/2537/3087/files/Owala-brand-logo400x400.png?v=1760045540",
+    "date": "June 22, 2026",
+    "date_iso": "2026-06-22",
+    "posted_iso": "2026-06-29T15:49:22.271872"
+  },
+  {
+    "title": "The Week's Top 7 Trending Products Worth Knowing About Right Now (June 08, 2026)",
+    "slug": "top-7-trending-products-june-2026",
+    "meta_description": "Jamie Cole ranks the 7 most notable trending products of June 2026 - what makes each stand out and exactly who should buy them.",
+    "date": "June 08, 2026",
+    "date_iso": "2026-06-08",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/35652454/pexels-photo-35652454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "statista.com",
+      "ncbi.nlm.nih.gov",
+      "hubs.com"
+    ],
+    "posted_iso": "2026-06-08",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "A Complete Home Gym for a Small Apartment Under $300: What Actually Works",
+    "slug": "small-apartment-home-gym-300-budget",
+    "meta_description": "Build a real home gym in a small apartment for under $300. Jamie Cole's honest, tested buying guide covers what to buy, what to skip, and what surprises you.",
+    "date": "June 01, 2026",
+    "date_iso": "2026-06-01",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/6496124/pexels-photo-6496124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "statista.com",
+      "cpsc.gov",
+      "journals.lww.com",
+      "health.harvard.edu"
+    ],
+    "posted_iso": "2026-06-01",
+    "available_languages": [
+      "en"
+    ],
+    "category": "Home & Living"
+  },
+  {
+    "title": "The Week's Top 7 Trending Products Worth Your Attention Right Now (May 29, 2026)",
+    "slug": "top-7-trending-products-may-2026",
+    "meta_description": "Jamie Cole ranks the 7 most notable trending products of the week. Honest picks, no brand deals, clear advice on who each one is actually for.",
+    "date": "May 29, 2026",
+    "date_iso": "2026-05-29",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/24029951/pexels-photo-24029951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "withings.com",
+      "statista.com",
+      "pewresearch.org",
+      "cdc.gov"
+    ],
+    "posted_iso": "2026-05-29",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "title": "The 7 TikTok Products That Are Actually Worth Buying (According to Someone Who Tested Them)",
     "slug": "tiktok-products-actually-worth-buying",
     "meta_description": "Siavash Sadighi cuts through TikTok hype to find 7 viral products that genuinely deliver. Honest reviews, no brand deals, real results.",
@@ -13,27 +83,6 @@
       "containerstore.com"
     ],
     "category": "Kitchen & Gear"
-  },
-  {
-    "title": "How the FTC's 2019 Crackdown on Fake Reviews Finally Changed the Buying Guide Industry",
-    "slug": "ftc-2019-fake-reviews-crackdown",
-    "meta_description": "Jamie Cole on the 2019 FTC fake review enforcement wave that reshaped consumer trust in product reviews and buying guides for good.",
-    "date": "November 18, 2019",
-    "date_iso": "2019-11-18",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/7772031/pexels-photo-7772031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ftc.gov",
-      "pewresearch.org",
-      "brightlocal.com",
-      "thewirecutter.com"
-    ],
-    "posted_iso": "2026-05-29",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ],
-    "category": "Tech & Gadgets"
   },
   {
     "title": "The FTC's 2023 Fake Review Crackdown: What It Actually Means for How You Shop",
@@ -75,65 +124,6 @@
     "category": "Tech & Gadgets"
   },
   {
-    "title": "The Week's Top 7 Trending Products Worth Your Attention Right Now (May 29, 2026)",
-    "slug": "top-7-trending-products-may-2026",
-    "meta_description": "Jamie Cole ranks the 7 most notable trending products of the week. Honest picks, no brand deals, clear advice on who each one is actually for.",
-    "date": "May 29, 2026",
-    "date_iso": "2026-05-29",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/24029951/pexels-photo-24029951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "withings.com",
-      "statista.com",
-      "pewresearch.org",
-      "cdc.gov"
-    ],
-    "posted_iso": "2026-05-29",
-    "category": "Top Finds",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "A Complete Home Gym for a Small Apartment Under $300: What Actually Works",
-    "slug": "small-apartment-home-gym-300-budget",
-    "meta_description": "Build a real home gym in a small apartment for under $300. Jamie Cole's honest, tested buying guide covers what to buy, what to skip, and what surprises you.",
-    "date": "June 01, 2026",
-    "date_iso": "2026-06-01",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/6496124/pexels-photo-6496124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "statista.com",
-      "cpsc.gov",
-      "journals.lww.com",
-      "health.harvard.edu"
-    ],
-    "posted_iso": "2026-06-01",
-    "available_languages": [
-      "en"
-    ],
-    "category": "Home & Living"
-  },
-  {
-    "title": "The Week's Top 7 Trending Products Worth Knowing About Right Now (June 08, 2026)",
-    "slug": "top-7-trending-products-june-2026",
-    "meta_description": "Jamie Cole ranks the 7 most notable trending products of June 2026 - what makes each stand out and exactly who should buy them.",
-    "date": "June 08, 2026",
-    "date_iso": "2026-06-08",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/35652454/pexels-photo-35652454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "statista.com",
-      "ncbi.nlm.nih.gov",
-      "hubs.com"
-    ],
-    "posted_iso": "2026-06-08",
-    "category": "Top Finds",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
     "title": "Amazon's Fake Review Purge of 2021 Changed How We Buy Everything",
     "slug": "amazon-fake-review-purge-2021",
     "meta_description": "Amazon deleted over 200 million fake reviews in 2021. Here's what that meant for buyers, guides, and the review economy that year.",
@@ -152,6 +142,27 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "How the FTC's 2019 Crackdown on Fake Reviews Finally Changed the Buying Guide Industry",
+    "slug": "ftc-2019-fake-reviews-crackdown",
+    "meta_description": "Jamie Cole on the 2019 FTC fake review enforcement wave that reshaped consumer trust in product reviews and buying guides for good.",
+    "date": "November 18, 2019",
+    "date_iso": "2019-11-18",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/7772031/pexels-photo-7772031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "pewresearch.org",
+      "brightlocal.com",
+      "thewirecutter.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ],
+    "category": "Tech & Gadgets"
   },
   {
     "title": "Amazon Killed Honest Reviews in 2019. Here's What Actually Happened.",
