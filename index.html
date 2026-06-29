@@ -424,12 +424,30 @@ body[data-page-depth] #potw-banner{display:none}</style>
 (function(){
   var V=['h359LRmMZMU','HMX0vrJj5nM','bmIVWe3Cux8','J7FzKL5xkRg','4g7ah0PfMGY','2C5NKMM7DZA','h0HjktaeEpA','FPzi2OIR82s','hLRJs75gqXg','E4S7SY9DkQE'];
   var track=document.getElementById('vidwallTrack'); if(!track) return;
-  function tile(id){
-    var p='?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3&playsinline=1';
-    return '<div class="vtile"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/'+id+p+'" title="Product review" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>';
-  }
-  var html=V.map(tile).join('');
-  track.innerHTML=html+html;   // duplicate once for a seamless infinite loop
+  // build tile placeholders (duplicated once for a seamless loop)
+  V.concat(V).forEach(function(id,n){
+    var t=document.createElement('div'); t.className='vtile';
+    var p=document.createElement('div'); p.className='vplayer'; p.id='vp'+n; p.setAttribute('data-vid',id);
+    t.appendChild(p); track.appendChild(t);
+  });
+  // YouTube IFrame Player API -> force muted playback on ready (param-autoplay is blocked, this is not)
+  window._vw=[];
+  window.onYouTubeIframeAPIReady=function(){
+    track.querySelectorAll('.vplayer').forEach(function(el){
+      var id=el.getAttribute('data-vid');
+      window._vw.push(new YT.Player(el,{
+        host:'https://www.youtube-nocookie.com', videoId:id,
+        playerVars:{autoplay:1,mute:1,controls:0,loop:1,playlist:id,modestbranding:1,rel:0,playsinline:1,disablekb:1,fs:0,iv_load_policy:3,start:3},
+        events:{
+          onReady:function(e){ try{ e.target.mute(); e.target.playVideo(); }catch(x){} },
+          onStateChange:function(e){ if(e.data===0){ try{ e.target.playVideo(); }catch(x){} } }  // replay on end = loop
+        }
+      }));
+    });
+    // nudge any that the browser parked, shortly after load
+    setTimeout(function(){ window._vw.forEach(function(p){ try{ p.mute(); p.playVideo(); }catch(x){} }); }, 1600);
+  };
+  var tag=document.createElement('script'); tag.src='https://www.youtube.com/iframe_api'; document.head.appendChild(tag);
 })();
 </script>
 
