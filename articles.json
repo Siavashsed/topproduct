@@ -194,5 +194,50 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "7 Products Actually Worth Buying This Week (July 2026)",
+    "slug": "top-7-trending-products-july-2026",
+    "meta_description": "Jamie Cole ranks the 7 most notable trending products of July 2026 - with real verdicts, honest downsides, and who each one is actually for.",
+    "date": "July 01, 2026",
+    "date_iso": "2026-07-01",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/8092421/pexels-photo-8092421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "anker.com",
+      "hatch.co",
+      "rabbit.tech",
+      "meta.com",
+      "breville.com",
+      "garmin.com",
+      "cowaymega.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Amazon Killed Fake Reviews in 2023. Here's What Actually Changed.",
+    "slug": "ftc-fake-reviews-2023-retrospective",
+    "meta_description": "The FTC's 2023 fake review crackdown reshaped how Americans shop online. Jamie Cole breaks down what really shifted-and what didn't.",
+    "date": "November 10, 2023",
+    "date_iso": "2023-11-10",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/6588437/pexels-photo-6588437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "aboutamazon.com",
+      "fakespot.com",
+      "pewresearch.org",
+      "tripadvisor.com",
+      "papers.ssrn.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
