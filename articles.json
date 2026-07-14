@@ -239,5 +239,47 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "The 7 Products People Won't Stop Texting Me About This Week",
+    "slug": "top-7-trending-products-july-13",
+    "meta_description": "My ranked pick of 7 trending products worth knowing about right now, with an honest verdict, who each is for, and a direct link. July 13, 2026.",
+    "date": "July 13, 2026",
+    "date_iso": "2026-07-13",
+    "author": "Lucy Chen",
+    "image": "https://images.pexels.com/photos/669228/pexels-photo-669228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "anker.com",
+      "meta.com",
+      "aqara.com",
+      "govee.com",
+      "sony.com",
+      "8bitdo.com",
+      "dyson.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Amazon Just Purged 20,000 Reviews. Here's What Broke",
+    "slug": "amazon-2020-fake-review-purge",
+    "meta_description": "In 2020 Amazon deleted around 20,000 reviews after an FT probe exposed paid reviewers. What the fake review scandal means for how you shop.",
+    "date": "January 03, 2020",
+    "date_iso": "2020-01-03",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/10223868/pexels-photo-10223868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ft.com",
+      "which.co.uk",
+      "gov.uk"
+    ],
+    "posted_iso": "2026-07-13",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
