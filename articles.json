@@ -281,5 +281,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Every Price Tag Lies: The Hidden Costs Nobody Advertises",
+    "slug": "hidden-costs-before-every-purchase",
+    "meta_description": "The hidden costs to check before every purchase, from auto-renewals to restocking fees, and how to spot them before you pay full price.",
+    "date": "July 15, 2026",
+    "date_iso": "2026-07-15",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/33175673/pexels-photo-33175673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "consumerreports.org",
+      "westmonroe.com"
+    ],
+    "posted_iso": "2026-07-15",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
