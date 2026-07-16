@@ -299,5 +299,24 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "That 20,000mAh Power Bank Is Lying to You",
+    "slug": "spec-sheet-numbers-marketers-inflate",
+    "meta_description": "8 spec sheet numbers marketers inflate, from power bank mAh to projector lumens, and the real measurements to check before you buy.",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "author": "Lucy Chen",
+    "image": "https://images.pexels.com/photos/12968298/pexels-photo-12968298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "rtings.com",
+      "which.co.uk",
+      "projectorcentral.com",
+      "displayhdr.org"
+    ],
+    "posted_iso": "2026-07-16",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
