@@ -318,5 +318,42 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "This Week's Top 7 Products, Ranked by What I'd Actually Rebuy",
+    "slug": "top-7-trending-products-july-20-2026",
+    "meta_description": "Seven trending products for July 20, 2026, ranked and tested. Honest verdicts, who each one suits, and the two I'd tell you to skip.",
+    "date": "July 20, 2026",
+    "date_iso": "2026-07-20",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/16442863/pexels-photo-16442863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "frame.work",
+      "anker.com",
+      "levoit.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The FTC Just Made Fake Reviews a $51,744 Mistake",
+    "slug": "ftc-2024-fake-review-rule",
+    "meta_description": "The FTC's 2024 fake review rule carries penalties up to $51,744 per violation. Here's what changed on October 21 and what buyers should watch for.",
+    "date": "July 16, 2024",
+    "date_iso": "2024-07-16",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/36731374/pexels-photo-36731374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "brightlocal.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
