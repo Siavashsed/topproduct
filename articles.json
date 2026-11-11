@@ -1,5 +1,123 @@
 [
   {
+    "title": "The Kavalsia Scorecard: Helm, KidBD and the Coaching Program, Rated on Six Criteria",
+    "slug": "kavalsia-scorecard-helm-kidbd-coaching-program",
+    "meta_description": "A reviewer's scorecard of Kavalsia's Helm, KidBD and Coaching Program: six criteria, scores out of 10, and a plain note on what the scores cannot tell you.",
+    "date": "November 10, 2026",
+    "date_iso": "2026-11-10",
+    "author": "Priya Lindqvist",
+    "image": "https://images.pexels.com/photos/38472818/pexels-photo-38472818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image_alt": "Five wooden stars in a row on a blue background, a rating concept.",
+    "photographer": "Ann Hannes",
+    "category": "Product Reviews & Buying Guides",
+    "posted_iso": "2026-11-10T22:52:38",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "This Week's Top 7 Products, Ranked by What I'd Actually Rebuy",
+    "slug": "top-7-trending-products-july-20-2026",
+    "meta_description": "Seven trending products for July 20, 2026, ranked and tested. Honest verdicts, who each one suits, and the two I'd tell you to skip.",
+    "date": "July 20, 2026",
+    "date_iso": "2026-07-20",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/16442863/pexels-photo-16442863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "frame.work",
+      "anker.com",
+      "levoit.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "That 20,000mAh Power Bank Is Lying to You",
+    "slug": "spec-sheet-numbers-marketers-inflate",
+    "meta_description": "8 spec sheet numbers marketers inflate, from power bank mAh to projector lumens, and the real measurements to check before you buy.",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "author": "Lucy Chen",
+    "image": "https://images.pexels.com/photos/12968298/pexels-photo-12968298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "rtings.com",
+      "which.co.uk",
+      "projectorcentral.com",
+      "displayhdr.org"
+    ],
+    "posted_iso": "2026-07-16",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Every Price Tag Lies: The Hidden Costs Nobody Advertises",
+    "slug": "hidden-costs-before-every-purchase",
+    "meta_description": "The hidden costs to check before every purchase, from auto-renewals to restocking fees, and how to spot them before you pay full price.",
+    "date": "July 15, 2026",
+    "date_iso": "2026-07-15",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/33175673/pexels-photo-33175673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "consumerreports.org",
+      "westmonroe.com"
+    ],
+    "posted_iso": "2026-07-15",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The 7 Products People Won't Stop Texting Me About This Week",
+    "slug": "top-7-trending-products-july-13",
+    "meta_description": "My ranked pick of 7 trending products worth knowing about right now, with an honest verdict, who each is for, and a direct link. July 13, 2026.",
+    "date": "July 13, 2026",
+    "date_iso": "2026-07-13",
+    "author": "Lucy Chen",
+    "image": "https://images.pexels.com/photos/669228/pexels-photo-669228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "anker.com",
+      "meta.com",
+      "aqara.com",
+      "govee.com",
+      "sony.com",
+      "8bitdo.com",
+      "dyson.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "7 Products Actually Worth Buying This Week (July 2026)",
+    "slug": "top-7-trending-products-july-2026",
+    "meta_description": "Jamie Cole ranks the 7 most notable trending products of July 2026 - with real verdicts, honest downsides, and who each one is actually for.",
+    "date": "July 01, 2026",
+    "date_iso": "2026-07-01",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/8092421/pexels-photo-8092421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "anker.com",
+      "hatch.co",
+      "rabbit.tech",
+      "meta.com",
+      "breville.com",
+      "garmin.com",
+      "cowaymega.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "slug": "owala-freesip-tiktok-water-bottle",
     "title": "The Owala FreeSip Quietly Became TikTok's Favorite Water Bottle",
     "meta_description": "The Owala FreeSip spread across TikTok without a big launch. Here is what makes the bottle different and whether the hype holds up.",
@@ -85,6 +203,24 @@
     "category": "Kitchen & Gear"
   },
   {
+    "title": "The FTC Just Made Fake Reviews a $51,744 Mistake",
+    "slug": "ftc-2024-fake-review-rule",
+    "meta_description": "The FTC's 2024 fake review rule carries penalties up to $51,744 per violation. Here's what changed on October 21 and what buyers should watch for.",
+    "date": "July 16, 2024",
+    "date_iso": "2024-07-16",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/36731374/pexels-photo-36731374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "brightlocal.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "slug": "stanley-quencher-2024-viral-cup",
     "title": "How the Stanley Quencher Turned a 1913 Brand Into 2024's Biggest Viral Cup",
     "meta_description": "In 2024 a more than century old brand became a viral phenomenon. A look back at how the Stanley Quencher took over, and what it really signalled.",
@@ -94,6 +230,28 @@
     "date": "February 10, 2024",
     "date_iso": "2024-02-10",
     "posted_iso": "2026-06-29T15:49:31.759818"
+  },
+  {
+    "title": "Amazon Killed Fake Reviews in 2023. Here's What Actually Changed.",
+    "slug": "ftc-fake-reviews-2023-retrospective",
+    "meta_description": "The FTC's 2023 fake review crackdown reshaped how Americans shop online. Jamie Cole breaks down what really shifted-and what didn't.",
+    "date": "November 10, 2023",
+    "date_iso": "2023-11-10",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/6588437/pexels-photo-6588437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "aboutamazon.com",
+      "fakespot.com",
+      "pewresearch.org",
+      "tripadvisor.com",
+      "papers.ssrn.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   },
   {
     "title": "The FTC's 2023 Fake Review Crackdown: What It Actually Means for How You Shop",
@@ -155,6 +313,25 @@
     ]
   },
   {
+    "title": "Amazon Just Purged 20,000 Reviews. Here's What Broke",
+    "slug": "amazon-2020-fake-review-purge",
+    "meta_description": "In 2020 Amazon deleted around 20,000 reviews after an FT probe exposed paid reviewers. What the fake review scandal means for how you shop.",
+    "date": "January 03, 2020",
+    "date_iso": "2020-01-03",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/10223868/pexels-photo-10223868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ft.com",
+      "which.co.uk",
+      "gov.uk"
+    ],
+    "posted_iso": "2026-07-13",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "title": "How the FTC's 2019 Crackdown on Fake Reviews Finally Changed the Buying Guide Industry",
     "slug": "ftc-2019-fake-reviews-crackdown",
     "meta_description": "Jamie Cole on the 2019 FTC fake review enforcement wave that reshaped consumer trust in product reviews and buying guides for good.",
@@ -190,167 +367,6 @@
       "brightlocal.com"
     ],
     "posted_iso": "2026-06-11",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "7 Products Actually Worth Buying This Week (July 2026)",
-    "slug": "top-7-trending-products-july-2026",
-    "meta_description": "Jamie Cole ranks the 7 most notable trending products of July 2026 - with real verdicts, honest downsides, and who each one is actually for.",
-    "date": "July 01, 2026",
-    "date_iso": "2026-07-01",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/8092421/pexels-photo-8092421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "anker.com",
-      "hatch.co",
-      "rabbit.tech",
-      "meta.com",
-      "breville.com",
-      "garmin.com",
-      "cowaymega.com"
-    ],
-    "posted_iso": "2026-07-01",
-    "category": "Top Finds",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Amazon Killed Fake Reviews in 2023. Here's What Actually Changed.",
-    "slug": "ftc-fake-reviews-2023-retrospective",
-    "meta_description": "The FTC's 2023 fake review crackdown reshaped how Americans shop online. Jamie Cole breaks down what really shifted-and what didn't.",
-    "date": "November 10, 2023",
-    "date_iso": "2023-11-10",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/6588437/pexels-photo-6588437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ftc.gov",
-      "aboutamazon.com",
-      "fakespot.com",
-      "pewresearch.org",
-      "tripadvisor.com",
-      "papers.ssrn.com"
-    ],
-    "posted_iso": "2026-07-01",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "The 7 Products People Won't Stop Texting Me About This Week",
-    "slug": "top-7-trending-products-july-13",
-    "meta_description": "My ranked pick of 7 trending products worth knowing about right now, with an honest verdict, who each is for, and a direct link. July 13, 2026.",
-    "date": "July 13, 2026",
-    "date_iso": "2026-07-13",
-    "author": "Lucy Chen",
-    "image": "https://images.pexels.com/photos/669228/pexels-photo-669228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "anker.com",
-      "meta.com",
-      "aqara.com",
-      "govee.com",
-      "sony.com",
-      "8bitdo.com",
-      "dyson.com"
-    ],
-    "posted_iso": "2026-07-13",
-    "category": "Top Finds",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Amazon Just Purged 20,000 Reviews. Here's What Broke",
-    "slug": "amazon-2020-fake-review-purge",
-    "meta_description": "In 2020 Amazon deleted around 20,000 reviews after an FT probe exposed paid reviewers. What the fake review scandal means for how you shop.",
-    "date": "January 03, 2020",
-    "date_iso": "2020-01-03",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/10223868/pexels-photo-10223868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ft.com",
-      "which.co.uk",
-      "gov.uk"
-    ],
-    "posted_iso": "2026-07-13",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Every Price Tag Lies: The Hidden Costs Nobody Advertises",
-    "slug": "hidden-costs-before-every-purchase",
-    "meta_description": "The hidden costs to check before every purchase, from auto-renewals to restocking fees, and how to spot them before you pay full price.",
-    "date": "July 15, 2026",
-    "date_iso": "2026-07-15",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/33175673/pexels-photo-33175673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ftc.gov",
-      "consumerreports.org",
-      "westmonroe.com"
-    ],
-    "posted_iso": "2026-07-15",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "That 20,000mAh Power Bank Is Lying to You",
-    "slug": "spec-sheet-numbers-marketers-inflate",
-    "meta_description": "8 spec sheet numbers marketers inflate, from power bank mAh to projector lumens, and the real measurements to check before you buy.",
-    "date": "July 16, 2026",
-    "date_iso": "2026-07-16",
-    "author": "Lucy Chen",
-    "image": "https://images.pexels.com/photos/12968298/pexels-photo-12968298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "rtings.com",
-      "which.co.uk",
-      "projectorcentral.com",
-      "displayhdr.org"
-    ],
-    "posted_iso": "2026-07-16",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "This Week's Top 7 Products, Ranked by What I'd Actually Rebuy",
-    "slug": "top-7-trending-products-july-20-2026",
-    "meta_description": "Seven trending products for July 20, 2026, ranked and tested. Honest verdicts, who each one suits, and the two I'd tell you to skip.",
-    "date": "July 20, 2026",
-    "date_iso": "2026-07-20",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/16442863/pexels-photo-16442863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "frame.work",
-      "anker.com",
-      "levoit.com"
-    ],
-    "posted_iso": "2026-07-20",
-    "category": "Top Finds",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "The FTC Just Made Fake Reviews a $51,744 Mistake",
-    "slug": "ftc-2024-fake-review-rule",
-    "meta_description": "The FTC's 2024 fake review rule carries penalties up to $51,744 per violation. Here's what changed on October 21 and what buyers should watch for.",
-    "date": "July 16, 2024",
-    "date_iso": "2024-07-16",
-    "author": "Jamie Cole",
-    "image": "https://images.pexels.com/photos/36731374/pexels-photo-36731374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ftc.gov",
-      "brightlocal.com"
-    ],
-    "posted_iso": "2026-07-20",
     "historical": true,
     "available_languages": [
       "en"
