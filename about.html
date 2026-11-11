@@ -296,6 +296,29 @@ body[data-page-depth="1"] article p a,
 body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;text-decoration:none;text-underline-offset:3px}
 /* /CONTRAST-AUDIT */
 </style>
+<!-- Meta Pixel (Kavalsia network) -->
+<script>
+(function(){
+if(window.__KAVALSIA_META_LOADED)return;window.__KAVALSIA_META_LOADED=true;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', "3117791381934109");
+var FIRE_PV=true,SITE_ID="topproduct",SITE_NAME="Topproduct",VIEW_EVT="Viewed Topproduct",SIGNUP_EVT="Topproduct NewsletterSignup",MIRROR_CAPI=false;
+var segs=location.pathname.split('/').filter(Boolean);var SLUG=segs.length?segs[segs.length-1].replace(/\.html$/,''):'home';if(SLUG==='index')SLUG='home';
+var BASE={site_id:SITE_ID,site_name:SITE_NAME,content_name:SLUG,page_path:location.pathname};
+function P(x){var o={};for(var k in BASE)o[k]=BASE[k];for(var j in x)o[j]=x[j];return o;}
+if(FIRE_PV){try{fbq('track','PageView');}catch(e){}}
+try{fbq('trackCustom',VIEW_EVT,P({page_title:document.title,referrer:document.referrer||''}));}catch(e){}
+function mirrorCAPI(evtName,payload){if(!MIRROR_CAPI)return;try{var hub=(window.KAVALSIA_HUB_URL||'').replace(/\/$/,'');if(!hub)return;fetch(hub+'/api/meta-capi',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({site_id:SITE_ID,event_name:evtName,payload:payload})}).catch(function(){});}catch(e){}}
+mirrorCAPI(VIEW_EVT,P({}));
+var MARKS=[30,60,120],fired={},acc=0,last=document.hidden?0:Date.now();
+function tick(){var now=Date.now();if(last){acc+=(now-last)/1000;}last=document.hidden?0:now;for(var i=0;i<MARKS.length;i++){var m=MARKS[i];if(!fired[m]&&acc>=m){fired[m]=1;var ev='TimeSpent'+m+'s';try{fbq('trackCustom',ev,P({seconds:m}));}catch(e){}mirrorCAPI(ev,P({seconds:m}));}}if(fired[120])clearInterval(iv);}
+var iv=setInterval(tick,1000);document.addEventListener('visibilitychange',tick);
+function sha256Hex(str){if(!window.crypto||!crypto.subtle)return Promise.resolve('');var buf=new TextEncoder().encode(String(str||'').trim().toLowerCase());return crypto.subtle.digest('SHA-256',buf).then(function(h){return Array.prototype.map.call(new Uint8Array(h),function(b){return ('00'+b.toString(16)).slice(-2);}).join('');});}
+document.addEventListener('submit',function(ev){try{var f=ev.target;if(!f||!f.tagName||f.tagName.toLowerCase()!=='form')return;var emailEl=f.querySelector('input[type=email], input[name*=email i]');if(!emailEl||!emailEl.value)return;var email=emailEl.value;sha256Hex(email).then(function(h){try{fbq('trackCustom',SIGNUP_EVT,P({email_hashed:h}));}catch(e){}mirrorCAPI(SIGNUP_EVT,P({email_hashed:h}));});}catch(e){}},true);
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=3117791381934109&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body data-page-depth="0">
 <!-- MASTHEAD -->
@@ -319,6 +342,9 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
             <rect x="1" y="1" width="36" height="36" rx="10" fill="url(#tpGrad)"/>
             <rect x="1.5" y="1.5" width="35" height="35" rx="9.5" stroke="url(#tpStroke)" stroke-width="1" fill="none"/>
             <path d="M7.5 11.5h11" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M13 11.5v15" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M21.5 26.5v-15" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M21.5 11.5h4.2a3.6 3.6 0 0 1 0 7.2h-4.2" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <circle cx="29" cy="27.5" r="2.4" fill="#fbbf24"/>
             <circle cx="29" cy="27.5" r="2.4" fill="none" stroke="rgba(255,255,255,.6)" stroke-width=".8"/>
           </svg>
@@ -429,7 +455,7 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
             <div><b>We find it before it floods your feed</b><span>Tracking emerging trends daily</span></div>
           </div>
           <div class="ab-sv-row">
-            <div class="ab-sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/></svg></div>
+            <div class="ab-sv-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
             <div><b>We test it for 30+ days</b><span>Real homes, real use, real wear</span></div>
           </div>
           <div class="ab-sv-row">
@@ -469,12 +495,12 @@ body[data-page-depth="1"] article .intro a{color:var(--text,#dc2626) !important;
           <p>We trace viral products to their source listings, so you know if that $49 gadget is really a $12 item with a marketing budget.</p>
         </div>
         <div class="ab-vcard">
-          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/></svg></div>
+          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
           <h3>Clear Verdicts</h3>
           <p>No vague star ratings. Every review ends with a plain answer: buy it, skip it, or wait for the price to drop.</p>
         </div>
         <div class="ab-vcard">
-          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+          <div class="ab-vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
           <h3>Trend Radar</h3>
           <p>We watch what is gaining traction before it hits everyone's feed, so the verdict is ready the moment you start wondering.</p>
         </div>
@@ -689,7 +715,7 @@ async function loadArticles(){
   if(!posts.length){
     grid.style.display='block';
     grid.innerHTML='<div class="arts-empty">'+
-      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>'+
+      '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c0b8a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'+
       '<h3>Fresh Reviews Are On The Test Bench</h3>'+
       '<p>Our editors are currently testing the next round of trending products. Join the weekly digest below to get every verdict the moment it goes live.</p>'+
       '</div>';
