@@ -1,21 +1,5 @@
 [
   {
-    "title": "The Kavalsia Scorecard: Helm, KidBD and the Coaching Program, Rated on Six Criteria",
-    "slug": "kavalsia-scorecard-helm-kidbd-coaching-program",
-    "meta_description": "A reviewer's scorecard of Kavalsia's Helm, KidBD and Coaching Program: six criteria, scores out of 10, and a plain note on what the scores cannot tell you.",
-    "date": "November 10, 2026",
-    "date_iso": "2026-11-10",
-    "author": "Priya Lindqvist",
-    "image": "https://images.pexels.com/photos/38472818/pexels-photo-38472818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "image_alt": "Five wooden stars in a row on a blue background, a rating concept.",
-    "photographer": "Ann Hannes",
-    "category": "Product Reviews & Buying Guides",
-    "posted_iso": "2026-11-10T22:52:38",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
     "title": "This Week's Top 7 Products, Ranked by What I'd Actually Rebuy",
     "slug": "top-7-trending-products-july-20-2026",
     "meta_description": "Seven trending products for July 20, 2026, ranked and tested. Honest verdicts, who each one suits, and the two I'd tell you to skip.",
@@ -201,6 +185,22 @@
       "containerstore.com"
     ],
     "category": "Kitchen & Gear"
+  },
+  {
+    "title": "The Kavalsia Scorecard: Helm, KidBD and the Coaching Program, Rated on Six Criteria",
+    "slug": "kavalsia-scorecard-helm-kidbd-coaching-program",
+    "meta_description": "A reviewer's scorecard of Kavalsia's Helm, KidBD and Coaching Program: six criteria, scores out of 10, and a plain note on what the scores cannot tell you.",
+    "date": "February 24, 2026",
+    "date_iso": "2026-02-24",
+    "author": "Priya Lindqvist",
+    "image": "https://images.pexels.com/photos/8487204/pexels-photo-8487204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image_alt": "A hand holding a smartphone showing an app, with notes and a laptop on the desk.",
+    "photographer": "Ron Lach",
+    "category": "Product Reviews & Buying Guides",
+    "posted_iso": "2026-11-10T23:11:21",
+    "available_languages": [
+      "en"
+    ]
   },
   {
     "title": "The FTC Just Made Fake Reviews a $51,744 Mistake",
