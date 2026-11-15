@@ -371,5 +371,54 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "AirPods Pro 3 Beat the $799 Smart Glasses in This Week's Top 7",
+    "slug": "top-7-trending-products-november-15-2026",
+    "meta_description": "This week's top 7 trending products for November 2026, ranked by a reviewer who tested them: what stands out, the catch, and who should buy each one.",
+    "date": "November 15, 2026",
+    "date_iso": "2026-11-15",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/6890186/pexels-photo-6890186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "apple.com",
+      "nintendo.com",
+      "store.google.com",
+      "ouraring.com",
+      "ninjakitchen.com",
+      "meta.com",
+      "amazon.com",
+      "nidcd.nih.gov",
+      "who.int",
+      "crresearch.com"
+    ],
+    "posted_iso": "2026-11-15",
+    "category": "Top Finds",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Amazon Just Banned Aukey and RavPower, and Your Reviews Were Bought",
+    "slug": "amazon-2021-aukey-ravpower-review-ban",
+    "meta_description": "Amazon's 2021 ban of Aukey, Mpow and RavPower showed that star ratings were partly paid for. Here's what changed for shoppers and what to buy now.",
+    "date": "February 15, 2021",
+    "date_iso": "2021-02-15",
+    "author": "Russell Kane",
+    "image": "",
+    "outbound_links": [
+      "safetydetectives.com",
+      "gov.uk",
+      "ftc.gov",
+      "cnbc.com",
+      "anker.com",
+      "belkin.com",
+      "ugreen.com"
+    ],
+    "posted_iso": "2026-11-15",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
