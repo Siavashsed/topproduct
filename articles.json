@@ -489,5 +489,27 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "I Bought the Internet's Most Hyped Products. Half Went Back.",
+    "slug": "hyped-products-tested-half-went-back",
+    "meta_description": "We tested the most hyped products online for 90 days. Here's which viral buys earn the money, which are marketing, and what to get instead.",
+    "date": "November 19, 2026",
+    "date_iso": "2026-11-19",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/4440787/pexels-photo-4440787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ninjakitchen.com",
+      "owalalife.com",
+      "bissell.com",
+      "sharkclean.com",
+      "stanley1913.com",
+      "pewresearch.org",
+      "ftc.gov"
+    ],
+    "posted_iso": "2026-11-19",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
