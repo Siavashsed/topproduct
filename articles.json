@@ -559,5 +559,52 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Ten Under-$100 Buys That Beat Gear Costing Three Times More",
+    "slug": "top-10-products-under-100-punch-above-price",
+    "meta_description": "Ten products under $100 that outperform pricier rivals, each with a verdict, who it suits, and the downside nobody mentions. Tested and bought by me.",
+    "date": "November 22, 2026",
+    "date_iso": "2026-11-22",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/27307266/pexels-photo-27307266.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "lodgecastiron.com",
+      "victorinox.com",
+      "buythermopro.com",
+      "instantpot.com",
+      "timemore.com",
+      "logitech.com",
+      "crucial.com",
+      "anker.com",
+      "soundcore.com",
+      "amazfit.com"
+    ],
+    "posted_iso": "2026-11-22",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The FTC Just Admitted Fake Reviews Are Out of Control",
+    "slug": "ftc-fake-review-rule-2022-reaction",
+    "meta_description": "The FTC's October 2022 move toward a fake review rule is real progress, but it won't fix your holiday shopping. Here's what to do instead.",
+    "date": "October 16, 2022",
+    "date_iso": "2022-10-16",
+    "author": "Patrick O'Connor",
+    "image": "",
+    "outbound_links": [
+      "ftc.gov",
+      "aboutamazon.com",
+      "brightlocal.com",
+      "fakespot.com",
+      "reviewmeta.com",
+      "nytimes.com"
+    ],
+    "posted_iso": "2026-11-22",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
