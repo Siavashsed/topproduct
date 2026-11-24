@@ -628,5 +628,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "The Quiet Owala Is Beating the Famous Stanley in My Tests",
+    "slug": "quiet-best-seller-beats-famous-brand",
+    "meta_description": "I tested a quiet best-seller against the famous brand, side by side. Here's the winner, where it loses, and who should buy which.",
+    "date": "November 24, 2026",
+    "date_iso": "2026-11-24",
+    "author": "Gemma Lewis",
+    "image": "https://images.pexels.com/photos/9943243/pexels-photo-9943243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "pnas.org",
+      "plma.com",
+      "owalalife.com",
+      "stanley1913.com",
+      "simplemodern.com"
+    ],
+    "posted_iso": "2026-11-24",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
