@@ -648,5 +648,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Read Product Reviews by the Three-Star Middle, Not the Five-Star Glow",
+    "slug": "read-product-reviews-spot-fake-ones",
+    "meta_description": "Learn to read product reviews like a pro: check the middle ratings, dates and reviewer history to spot fake ones before you spend a dollar.",
+    "date": "November 25, 2026",
+    "date_iso": "2026-11-25",
+    "author": "Lucy Chen",
+    "image": "https://images.pexels.com/photos/953864/pexels-photo-953864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "spiegel.medill.northwestern.edu",
+      "ftc.gov",
+      "consumerreports.org",
+      "rtings.com",
+      "nytimes.com"
+    ],
+    "posted_iso": "2026-11-25",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
