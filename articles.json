@@ -668,5 +668,22 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Every Product Gets Scored Out of 100 Before I Recommend It",
+    "slug": "how-jamie-cole-scores-products",
+    "meta_description": "How Jamie Cole tests and scores products: 30 days of real use, self-bought gear, a 100-point rubric, and honest downsides on every pick.",
+    "date": "November 26, 2026",
+    "date_iso": "2026-11-26",
+    "author": "Jamie Cole",
+    "image": "https://images.pexels.com/photos/9574561/pexels-photo-9574561.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ftc.gov",
+      "spiegel.medill.northwestern.edu"
+    ],
+    "posted_iso": "2026-11-26",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
